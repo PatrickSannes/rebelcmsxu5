@@ -21,14 +21,14 @@ Who do you think you are?
 ===============
 Yes, we've read all the blog posts, we've heard all the critical opinions, but call us crazy we think we can do this. We have rescued a LOT worse!
 Our core development team has worked on:
--BBC.com
--BBC.co.uk
--Top Gear
--Radio Times
--BBC iPlayer International
--Mercury Records
--BBC Good Food
--Fiction Records
+ - BBC.com
+ - BBC.co.uk
+ - Top Gear
+ - Radio Times
+ - BBC iPlayer International
+ - Mercury Records
+ - BBC Good Food
+ - Fiction Records
 
 Open Source
 ===============
