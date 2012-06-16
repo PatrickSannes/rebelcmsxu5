@@ -18,7 +18,7 @@ What we want to accomplish…
 
 What happens next?
 ===============
- - As per Oren's post (http://ayende.com/blog/156577/on-umbracorsquo-s-nhibernatersquo-s-pullout) we are first focusing on the data layer and ripping out DynamicNode.
+ - As per Oren's [post](http://ayende.com/blog/156577/on-umbracorsquo-s-nhibernatersquo-s-pullout) we are first focusing on the data layer and ripping out DynamicNode.
  - We want to remove "Nice to haves" and end up with something light-weight that works. 
  - Performance and simplicity is our first main goal.
 
