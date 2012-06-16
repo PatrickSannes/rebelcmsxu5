@@ -8,13 +8,14 @@ We have the skills to fix it.
 
 What we want to accomplish…
 ===============
--Performance issues solved
--A brand new kick-ass responsive admin User Interface
--REST API
--Mono support
--Heroku and AppHarbour support
--RavenDB and NoSQL core replacement
--Continued development and support for "Umbraco 5" supporters
+
+ - Performance issues solved
+ - A brand new kick-ass responsive admin User Interface
+ - REST API
+ - Mono support
+ - Heroku and AppHarbour support
+ - RavenDB and NoSQL core replacement
+ - Continued development and support for "Umbraco 5" supporters
 
 Who do you think you are?
 ===============
