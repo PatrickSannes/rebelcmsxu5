@@ -8,7 +8,6 @@ We have the skills to fix it.
 
 What we want to accomplish…
 ===============
-
  - Performance issues solved
  - A brand new kick-ass responsive admin User Interface
  - REST API
@@ -37,6 +36,7 @@ Nothing will ever change that. This will be as Open Source as Umbraco is with th
 When will this start?
 
 We are already under way! Follow us on Twitter for more updates!
+
 Feedback
-Follow us on Twitter: @rebel_cms
-Email us at: info@rebelcms.com
+ - Follow us on Twitter: @rebel_cms
+ - Email us at: info@rebelcms.com
