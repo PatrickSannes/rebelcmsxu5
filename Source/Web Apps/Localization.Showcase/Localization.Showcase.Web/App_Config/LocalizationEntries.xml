@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Localizations>
+  <Text Key="Header">
+    <Translation Language="en-US">Localization demo</Translation>
+    <Translation Language="da-DK">Lokaliseringsdemo</Translation>    
+  </Text>
+
+
+  <Text Key="Slogan">
+    <Translation Language="en-US">Language is vivid - Don't let computer languages keep it down</Translation>
+    <Translation Language="da-DK">Sprog er levende</Translation>
+  </Text>
+
+
+  <Text Key="MissingInDanish">
+    <Translation Language="en-US">This text will be missing in danish</Translation>
+    <Translation Language="whatever">THIS IS A TEXT IN THE WHATEVER LANGUAGE</Translation>
+  </Text>
+
+
+  <Text Key="Connected">
+    <!-- Pattern lookup (the default pattern "Enum")-->
+    <Translation Language="en-US">You and {@Enum(Friends)} are now connected</Translation>
+    <Translation Language="da-DK">Du er nu forbundet med {@Enum(Friends)}</Translation>
+  </Text>
+
+  <Text Key="ConnectedMany">
+    <!-- Format group expression-->
+    <Translation Language="en-US"><![CDATA[You and <Link: {Count} other people are now connected>]]></Translation>
+    <Translation Language="da-DK"><![CDATA[Du er nu forbundet med <Link: {Count} andre personer>]]></Translation>
+  </Text>
+
+  
+  <Text Key="Labels.ChosenFriends">
+    <Translation Language="en-US">Choose friends</Translation>
+    <Translation Language="da-DK">Vælg venner</Translation>
+  </Text>
+
+  <Text Key="FriendRequirement">    
+    <Translation Language="en-US">#Required{0: You don't have to be friends with anyone, but you could :) | 1: Choose at least one friend | Choose at least {#} friends}</Translation>
+    <Translation Language="da-DK">#Required{0: Du behøver ikke at vælge nogen venner, men du kan godt :) | 1: Vælg mindst én ven | Vælg mindst {#} venner}</Translation>
+  </Text>
+
+  <Text Key="RequiredFriendsError">
+    <Translation Language="en-US"><![CDATA[You need to pick #Missing{1: one more friend | < 3: just {#} more friends | at least {#} more friends}]]></Translation>
+    <Translation Language="da-DK"><![CDATA[Du mangler at vælge #Missing{1: endnu en ven | mindst {#} venner endnu}]]></Translation>
+  </Text>
+
+  <Text Key="Balance">
+    <Translation Language="en-US"><![CDATA[Your balance is {Balance:N2} ]]></Translation>
+    <Translation Language="da-DK"><![CDATA[Din saldo er {Balance:N2}]]></Translation>
+  </Text>
+  
+  <!--Custom validation message-->
+  <Text Key="Validation.Required">
+    <Translation Language="en-US">Required (we can change this text)</Translation>
+    <Translation Language="da-DK">Krævet (vi kan ændre denne tekst)</Translation>
+  </Text>
+
+  <Text Key="Validation.FormatException">
+    <Translation Language="en-US">Invalid value</Translation>
+    <Translation Language="da-DK">Ugyldig værdi</Translation>
+  </Text>
+
+  <Text Key="CustomRequired">
+    <Translation Language="en-US">This is so required</Translation>
+    <Translation Language="da-DK">Herre krævet!</Translation>
+  </Text>
+
+  <Text Key="CustomRange">
+    <Translation Language="en-US">The value {Value:roman} ({Value:N2}) must be between {Minimum} and {Maximum}</Translation>
+    <Translation Language="en-US">Værdien skal være mellem {Minimum} og {Maximum}</Translation>
+  </Text>
+  
+  
+  <!-- Override plugin -->
+  <Text Key="Tulips2" Namespace="TestPlugin">
+    <Translation Language="en-US">~/Content/Hydrangeas.jpg</Translation>
+  </Text>
+</Localizations>

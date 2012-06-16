@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <folder id="F01" name="My Content Folder">
+    <article id="A01" name="My Test Article" />
+  </folder>
+</root>

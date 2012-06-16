@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Umbraco.Framework.Persistence.Model.PersistenceEntity">
+    <Position X="10.5" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAEAAAAAAAAAAIAAAAAAAAAAAAAAAAAIgAAAAA=</HashCode>
+      <FileName>Model\PersistenceEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.TypedPersistenceEntity">
+    <Position X="3.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAiAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\TypedPersistenceEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.VersionedPersistenceEntity">
+    <Position X="0.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\VersionedPersistenceEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.AttributeGroup">
+    <Position X="6.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAQAABAAAAQQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Attribution\AttributeGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.AttributeGroupCollection">
+    <Position X="21.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Attribution\AttributeGroupCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.TypedAttribute">
+    <Position X="15.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Model\Attribution\TypedAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.TypedAttributeCollection" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABACAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Model\Attribution\TypedAttributeCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.TypedAttributeName" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Attribution\TypedAttributeName.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.TypedAttributeValueCollection">
+    <Position X="25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEBABAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Attribution\TypedAttributeValueCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.MetaData.AttributeDefinition">
+    <Position X="17.25" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAQAIBAAAAQACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Attribution\MetaData\AttributeDefinition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.MetaData.AttributeGroupDefinition">
+    <Position X="20.25" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAIAAAQEABAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Attribution\MetaData\AttributeGroupDefinition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.MetaData.AttributeTypeDefinition">
+    <Position X="9.5" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAIgAAQAgBAAAAQAAAAACIAAEAIAAAAAgiA=</HashCode>
+      <FileName>Model\Attribution\MetaData\AttributeTypeDefinition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.MetaData.AttributionSchemaDefinition">
+    <Position X="12.25" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>UQAAACAAAAMAAAgAAIAAAAQAAAAAAAAAAIAAEAAAAAA=</HashCode>
+      <FileName>Model\Attribution\MetaData\AttributionSchemaDefinition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Framework.Persistence.Model.Attribution.MetaData.StringSerializationType" BaseTypeListCollapsed="true">
+    <Position X="25" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAEQAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Attribution\MetaData\StringSerializationType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

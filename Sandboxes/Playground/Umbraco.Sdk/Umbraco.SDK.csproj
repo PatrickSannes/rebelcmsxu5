@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EDA12862-CD2E-4BF1-AC14-F2209686479A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.SDK</RootNamespace>
+    <AssemblyName>Umbraco.SDK</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UmbracoFramework.EntityGraph.Synonyms\UmbracoFramework.EntityGraph.Synonyms.csproj">
+      <Project>{0B8019BA-E5DE-4E54-94AE-DF60DD4B8297}</Project>
+      <Name>UmbracoFramework.EntityGraph.Synonyms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prototyping.Umbraco.EntityGraph.RepositoryProviders.MySql\Prototyping.Umbraco.EntityGraph.RepositoryProviders.MySql.csproj">
+      <Project>{252AFE52-C260-486E-A55A-23993FD64DFC}</Project>
+      <Name>Prototyping.Umbraco.EntityGraph.RepositoryProviders.MySql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UmbracoFramework.EntityGraph.DataPersistence\UmbracoFramework.EntityGraph.DataPersistence.csproj">
+      <Project>{5037EB67-BD88-4761-AD46-04CA4F88F8E5}</Project>
+      <Name>UmbracoFramework.EntityGraph.DataPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UmbracoFramework.EntityGraph.Domain\UmbracoFramework.EntityGraph.Domain.csproj">
+      <Project>{41ED84AF-AAB1-4DF9-99AA-6EB242BFC251}</Project>
+      <Name>UmbracoFramework.EntityGraph.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UmbracoFramework\UmbracoFramework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>UmbracoFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco\Umbraco.csproj">
+      <Project>{B93B84EB-4B9F-4E11-80CB-5865E6A18A23}</Project>
+      <Name>Umbraco</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ContentResolver.cd" />
+    <None Include="Entity - With Synonyms.cd" />
+    <None Include="Entity - Simple.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

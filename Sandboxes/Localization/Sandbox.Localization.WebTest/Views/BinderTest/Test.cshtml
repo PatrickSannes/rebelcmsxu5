@@ -1,0 +1,46 @@
+﻿@model Sandbox.Localization.WebTest.Controllers.Foo
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+@using (Html.BeginForm())
+{
+    <div>
+    @Html.LabelFor(x => x.String):
+    @Html.TextBoxFor(x => x.String)
+    @Html.ValidationMessageFor(x => x.String)
+    </div>
+    <div>
+    @Html.LabelFor(x => x.AnotherString):
+    @Html.TextBoxFor(x => x.AnotherString)
+    @Html.ValidationMessageFor(x => x.AnotherString)
+    </div>
+    <div>
+    @Html.LabelFor(x => x.Number):
+    @Html.TextBoxFor(x => x.Number)
+    @Html.ValidationMessageFor(x => x.Number)
+    </div>
+    <div>
+    @Html.LabelFor(x => x.Stars):
+    @Html.TextBoxFor(x => x.Stars)
+    @Html.ValidationMessageFor(x => x.Stars)
+    </div>
+    <div>
+    @Html.LabelFor(x => x.Messages):
+    @Html.TextBoxFor(x => x.Messages)
+    @Html.ValidationMessageFor(x => x.Messages)
+    </div>
+    <div>
+    @Html.LabelFor(x => x.AnotherNumber):
+    @Html.TextBoxFor(x => x.AnotherNumber)
+    @Html.ValidationMessageFor(x => x.AnotherNumber)
+    </div>
+        <div>
+    @Html.LabelFor(x => x.RangedNumber):
+    @Html.TextBoxFor(x => x.RangedNumber)
+    @Html.ValidationMessageFor(x => x.RangedNumber)
+    </div>
+    
+    <input type="submit" value="OK" />
+}

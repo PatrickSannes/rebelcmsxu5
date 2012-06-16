@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Localizations Language="en-US">
+
+  <Text Key="Hello">Hello there</Text>
+
+  <Text Key="Tulips1">resource:TestPlugin.Tulips.jpg</Text>
+  <Text Key="Tulips2">resource:TestPlugin.Tulips.jpg</Text>
+  
+</Localizations>

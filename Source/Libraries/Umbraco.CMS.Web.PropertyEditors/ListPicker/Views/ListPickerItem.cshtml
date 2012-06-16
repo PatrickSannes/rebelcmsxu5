@@ -1,0 +1,25 @@
+﻿@inherits WebViewPage<Umbraco.Cms.Web.PropertyEditors.ListPicker.ListItem>
+                       
+@using Umbraco.Cms.Web;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using Umbraco.Cms.Web.PropertyEditors.ListPicker;
+@using Umbraco.Cms.Web.PropertyEditors;
+
+<li>
+    @using (Html.BeginCollectionItem("items"))
+    {
+        @Html.ValidationMessageFor(x => Model.Value)
+
+        @Html.TextBoxFor(x => Model.Value, new { @class = "list-item-value" })
+        @Html.TextBoxFor(x => Model.Id, new { @class = "list-item-id" })
+    }
+    <a href="#" class="delete">Delete</a>
+</li>

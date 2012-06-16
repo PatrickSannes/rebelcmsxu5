@@ -1,0 +1,35 @@
+Some or all of following pre-requisites are needed in order to build or run the Umbraco 5 source.
+In many cases it's inpractical or not permitted for us to distribute the libraries or installers:
+
+
+.NET 4.0
+
+ASP.NET MVC3 (RC2)
+http://www.asp.net/mvc/mvc3
+
+
+Microsoft Research Code Contracts
+http://research.microsoft.com/en-us/projects/contracts/
+
+
+Microsoft Research Pex and Moles - helpers for unit testing (generates unit tests and allows replacement of .NET methods with delegates)
+http://research.microsoft.com/en-us/projects/pex/downloads.aspx
+
+
+Sandcastle - Documentation Compiler for Managed Class Libraries
+http://sandcastle.codeplex.com/
+
+
+Sandcastle Builder - GUI to help compose and build Sandcastle output
+http://shfb.codeplex.com/
+
+
+Sandcastle June 2010 (2.6.10621.1) Patch - Rev 1
+http://sandcastlestyles.codeplex.com/releases/view/47767
+
+
+Jan 2010
+Sandboxes/Hive/Hive.sln has been modified to use SqlCe4 in its tests
+--------------------------------------------------------------------
+Microsoft Sql Server CE 4.0 CTP2
+http://blogs.msdn.com/b/sqlservercompact/archive/2010/12/22/downloads-available-for-sql-server-compact-4-0-ctp2-visual-studio-2010-sp1-beta-tools-for-sql-server-compact-4-0-ctp2-and-cms-mojoportal-orchard-and-umbraco-that-work-with-sql-server-compact.aspx

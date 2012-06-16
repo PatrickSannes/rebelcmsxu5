@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Localizations>
+  <Text Key="Plugin.Key">
+    <Translation Language="da-DK">Ja! #Count{1: én | mange} </Translation>
+    <Translation Language="en-US">Yes! #Count{1: one | a lot}</Translation>
+  </Text>
+
+  <Text Key="Plugin.OtherKey">    
+    <Translation Language="en-US">From plugin</Translation>
+  </Text>
+</Localizations>

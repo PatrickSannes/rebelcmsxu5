@@ -1,0 +1,110 @@
+﻿@inherits WebViewPage<Umbraco.Cms.Web.PropertyEditors.RichTextBox.RichTextBoxEditorModel>
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Controllers
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+@using Umbraco.Framework;
+
+@{
+    Html
+
+        //files for Umbraco rich text component
+
+        .RequiresJsResource(typeof(RichTextBoxEditor), "Umbraco.Cms.Web.PropertyEditors.RichTextBox.Resources.RichTextBox.js")
+
+        //main files for TinyMCE
+
+        .RequiresJs("TinyMCE/tiny_mce.js", "Modules", 100)
+        //.RequiresJs("TinyMCE/themes/advanced/editor_template.js", "Modules", 101)
+        .RequiresJs("TinyMCE/plugins/style/editor_plugin.js", "Modules", 102)
+        .RequiresJs("TinyMCE/langs/en.js", "Modules", 103)
+
+        //plugins for TinyMCE
+
+        .RequiresJs("TinyMCE/plugins/table/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/save/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/layer/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/pagebreak/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/advhr/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/advimage/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/advlink/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/emotions/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/iespell/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/insertdatetime/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/inlinepopups/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/preview/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/media/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/searchreplace/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/print/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/contextmenu/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/paste/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/directionality/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/noneditable/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/fullscreen/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/visualchars/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/nonbreaking/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/xhtmlxtras/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/advlist/editor_plugin.js", "Modules", 110)        
+        .RequiresJs("TinyMCE/plugins/umbracostyles/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/umbracolink/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/umbracocharmap/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/umbracoanchor/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/umbracomacro/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/umbracomedia/editor_plugin.js", "Modules", 110)
+        .RequiresJs("TinyMCE/plugins/umbracosave/editor_plugin.js", "Modules", 110);
+
+    var stylesheetsString = string.Join(",", Model.Stylesheets.Select(x => Url.Content(Model.AppContext.Settings.UmbracoFolders.StylesheetsFolder + "/" + x.Name)).ToArray());
+    var stylesString = string.Join(";", Model.Stylesheets.SelectMany(x => StylesheetHelper.ParseRules(x)).Select(x => x.Name + "=" + x.Selector).ToArray());
+
+    var insertAnchorPath = Url.GetEditorUrl("InsertAnchor", typeof(InsertAnchorController), null).TrimEnd('/');
+    var insertCharPath = Url.GetEditorUrl("InsertChar", typeof(InsertCharController), null).TrimEnd('/');
+    var insertLinkPath = Url.GetEditorUrl("InsertLink", typeof(InsertLinkController), null).TrimEnd('/');
+    var insertMacroPath = Url.GetEditorUrl("InsertMacro", typeof(InsertMacroController), null).TrimEnd('/');
+    var insertMediaPath = Url.GetEditorUrl("InsertMedia", typeof (InsertMediaController), null).TrimEnd('/');
+    
+}
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {
+            var propertyUIElements = Umbraco.PropertyEditors.PropertyEditorManager.getInstance().getPropertyEditorUIElements("@ViewBag.UmbracoPropertyId");
+
+            //Create the rich text editor for this text area.
+            $("#@Html.IdFor(x => Model.Value)").RichTextBox({
+                tinyMceControllerPaths: {
+                    "InsertAnchor": "@insertAnchorPath",
+                    "InsertChar": "@insertCharPath",
+                    "InsertLink": "@insertLinkPath",
+                    "InsertMacro": "@insertMacroPath",
+                    "InsertMedia": "@insertMediaPath"
+                },
+                propertyId: "@ViewBag.UmbracoPropertyId",
+                textareaId: "@Html.IdFor(x => Model.Value)",
+                width: "@Model.PreValueModel.Size.Width",
+                height: "@Model.PreValueModel.Size.Height",
+                stylesheets: "@stylesheetsString",
+                styles: "@stylesString",
+                validElements: "@Model.PreValueModel.ValidElements",
+                showContextMenu: @Model.PreValueModel.ShowContextMenu.ToString().ToLower(),
+                baseUrl: "@Url.Content(Model.AppContext.Settings.UmbracoFolders.BackOfficeFolder + "/Modules/TinyMCE")",
+                currNodeId: "@(Model.CurrentNodeId.IsNullValueOrEmpty() ? "" : Model.CurrentNodeId.ToString())",
+                macroContentAjaxUrl: "@Url.Action("MacroContents", "Macro")",
+                document_base_url : "/",
+                relative_urls : false,
+                remove_script_host : true,
+            });
+        });
+    })(jQuery);
+</script>
+<!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
+<div>
+    @Html.TextAreaFor(x => Model.Value, 15, 80, new { style = "width: 70%", @class = "tinymce" })
+</div>

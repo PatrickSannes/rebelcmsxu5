@@ -1,0 +1,34 @@
+﻿@inherits System.Web.Mvc.WebViewPage<Umbraco.Cms.Web.PropertyEditors.Numeric.NumericEditorModel>
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.Numeric
+
+@{
+    Html.RequiresJsResource(typeof(NumericEditor), "Umbraco.Cms.Web.PropertyEditors.Numeric.Resources.NumericPropertyEditor.js");
+
+    var propertyId = ViewBag.UmbracoPropertyId;
+    var fieldId = Html.IdFor(x => Model.ValueAsDecimal).ToString();
+    
+    <script type="text/javascript">
+		(function ($) {
+			$(document).ready(function () {
+			    Umbraco.PropertyEditors.NumericPropertyEditor.init({
+			            umbracoPropertyId: "@propertyId",
+			            fieldId: "@fieldId",
+			            decimalPlaces: @Model.PreValueModel.DecimalPlaces
+			        });
+			});
+		})(jQuery);
+    </script>
+}
+
+@Html.TextBox("ValueAsDecimal", Model.ValueAsDecimal.ToString("0.".PadRight(Model.PreValueModel.DecimalPlaces + 2, '0')), new { @class = "numeric" })

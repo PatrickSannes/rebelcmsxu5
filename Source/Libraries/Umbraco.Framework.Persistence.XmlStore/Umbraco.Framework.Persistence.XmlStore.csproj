@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35BE72E0-F3FB-49F8-8DEE-6DA4C0EB85C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Framework.Persistence.XmlStore</RootNamespace>
+    <AssemblyName>Umbraco.Framework.Persistence.XmlStore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\ProviderConfigurationSection.cs" />
+    <Compile Include="DataManagement\DataContext.cs" />
+    <Compile Include="DataManagement\DataContextFactory.cs" />
+    <Compile Include="DataManagement\Linq\XDocumentQueryableDataSource.cs" />
+    <Compile Include="DataManagement\Linq\XDocumentQueryContext.cs" />
+    <Compile Include="DataManagement\Linq\XElementCriteriaVisitor.cs" />
+    <Compile Include="DataManagement\Linq\XElementSourceFieldBinder.cs" />
+    <Compile Include="DataManagement\ReadWrite\ReadOnlyUnitOfWork.cs" />
+    <Compile Include="DataManagement\ReadWrite\ReadOnlyUnitOfWorkFactory.cs" />
+    <Compile Include="DataManagement\ReadWrite\ReadWriteUnitOfWork.cs" />
+    <Compile Include="DataManagement\ReadWrite\ReadWriteUnitOfWorkFactory.cs" />
+    <Compile Include="DataManagement\Transaction.cs" />
+    <Compile Include="DependencyDemandBuilders\XmlProviderDemandBuilder.cs" />
+    <Compile Include="RepositoryReader.cs" />
+    <Compile Include="RepositoryReadWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HiveReadProvider.cs" />
+    <Compile Include="HiveReadWriteProvider.cs" />
+    <Compile Include="XmlToModelMapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Framework.Persistence\Umbraco.Framework.Persistence.csproj">
+      <Project>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</Project>
+      <Name>Umbraco.Framework.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

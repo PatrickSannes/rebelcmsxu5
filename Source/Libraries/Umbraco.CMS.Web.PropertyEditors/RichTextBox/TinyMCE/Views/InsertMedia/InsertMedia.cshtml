@@ -1,0 +1,185 @@
+﻿@inherits WebViewPage
+              
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Cms
+@using Umbraco.Cms.Web.Model.BackOffice
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Controllers
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Trees;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+
+@{
+    ViewBag.Title = "Insert media";
+    Layout = "~/Areas/Umbraco/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    @{
+        Html
+            .RequiresJs("jQuery/jquery.form.js", "Scripts", 20)
+            .RequiresJs("../Modules/TinyMCE/tiny_mce_popup.js", "Scripts", 100)
+            .RequiresJsResource(typeof(InsertMediaController), "Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Resources.InsertMedia.InsertMedia.js", 101);
+    }
+    
+    <style type="text/css">
+    
+        #tabs { z-index: 10; }
+        .panel { background-image: none !important; border: solid 1px #ccc; margin: 0 0 8px; z-index: 5; }
+        #content-tree, #media-tree { height: 267px; overflow: auto; }
+       
+    
+    </style>
+}
+
+<form action="" data-bind="submit: insert">
+
+    <div style="width:100%">
+        <div class="property-pane clearfix" style="float:left;width:195px;height:373px;">
+              @{
+                var additionaParameters = new Dictionary<string, object>();
+                additionaParameters.Add("DialogMode", true);
+                additionaParameters.Add("OnNodeClick", "Umbraco.Controls.TinyMCE.InsertMedia.onNodeClick");
+            }
+
+             @Html.RenderTree(
+                    new TreeRenderModel(
+                        Url.GetTreeUrl(
+                            "Index",
+                            new HiveId(CorePluginConstants.MediaTreeControllerId), 
+                            new Guid(CorePluginConstants.MediaTreeControllerId),
+                            additionaParameters.ToFormCollection()),
+                                     "media-tree") { ManuallyInitialize = false })
+        </div>
+        <div style="float:left;width:395px;margin-left:10px;">
+            <div class="property-pane clearfix" style="height:105px" id="media-preview">
+
+               <p>Please select an existing media item or choose a location to upload a new item to.</p>
+
+            </div>
+            <div class="property-pane clearfix" style="height:250px;overflow:hidden;overflow-y:scroll;">
+
+                <div id="media-params" style="display:none;">
+                    <div class="property-editor clearfix">
+                        <div class="property-editor-label">
+                            <label for="href">URL</label>
+                        </div>
+                        <div class="property-editor-control">
+                            <input type="hidden" id="localUrl" name="localUrl" data-bind="value: localUrl" />
+                            <input type="text" id="href" name="href" data-bind="value: href" />
+                        </div>
+                    </div>
+
+                    <div class="property-editor clearfix">
+                        <div class="property-editor-label">
+                            <label for="title">Title</label>
+                        </div>
+                        <div class="property-editor-control">
+                            <input type="text" id="title" name="title" data-bind="value: title" />
+                        </div>
+                    </div>
+      
+       
+                   <div id="params">
+    
+                   </div>
+
+               </div>
+
+                <div id="media-upload" class="property-pane clearfix upload" style="display:none;">
+                    
+                         <div class="property-editor clearfix">
+                            <div class="property-editor-label">
+                                <label>Media type</label>
+                            </div>
+                            <div class="property-editor-control">
+                               <select id="docTypeId" name="docTypeId">
+                               </select>
+                            </div>
+                        </div>
+                        <div class="property-editor clearfix">
+                            <div class="property-editor-label">
+                                <label>File</label>
+                            </div>
+                            <div class="property-editor-control">
+                               <input type="file" />
+                            </div>
+                        </div>
+                   
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script id="paramTemplate" type="text/x-jquery-tmpl">
+        <div class="property-editor clearfix">
+            <div class="property-editor-label">
+                <label for="${name}">${name}</label>
+            </div>
+            <div class="property-editor-control">
+                <input type="text" id="${name}" name="${name}" />
+            </div>
+        </div>
+    </script>
+
+    
+
+
+            <div class="property-pane clearfix upload" style="display:none;">
+                    
+                     <div class="property-editor clearfix">
+                        <div class="property-editor-label">
+                            <label>Media type</label>
+                        </div>
+                        <div class="property-editor-control">
+                           <select id="docTypeId" name="docTypeId">
+                           </select>
+                        </div>
+                    </div>
+                    <div class="property-editor clearfix">
+                        <div class="property-editor-label">
+                            <label>File</label>
+                        </div>
+                        <div class="property-editor-control">
+                           <input type="file" />
+                        </div>
+                    </div>
+                   
+                
+            </div>
+
+
+    <div class="button-bar" style="clear:both">
+        <input type="submit" id="insert" name="insert" value="Insert" /> or <a href="#" onclick="tinyMCEPopup.close();">Cancel</a>
+    </div>
+</form>
+
+<script type="text/javascript" language="javascript">
+
+    (function ($) {
+        $(document).ready(function () {
+            Umbraco.Controls.TinyMCE.InsertMedia.init({
+                ajaxNiceUrlUrl: '@Url.Action("NiceUrl", "Content")',
+                ajaxAllowsUploadUrl: '@Url.Action("AllowsUpload", "InsertMedia")',
+                ajaxPossibleMediaTypesUrl: '@Url.Action("GetPossibleMediaTypes", "InsertMedia")',
+                ajaxDisplayTemplateUrl: '@Url.Action("GetMediaMarkup", "InsertMedia")',
+                ajaxAdditionalParamsUrl: '@Url.Action("GetMediaParameters", "InsertMedia")',
+                ajaxPreviewUrl: '@Url.Action("GetMediaPreview", "InsertMedia")',
+                ajaxUploadHandlerUrl: '@Url.Action("Upload", "Media")',
+                ajaxIsChosenMediaItemValidUrl: '@Url.Action("IsChosenMediaItemValid", "InsertMedia")'
+            });
+        });
+    })(jQuery);
+
+</script>

@@ -1,0 +1,128 @@
+﻿@model FriendsChooseModel
+@using Umbraco.Framework
+@using Umbraco.Framework.Localization.Web.Mvc
+@using Localization.Showcase.Web.Models
+@{
+    ViewBag.Title = "Friends";       
+}
+
+<a href="@Url.Content("~/da-DK")">Dansk</a> |
+<a href="@Url.Content("~/en-US")">English</a> |
+<a href="@Url.Content("~/whatever")">The "whatever" language (custom logic only)</a><br /><br />
+
+<a href="?custom-languages=true">Toggle custom language logic</a> |
+<a href="?custom-languages=false">Toggle default language logic</a> 
+
+<h1>@Html.GetText("Header")</h1>
+
+<h3>@Html.GetText("Slogan")</h3>
+<i>(Slogan from JavaScript: <script>document.write(
+        Showcase.get("Slogan")
+);</script>)</i>
+
+<h2>Simple test</h2>
+<i>The text below will be missing in Danish unless you choose the custom language logic (link above) where English is a fallback language for Danish. <br />
+When texts are missing the DefaultTextManager's MissingTextHandler delegate is used to get the text to display</i>
+<div><b>@Html.GetText("MissingInDanish")</b></div>
+
+
+
+@*Localized label (See FriendsChooseModel.ChosenFriends)*@
+<h2>@Html.LabelFor(x => x.ChosenFriends)</h2>
+
+@*This demonstrates logic that is okay in code. It's two different features, thus not grammar related*@
+@if( Model.AddedFriends != null ) {
+    <div style="font-weight: bold; font-size: 1.5em;">
+    @(Model.AddedFriends.Count > 3 ? 
+        
+        Html.GetText("ConnectedMany", new {Count=Model.AddedFriends.Count, Link="<a href='/ShowFriends'>{#}</a>"}) : 
+        //In this case we don't use the formatted value to output the friend
+        Html.GetText("Connected", new {Friends = Model.AddedFriends.WrapList("Name", @<a href="/Show/@item.Reference.ID">@item.FormattedValue</a>)}))          
+    </div>
+    <script>document.write(
+        //The Showcase object is from _Layout.cshtml (actually, the controller Resources/JavaScript
+        Showcase.get("Connected", { Friends: ["This", "is", "JavaScript"] })
+    );</script>
+}
+<br />
+
+@Html.GetText("FriendRequirement", new { Required = FriendSettings.RequiredFriends })
+
+@*This one comes from the controller*@
+<div>@Html.ValidationMessage("")</div>
+
+<div style="font-style: italic">Client side validation: <span style="color:Red" id='friend-validation'></span> </div>
+
+<script>
+    $(function () {
+        //Here we write the missing number of friends to be checked with javascript
+        function validateFriends() {
+            var checked = $("input.friend-checker:checked").length;
+                        
+            var missing = @FriendSettings.RequiredFriends - checked;                        
+            $("#friend-validation").html(
+                 missing > 0 ?
+                    Showcase.get("RequiredFriendsError", {Missing: Showcase.wrap(missing, "<b>{#}</b>")}) : "");            
+        }
+        $("input.friend-checker").click(validateFriends);
+        validateFriends();
+    });
+</script>
+
+@using (Html.BeginForm())
+{
+
+    foreach (var friend in Model.Friends)
+    {
+        //The index syntax is to map the values to the dictionary of the model
+        var prefix = string.Format("ChosenFriends[{0}]", friend.ID);               
+        <div>
+            <input type="hidden" name="ChosenFriends.Index" value="@friend.ID" />
+            @Html.Hidden(prefix + ".Key", friend.ID)
+            <label>
+                @friend.Name                
+                @Html.CheckBox(prefix + ".Value", Model.ChosenFriends.ContainsKey(friend.ID), new {@class="friend-checker"})
+            </label>
+        </div>
+    }
+    
+    <h2>Validation messages</h2>
+    <div>[Required] @Html.TextBoxFor(x => x.RequiredString) @Html.ValidationMessageFor(x => x.RequiredString)</div>
+    <div>Custom [Required] @Html.TextBoxFor(x => x.CustomRequiredString) @Html.ValidationMessageFor(x => x.CustomRequiredString)</div>
+    <div>Custom [Range] and default [FormatException] @Html.TextBoxFor(x => x.CustomRangeInt) @Html.ValidationMessageFor(x => x.CustomRangeInt)</div>
+    
+    <div>
+        <input type="submit" value="OK" />
+    </div>       
+}
+
+<h2>Random number sample</h2>
+<div style="margin: 10px 0; font-size: 1.5em;">
+    @Html.GetText("Balance", new
+{
+    Balance = new Random().Next(-1000, 1000)
+        .Wrap(@<span style="color:@(item.Value < 0 ? "red" : "green")">@item.FormattedValue</span>)
+})
+    (Reload to change)
+</div>
+<div>
+    Javscript says "100.00" in the selected language:
+    <script>document.write(
+            Showcase.get("Balance", { Balance: 100 })
+    );</script>
+</div>
+
+<div>
+    Some raw numbers @Html.GetText("Enum", new { Values = new[] { 10, 50, 80 } })<br />
+    Some numbers with wrapper and default format @Html.GetText("Enum", new { _0 = new[] { 10, 50, 80 }.WrapList("<b>{#}</b>").WithDefaultFormat("N2") })
+</div>
+
+
+<h2>Plugin assembly</h2>
+
+@{var test = new TestPlugin.FancyStuff();}
+<div><b>@Html.Raw(test.SayHello())</b></div>
+Tulips:
+<img width="200" src="@test.GetTulips()" /><br />
+More tulips(?):
+<img width="200" src="@test.GetMoreTulips()" />

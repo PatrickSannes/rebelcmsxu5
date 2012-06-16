@@ -1,0 +1,23 @@
+﻿@inherits WebViewPage<System.Drawing.Size>
+
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+
+@{ 
+    Html
+        .RequiresCssResource(typeof(RichTextBoxEditor), "Umbraco.Cms.Web.PropertyEditors.RichTextBox.Resources.SizeInputField.css");
+}
+
+<div class="rtb-size">
+    @Html.TextBoxFor(x => Model.Width) x @Html.TextBoxFor(x => Model.Height)
+</div>

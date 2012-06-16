@@ -1,0 +1,106 @@
+﻿@using Umbraco.Foundation.Web.Localization.JavaScript
+@using Umbraco.Foundation.Web.Localization.Mvc
+@using Umbraco.Foundation.Localization.Processing.ParameterValues
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+
+    @foreach (var src in JavaScriptWriter.ScriptDependencies) {
+        <script type="text/javascript" src="@src"></script>
+    }
+</head>
+
+
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                <h1>My MVC Application</h1>
+            </div>
+
+            <div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>
+
+            <div id="menucontainer">
+
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    </ul>
+
+            </div>
+        </div>
+
+        <div id="main">            
+
+            <img width="30" src="@ResourceHelper.GetUrl("Plugin.Tulips1", type: typeof(Sandbox.Localization.PluginTest.GetText))" />
+            <img width="30" src="@ResourceHelper.GetUrl("Plugin.Tulips2", type: typeof(Sandbox.Localization.PluginTest.GetText))" />
+
+            <img width="30" src="@ResourceHelper.GetUrl("Koala1")" />
+            <img width="30" src="@ResourceHelper.GetUrl("Koala2")" />
+
+            @Html.GetText("NotFriendList", new {Users = new[] {"John", "Abe", "Laurence"}.WrapList(@<a style="color: red" href='#'>@item.Value</a>)})<br />            
+
+            @Html.GetText("Friends", new {User = "John".Wrap("<a href='#'>{#}</a>")})
+            
+            <br />            
+
+            @Html.GetText("FriendList", new {Users = new[] {"John", "Abe", "Laurence"}.WrapList(@<a href='#'>@item.Value</a>)})<br />            
+            
+            @Html.GetText("ManyFriends", new {Count = 10.Wrap("<span style='color:green'>{#}</span>"), Link="<a href='#'>{#}</a>"})<br />            
+            @Html.GetText("ManyFriends", new {Count = 10.Wrap(@<span style="color:green">@item.FormattedValue</span>), Link="<a href='#'>{#}</a>"})<br />
+            @Html.GetText("ManyFriends", new {Count = 50.Wrap(@<span style="color:green">@item.FormattedValue</span>), Link="<a href='#'>{#}</a>"})<br />
+
+            @Html.GetText("Echo", new { Value = "<b>Bold</b>".Unencoded()})<br />
+
+
+
+
+            @{var w = new Umbraco.Foundation.Web.Localization.JavaScript.JavaScriptWriter("L10n");}
+            <script type="text/javascript">          
+            @(w.GetScript(L10n.Current, "L10n", L10n.Current.GetCurrentLanguage(),  "Sandbox.Localization.WebTest", null))          
+                                                
+                       
+                   //alert(L10n.get("Validation.FormatException", {"CommonTypeKey": "Validation.Types.Integer", CommonTypeName: "Integer"})); 
+                   alert(L10n.get("EnumTest", {Values: ["A", "B", "C"]}));
+//                   alert(L10n.get("Friends", {User: L10n.wrapFormat("Test", "<b>{#}</b>")}));
+//                   alert(L10n.get("Friends", {User: L10n.unencoded("<b>Test</b>")}));
+//                   alert(L10n.get("Friends", {User: "<b>Test</b>"}));
+//                   alert(L10n.get("ManyFriends", {Link: "<a href='#'>{#}</a>", Count: L10n.wrapFormat(9, "<b>{#}</b>")}));
+            
+//                alert(L10n.get("JsTest1", {Username: "John"}));
+//                alert(L10n.get("JsTest4"));
+//                alert(L10n.get("JsTest4", {Username: "John", Number:1}));
+//                alert(L10n.get("JsTest5", {Username: "John", Number:10}));
+//                alert(L10n.get("JsTest6", {Username: "John", Number:8, BigNumber: 1000}));                
+//                alert(L10n.get("Claus", {Username: "Claus", Count: 1, NameFormat: "<span>{#}</span>"}));                
+            </script>
+
+            @Html.GetText("Claus" /*@L10n @da-DK Text */, 
+                new { Username = "Claus", Count = 1, NameFormat = "<span>{#}</span>" })
+
+            <div>
+                Plugin.Key gives "@Html.GetText("Plugin.Key", new { Count = 10 })" in this context
+            </div>
+            
+             
+             <div>
+                Text from another assembly (i.e. another namespace): 
+                "@Html.GetText("Plugin.Key", new { Count = 10 }, type: typeof(Sandbox.Localization.PluginTest.GetText))"
+            </div>
+                                     
+
+            @Sandbox.Localization.PluginTest.GetText.Get()
+
+            @RenderBody()
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

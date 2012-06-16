@@ -1,0 +1,51 @@
+﻿@inherits WebViewPage
+              
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Cms
+@using Umbraco.Cms.Web.Model.BackOffice
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Controllers
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Trees;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+
+@{
+    ViewBag.Title = "Insert/edit anchor";
+    Layout = "~/Areas/Umbraco/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    @{
+        Html
+            .RequiresJs("../Modules/TinyMCE/tiny_mce_popup.js", "Scripts", 100)
+            .RequiresJsResource(typeof(InsertAnchorController), "Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Resources.InsertAnchor.InsertAnchor.js", 101);
+    }
+}
+
+<form action="" onsubmit="AnchorDialog.update();return false;">
+    <div class="property-pane clearfix">
+
+        <div class="property-editor clearfix">
+            <div class="property-editor-label">
+                <label for="name">Name</label>
+            </div>
+            <div class="property-editor-control">
+                <input type="text" id="name" name="name" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="button-bar">
+        <input type="submit" id="insert" name="insert" value="Insert" /> or <a href="#" onclick="tinyMCEPopup.close();">Cancel</a>
+    </div>
+</form>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Localizations>
+  <Text Key="TestEntry">
+    <Translation Language="en-US">Hello</Translation>    
+  </Text>
+
+  <Text Key="Plugin.OtherKey">
+    <Translation Language="en-US">From test</Translation>
+  </Text>
+
+  <Text Key="DefaultExpressionParser.SyntaxError.UnexpectedToken">
+    <Translation Language="en-US">Override</Translation>
+  </Text>
+
+  <Text Key="MultiLanguage">
+    <Translation Language="da-DK, en-US">Multi</Translation>
+  </Text>
+</Localizations>

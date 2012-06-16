@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41ED84AF-AAB1-4DF9-99AA-6EB242BFC251}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Framework.EntityGraph.Domain</RootNamespace>
+    <AssemblyName>Umbraco.Framework.EntityGraph.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>False</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>True</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsContainerAnalysis>True</CodeContractsContainerAnalysis>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>True</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\Umbraco.Framework.EntityGraph.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Umbraco.Framework.EntityGraph.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SolutionInfo.UmbracoFramework.cs">
+      <Link>Properties\SolutionInfo.UmbracoFramework.cs</Link>
+    </Compile>
+    <Compile Include="EntityFactory.cs" />
+    <Compile Include="Entity\Attribution\MetaData\AttributeDefinition.cs" />
+    <Compile Include="Entity\Attribution\MetaData\AttributeGroupDefinition.cs" />
+    <Compile Include="Entity\Attribution\MetaData\AttributeTypeDefinition.cs" />
+    <Compile Include="Entity\Attribution\MetaData\AttributionSchemaDefinition.cs" />
+    <Compile Include="Entity\Attribution\MetaData\StringSerializationType.cs" />
+    <Compile Include="Entity\Attribution\TypedAttribute.cs" />
+    <Compile Include="Entity\Attribution\TypedAttributeName.cs" />
+    <Compile Include="Entity\Dynamic\DynamicEntity.cs" />
+    <Compile Include="Entity\Dynamic\DynamicTypedEntity.cs" />
+    <Compile Include="Entity\EntityPath.cs" />
+    <Compile Include="Entity\EntityStatus.cs" />
+    <Compile Include="Entity\Graph\EntityAssociation.cs" />
+    <Compile Include="Entity\Graph\ITypedEntityGraphT.cs" />
+    <Compile Include="Entity\Graph\MetaData\EntityAssociationType.cs" />
+    <Compile Include="Entity\Graph\MetaData\EntityGraphSchema.cs" />
+    <Compile Include="Entity\Graph\MetaData\EntityTypeDefinition.cs" />
+    <Compile Include="Entity\Graph\TypedEntityVertex.cs" />
+    <Compile Include="Entity\IEntityCollectionExtenions.cs">
+      <DependentUpon>IEntityCollectionOfT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TypedEntity.cs" />
+    <Compile Include="Extensions\IEntityExtensions.cs" />
+    <Compile Include="Entity\Attribution\AttributeGroupCollection.cs" />
+    <Compile Include="Entity\Graph\EntityAssociationCollection.cs" />
+    <Compile Include="Entity\Attribution\IAttributeGroupCollection.cs" />
+    <Compile Include="Entity\Attribution\TypedAttributeCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entity\Attribution\IAttributeGroup.cs" />
+    <Compile Include="Entity\Attribution\MetaData\IAttributeDefinition.cs" />
+    <Compile Include="Entity\Attribution\MetaData\IAttributeGroupDefinition.cs" />
+    <Compile Include="Entity\Attribution\MetaData\IAttributeSerializationDefinition.cs" />
+    <Compile Include="ObjectModel\EntityGraphOfT.cs" />
+    <Compile Include="ObjectModel\EntityCollectionOfT.cs" />
+    <Compile Include="Entity\Graph\IEntityGraphOfT.cs" />
+    <Compile Include="Entity\IEntityCollectionOfT.cs" />
+    <Compile Include="Entity\Graph\ITypedEntityAdaptorGraph.cs" />
+    <Compile Include="Entity\Graph\ITypedEntityVertexAdaptor.cs" />
+    <Compile Include="Entity\Graph\ITypedEntityGraph.cs" />
+    <Compile Include="Entity\Graph\ITypedEntityVertex.cs" />
+    <Compile Include="Entity\Graph\IEntityVertex.cs" />
+    <Compile Include="Entity\Attribution\MetaData\IAttributionSchemaDefinition.cs" />
+    <Compile Include="Entity\Attribution\MetaData\AttributionSchemaDefinitionCodeContract.cs">
+      <DependentUpon>IAttributionSchemaDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Attribution\MetaData\IAttributeTypeDefinitionCodeContract.cs">
+      <DependentUpon>IAttributeTypeDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\IEntityCodeContract.cs">
+      <DependentUpon>IEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\IEntityCollection.cs" />
+    <Compile Include="Entity\Graph\MetaData\IEntityTypeDefinition.cs" />
+    <Compile Include="Entity\Graph\MetaData\IEntityGraphSchema.cs" />
+    <Compile Include="Entity\ITypedEntity.cs" />
+    <Compile Include="Entity\ITypedEntityCodeContract.cs">
+      <DependentUpon>ITypedEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Graph\IVertex.cs" />
+    <Compile Include="Entity\Graph\MetaData\IVertexRule.cs" />
+    <Compile Include="Entity\Graph\MetaData\IVertexRuleCollection.cs" />
+    <Compile Include="ObjectModel\LazyMappedIdentifierCollection.cs" />
+    <Compile Include="ObjectModel\TypedEntityCollectionT.cs" />
+    <Compile Include="ObjectModel\TypedEntityGraphT.cs" />
+    <Compile Include="Versioning\BranchDto.cs" />
+    <Compile Include="Versioning\ChangesetDto.cs" />
+    <Compile Include="Versioning\IBranch.cs" />
+    <Compile Include="Versioning\IBranchCodeContract.cs">
+      <DependentUpon>IBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Versioning\IChangeset.cs" />
+    <Compile Include="Entity\IEntity.cs" />
+    <Compile Include="Entity\Graph\IEntityAssociation.cs" />
+    <Compile Include="Entity\Graph\IEntityAssociationCollection.cs" />
+    <Compile Include="Entity\Graph\MetaData\IEntityAssociationType.cs" />
+    <Compile Include="Entity\Graph\IEntityGraph.cs" />
+    <Compile Include="Entity\IEntityStatus.cs" />
+    <Compile Include="Entity\Graph\IEntityAdaptorGraph.cs" />
+    <Compile Include="Entity\Graph\IEntityAdaptorVertex.cs" />
+    <Compile Include="Entity\IEntityPath.cs" />
+    <Compile Include="Entity\Attribution\MetaData\IAttributeTypeDefinition.cs" />
+    <Compile Include="Exceptions\InvalidEntityIdentifierException.cs" />
+    <Compile Include="Entity\Attribution\ITypedAttribute.cs" />
+    <Compile Include="Entity\Attribution\ITypedAttributeCollection.cs" />
+    <Compile Include="Entity\Attribution\ITypedAttributeName.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Versioning\IChangesetCodeContract.cs">
+      <DependentUpon>IChangeset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Versioning\IRevisionData.cs" />
+    <Compile Include="Versioning\IRevisionDataCodeContract.cs">
+      <DependentUpon>IRevisionData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Versioning\RevisionDataDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomDictionary.xml" />
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstracts\" />
+    <Folder Include="ImplTemp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

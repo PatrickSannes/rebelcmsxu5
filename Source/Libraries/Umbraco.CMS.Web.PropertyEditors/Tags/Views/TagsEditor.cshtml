@@ -1,0 +1,36 @@
+﻿@inherits WebViewPage<Umbraco.Cms.Web.PropertyEditors.Tags.TagsEditorModel>
+              
+@using Umbraco.Cms.Web;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using Umbraco.Cms.Web.PropertyEditors.Tags
+
+@{
+    Html
+        .RequiresCssResource(typeof(TagsEditor), "Umbraco.Cms.Web.PropertyEditors.Tags.Resources.jquery.tagsinput.css", 100)
+        .RequiresJsResource(typeof(TagsEditor), "Umbraco.Cms.Web.PropertyEditors.Tags.Resources.jquery.tagsinput.js", 100);
+}
+
+<script type="text/javascript">
+
+    (function ($) {
+        $(document).ready(function () {
+            $('#@Html.IdFor(x => Model.Value)').tagsInput({
+                'height': '100px',
+                'width': '400px',
+                'unique': true, 
+                'defaultText': 'add a tag'
+            });
+        });
+    })(jQuery);
+
+</script>
+
+@Html.TextBoxFor(x => Model.Value, new { @class = "tags" })

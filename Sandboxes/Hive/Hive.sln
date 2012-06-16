@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Hive.BootStrappers.AutoFac", "Sandbox.Hive.BootStrappers.AutoFac\Sandbox.Hive.BootStrappers.AutoFac.csproj", "{124CF288-DD01-4832-9745-BAE3CB4A052F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Hive.Tests", "Sandbox.Hive.Tests\Sandbox.Hive.Tests.csproj", "{C23F1D85-D0BA-4517-9BA8-2179E05B7806}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{80FDC13D-ED8B-48A6-BB9E-7808222DDD62}"
+	ProjectSection(SolutionItems) = preProject
+		Hive.vsmdi = Hive.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.PersistenceProviders.NHibernate", "Sandbox.PersistenceProviders.NHibernate\Sandbox.PersistenceProviders.NHibernate.csproj", "{7EE6C7BC-FF29-42CE-9AEA-4207452DD79B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.PersistenceProviders.MockedInMemory", "Sandbox.PersistenceProviders.MockedInMemory\Sandbox.PersistenceProviders.MockedInMemory.csproj", "{1635B93A-00B1-4FEF-922A-F696FB5B82A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Hive.Domain", "Sandbox.Hive.Domain\Sandbox.Hive.Domain.csproj", "{4FBFC07A-FBDA-4CA5-A432-C2395CFF5A52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DC184A8B-1DAF-4DD3-85D9-5013583523E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.HivePersistenceProviders.NHibernate", "Sandbox.HivePersistenceProviders.NHibernate\Sandbox.HivePersistenceProviders.NHibernate.csproj", "{589505B0-3048-4900-8B99-85215B507B3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Hive.Foundation", "Sandbox.Hive.Foundation\Sandbox.Hive.Foundation.csproj", "{2146902D-6956-4F6B-BC5E-A8D442FD5BFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{53C43FB4-8475-4E54-AE1D-05E44996865D}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Hive.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{124CF288-DD01-4832-9745-BAE3CB4A052F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{124CF288-DD01-4832-9745-BAE3CB4A052F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{124CF288-DD01-4832-9745-BAE3CB4A052F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{124CF288-DD01-4832-9745-BAE3CB4A052F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C23F1D85-D0BA-4517-9BA8-2179E05B7806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C23F1D85-D0BA-4517-9BA8-2179E05B7806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C23F1D85-D0BA-4517-9BA8-2179E05B7806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C23F1D85-D0BA-4517-9BA8-2179E05B7806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE6C7BC-FF29-42CE-9AEA-4207452DD79B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE6C7BC-FF29-42CE-9AEA-4207452DD79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE6C7BC-FF29-42CE-9AEA-4207452DD79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE6C7BC-FF29-42CE-9AEA-4207452DD79B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1635B93A-00B1-4FEF-922A-F696FB5B82A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1635B93A-00B1-4FEF-922A-F696FB5B82A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1635B93A-00B1-4FEF-922A-F696FB5B82A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1635B93A-00B1-4FEF-922A-F696FB5B82A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBFC07A-FBDA-4CA5-A432-C2395CFF5A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBFC07A-FBDA-4CA5-A432-C2395CFF5A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBFC07A-FBDA-4CA5-A432-C2395CFF5A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBFC07A-FBDA-4CA5-A432-C2395CFF5A52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589505B0-3048-4900-8B99-85215B507B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589505B0-3048-4900-8B99-85215B507B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589505B0-3048-4900-8B99-85215B507B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589505B0-3048-4900-8B99-85215B507B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2146902D-6956-4F6B-BC5E-A8D442FD5BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2146902D-6956-4F6B-BC5E-A8D442FD5BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2146902D-6956-4F6B-BC5E-A8D442FD5BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2146902D-6956-4F6B-BC5E-A8D442FD5BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C43FB4-8475-4E54-AE1D-05E44996865D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C43FB4-8475-4E54-AE1D-05E44996865D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C43FB4-8475-4E54-AE1D-05E44996865D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C43FB4-8475-4E54-AE1D-05E44996865D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC184A8B-1DAF-4DD3-85D9-5013583523E5} = {80FDC13D-ED8B-48A6-BB9E-7808222DDD62}
+		{C23F1D85-D0BA-4517-9BA8-2179E05B7806} = {DC184A8B-1DAF-4DD3-85D9-5013583523E5}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.AttributedNode">
+    <Position X="10.5" Y="6.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>RenderViewModel\AttributedNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.AttributedNodeWithAlias">
+    <Position X="12.75" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RenderViewModel\AttributedNodeWithAlias.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.ClayConversionHelper" Collapsed="true">
+    <Position X="15.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RenderViewModel\ClayConversionHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.Content">
+    <Position X="9.75" Y="8.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>RenderViewModel\Content.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.Node">
+    <Position X="7.5" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACICAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>RenderViewModel\Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.Template">
+    <Position X="12.75" Y="11" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RenderViewModel\Template.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.Field">
+    <Position X="5.75" Y="8.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAIAAAAAgAAAAAAA=</HashCode>
+      <FileName>RenderViewModel\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.KeyedFieldValue">
+    <Position X="5.75" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>RenderViewModel\KeyedFieldValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.NodeWithAlias">
+    <Position X="5.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RenderViewModel\NodeWithAlias.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.ContentType">
+    <Position X="3.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>RenderViewModel\ContentType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Cms.Domain.RenderViewModel.FieldDefinition">
+    <Position X="1.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>RenderViewModel\FieldDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Umbraco.Cms.Domain.RenderViewModel.IRoutableItem" Collapsed="true">
+    <Position X="15.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAAAAAAAAAACAAAAAAIAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>RenderViewModel\IRoutableItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

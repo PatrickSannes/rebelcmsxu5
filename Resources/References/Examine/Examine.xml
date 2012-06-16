@@ -1,0 +1,2335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Examine</name>
+    </assembly>
+    <members>
+        <member name="T:Examine.LuceneEngine.LuceneExtensions">
+            <summary>
+            Extension methods for Lucene
+            </summary>
+        </member>
+        <member name="T:Examine.LuceneEngine.SearchCriteria.LuceneQuery">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Examine.SearchCriteria.IQuery">
+            <summary>
+            Defines the query methods for the fluent search API
+            </summary>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.RawQuery(System.String)">
+            <summary>
+            Passes a text string which is preformatted for the underlying search API. Examine will not modify this
+            </summary>
+            <remarks>
+            This allows a developer to completely bypass and Examine logic and comprise their own query text which they are passing in.
+            It means that if the search is too complex to achieve with the fluent API, or too dynamic to achieve with a static language
+            the provider can still handle it.
+            </remarks>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Id(System.String)">
+            <summary>
+            Query on the id
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Field(System.String,System.String)">
+            <summary>
+            Query on the specified field
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="fieldValue">The field value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Field(System.String,Examine.SearchCriteria.IExamineValue)">
+            <summary>
+            Query on the specified field
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="fieldValue">The field value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Query on a specified field using a date range. Includes upper and lower bounds
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.DateTime,System.DateTime,System.Boolean,System.Boolean)">
+            <summary>
+            Query on a specified field using a date range using a default <see cref="T:Examine.SearchCriteria.DateResolution"/> of DateResolution.Millisecond
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <param name="includeLower">if set to <c>true</c> the lower.</param>
+            <param name="includeUpper">if set to <c>true</c> the upper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.DateTime,System.DateTime,System.Boolean,System.Boolean,Examine.SearchCriteria.DateResolution)">
+            <summary>
+            Query on a specified field using a date range using the specified date resolution
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <param name="resolution">The resolution of the date field.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.Int32,System.Int32)">
+            <summary>
+            Query on a specified field using an int range
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Query on a specified field using an int range. Includes upper and lower bounds
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.Double,System.Double)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.Double,System.Double,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.Single,System.Single)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.Single,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.Int64,System.Int64)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.Int64,System.Int64,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.String,System.String)">
+            <summary>
+            Query on a specified field using a string range. Includes upper and lower bounds
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.Range(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Query on a specified field using a string range
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="lower">The lower.</param>
+            <param name="upper">The upper.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.GroupedAnd(System.Collections.Generic.IEnumerable{System.String},System.String[])">
+            <summary>
+            Queries multiple fields with each being an And boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.GroupedAnd(System.Collections.Generic.IEnumerable{System.String},Examine.SearchCriteria.IExamineValue[])">
+            <summary>
+            Queries multiple fields with each being an And boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.GroupedOr(System.Collections.Generic.IEnumerable{System.String},System.String[])">
+            <summary>
+            Queries multiple fields with each being an Or boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.GroupedOr(System.Collections.Generic.IEnumerable{System.String},Examine.SearchCriteria.IExamineValue[])">
+            <summary>
+            Queries multiple fields with each being an Or boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.GroupedNot(System.Collections.Generic.IEnumerable{System.String},System.String[])">
+            <summary>
+            Queries multiple fields with each being an Not boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.GroupedNot(System.Collections.Generic.IEnumerable{System.String},Examine.SearchCriteria.IExamineValue[])">
+            <summary>
+            Queries multiple fields with each being an Not boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.GroupedFlexible(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Examine.SearchCriteria.BooleanOperation},System.String[])">
+            <summary>
+            Queries on multiple fields with their inclusions customly defined
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <param name="operations">The operations.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.GroupedFlexible(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Examine.SearchCriteria.BooleanOperation},Examine.SearchCriteria.IExamineValue[])">
+            <summary>
+            Queries on multiple fields with their inclusions customly defined
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <param name="operations">The operations.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.OrderBy(System.String[])">
+            <summary>
+            Orders the results by the specified fields
+            </summary>
+            <param name="fieldNames">The field names.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IQuery.OrderByDescending(System.String[])">
+            <summary>
+            Orders the results by the specified fields in a descending order
+            </summary>
+            <param name="fieldNames">The field names.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.#ctor(Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria,Lucene.Net.Search.BooleanClause.Occur)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.LuceneEngine.SearchCriteria.LuceneQuery"/> class.
+            </summary>
+            <param name="search">The search.</param>
+            <param name="occurance">The occurance.</param>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Id(System.String)">
+            <summary>
+            Query on the id
+            </summary>
+            <param name="id">The id.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Field(System.String,System.String)">
+            <summary>
+            Query on the specified field
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="fieldValue">The field value.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.DateTime,System.DateTime,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns>
+            A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended
+            </returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.DateTime,System.DateTime,System.Boolean,System.Boolean,Examine.SearchCriteria.DateResolution)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <param name="resolution">The resolution.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.Int32,System.Int32)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.Double,System.Double)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.Double,System.Double,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.Single,System.Single)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.Single,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.Int64,System.Int64)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.Int64,System.Int64,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.String,System.String)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Range(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.Field(System.String,Examine.SearchCriteria.IExamineValue)">
+            <summary>
+            Query on the specified field
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="fieldValue">The field value.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.GroupedAnd(System.Collections.Generic.IEnumerable{System.String},System.String[])">
+            <summary>
+            Queries multiple fields with each being an And boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.GroupedAnd(System.Collections.Generic.IEnumerable{System.String},Examine.SearchCriteria.IExamineValue[])">
+            <summary>
+            Queries multiple fields with each being an And boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.GroupedOr(System.Collections.Generic.IEnumerable{System.String},System.String[])">
+            <summary>
+            Queries multiple fields with each being an Or boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.GroupedOr(System.Collections.Generic.IEnumerable{System.String},Examine.SearchCriteria.IExamineValue[])">
+            <summary>
+            Queries multiple fields with each being an Or boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.GroupedNot(System.Collections.Generic.IEnumerable{System.String},System.String[])">
+            <summary>
+            Queries multiple fields with each being an Not boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.GroupedNot(System.Collections.Generic.IEnumerable{System.String},Examine.SearchCriteria.IExamineValue[])">
+            <summary>
+            Queries multiple fields with each being an Not boolean operation
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="query">The query.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.GroupedFlexible(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Examine.SearchCriteria.BooleanOperation},System.String[])">
+            <summary>
+            Queries on multiple fields with their inclusions customly defined
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="operations">The operations.</param>
+            <param name="query">The query.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.GroupedFlexible(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Examine.SearchCriteria.BooleanOperation},Examine.SearchCriteria.IExamineValue[])">
+            <summary>
+            Queries on multiple fields with their inclusions customly defined
+            </summary>
+            <param name="fields">The fields.</param>
+            <param name="operations">The operations.</param>
+            <param name="query">The query.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.OrderBy(System.String[])">
+            <summary>
+            Orders the results by the specified fields
+            </summary>
+            <param name="fieldNames">The field names.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneQuery.OrderByDescending(System.String[])">
+            <summary>
+            Orders the results by the specified fields in a descending order
+            </summary>
+            <param name="fieldNames">The field names.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="T:Examine.IndexItem">
+            <summary>
+            Represents an item going into the index
+            </summary>
+        </member>
+        <member name="M:Examine.IndexItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.IndexItem"/> class.
+            </summary>
+        </member>
+        <member name="P:Examine.IndexItem.Fields">
+            <summary>
+            Gets the fields.
+            </summary>
+        </member>
+        <member name="P:Examine.IndexItem.Id">
+            <summary>
+            Gets the id.
+            </summary>
+        </member>
+        <member name="P:Examine.IndexItem.ItemCategory">
+            <summary>
+            Gets the type of the item.
+            </summary>
+            <value>
+            The type of the item.
+            </value>
+        </member>
+        <member name="T:Examine.StringExtensions">
+            <summary>
+             String extensions
+            </summary>
+        </member>
+        <member name="M:Examine.StringExtensions.RemoveStopWords(System.String)">
+            <summary>
+             Removes stop words from the text if not contained within a phrase
+            </summary>
+            <param name="searchText"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Examine.IndexingErrorEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Examine.IndexingErrorEventArgs.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.IndexingErrorEventArgs"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="id">The id.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="P:Examine.IndexingErrorEventArgs.InnerException">
+            <summary>
+            Gets the inner exception.
+            </summary>
+        </member>
+        <member name="P:Examine.IndexingErrorEventArgs.Message">
+            <summary>
+            Gets the message.
+            </summary>
+        </member>
+        <member name="P:Examine.IndexingErrorEventArgs.Id">
+            <summary>
+            Gets the id.
+            </summary>
+        </member>
+        <member name="T:Examine.Providers.BaseSearchProvider">
+            <summary>
+             Abstract search provider object
+            </summary>
+        </member>
+        <member name="T:Examine.ISearcher">
+            <summary>
+            An interface representing an Examine Searcher
+            </summary>
+        </member>
+        <member name="M:Examine.ISearcher.Search(System.String,System.Boolean)">
+            <summary>
+            Searches the specified search text in all fields of the index
+            </summary>
+            <param name="searchText">The search text.</param>
+            <param name="useWildcards">if set to <c>true</c> the search will use wildcards.</param>
+            <returns>Search Results</returns>
+        </member>
+        <member name="M:Examine.ISearcher.Search(Examine.SearchCriteria.IQuery)">
+            <summary>
+            Searches using the specified search query parameters
+            </summary>
+            <param name="searchParameters">The search parameters.</param>
+            <returns>Search Results</returns>
+        </member>
+        <member name="M:Examine.ISearcher.CreateSearchCriteria">
+            <summary>
+            Creates a search criteria instance as required by the implementation
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.Providers.BaseSearchProvider.Search(System.String,System.Boolean)">
+            <summary>
+            Simple search method which should default to searching content nodes
+            </summary>
+            <param name="searchText"></param>
+            <param name="useWildcards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.Providers.BaseSearchProvider.Search(Examine.SearchCriteria.IQuery)">
+            <summary>
+            Searches the data source using the Examine Fluent API
+            </summary>
+            <param name="searchParams">The fluent API search.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.Providers.BaseSearchProvider.CreateSearchCriteria">
+            <summary>
+            Creates an instance of SearchCriteria for the provider
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.Providers.BaseSearchProvider.Dispose">
+            <summary>
+            When the object is disposed, all data should be written
+            </summary>
+        </member>
+        <member name="M:Examine.Providers.BaseSearchProvider.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:Examine.LuceneEngine.FieldIndexTypes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.AllHitsCollector.GetDocId(System.Int32)">
+            <summary>
+            Gets the doc id at a specified index
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.AllHitsCollector.GetDocScore(System.Int32)">
+            <summary>
+            Gets the doc score for a doc at a specified index
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Examine.ItemField">
+            <summary>
+            Represents a field in an index
+            </summary>
+        </member>
+        <member name="M:Examine.ItemField.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.ItemField"/> class.
+            </summary>
+        </member>
+        <member name="M:Examine.ItemField.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.ItemField"/> class.
+            </summary>
+            <param name="fieldValue">The field value.</param>
+        </member>
+        <member name="P:Examine.ItemField.FieldValue">
+            <summary>
+            Gets or sets the field value.
+            </summary>
+            <value>
+            The field value.
+            </value>
+        </member>
+        <member name="P:Examine.ItemField.DataType">
+            <summary>
+            Gets or sets the type of the data.
+            </summary>
+            <value>
+            The type of the data.
+            </value>
+        </member>
+        <member name="P:Examine.ItemField.EnableSorting">
+            <summary>
+            Gets or sets a value indicating whether [enable sorting].
+            </summary>
+            <value>
+              <c>true</c> if [enable sorting]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Examine.LuceneEngine.SearchResults">
+            <summary>
+            An implementation of the search results returned from Lucene.Net
+            </summary>
+        </member>
+        <member name="M:Examine.ISearchResults.Skip(System.Int32)">
+            <summary>
+            Skips the specified skip.
+            </summary>
+            <param name="skip">The skip.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Examine.ISearchResults.TotalItemCount">
+            <summary>
+            Gets the total item count.
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchResults.Empty">
+            <summary>
+             Returns an empty search result
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Examine.LuceneEngine.SearchResults.Docs">
+            <summary>
+            Internal cache of search results
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchResults.CreateSearchResult(Lucene.Net.Documents.Document,System.Single)">
+            <summary>
+            Creates the search result from a <see cref="T:Lucene.Net.Documents.Document"/>
+            </summary>
+            <param name="doc">The doc to convert.</param>
+            <param name="score">The score.</param>
+            <returns>A populated search result object</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchResults.Skip(System.Int32)">
+            <summary>
+            Skips to a particular point in the search results.
+            </summary>
+            <remarks>
+            This allows for lazy loading of the results paging. We don't go into Lucene until we have to.
+            </remarks>
+            <param name="skip">The number of items in the results to skip.</param>
+            <returns>A collection of the search results</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchResults.GetEnumerator">
+            <summary>
+            Gets the enumerator starting at position 0
+            </summary>
+            <returns>A collection of the search results</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchResults.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="P:Examine.LuceneEngine.SearchResults.LuceneSearcher">
+            <summary>
+            Exposes the internal Lucene searcher
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.SearchResults.LuceneQuery">
+            <summary>
+            Exposes the internal lucene query to run the search
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.SearchResults.TotalItemCount">
+            <summary>
+            Gets the total number of results for the search
+            </summary>
+            <value>The total items from the search.</value>
+        </member>
+        <member name="T:Examine.LuceneEngine.Providers.LuceneIndexer">
+            <summary>
+             Abstract object containing all of the logic used to use Lucene as an indexer
+            </summary>
+        </member>
+        <member name="T:Examine.Providers.BaseIndexProvider">
+            <summary>
+            Base class for an Examine Index Provider. You must implement this class to create an IndexProvider
+            </summary>
+        </member>
+        <member name="T:Examine.IIndexer">
+            <summary>
+            Interface to represent an Examine Indexer
+            </summary>
+        </member>
+        <member name="M:Examine.IIndexer.PerformIndexing(Examine.IndexOperation[])">
+            <summary>
+            Forces a particular XML node to be reindexed
+            </summary>
+            <param name="items">item to reindex</param>
+        </member>
+        <member name="M:Examine.Providers.BaseIndexProvider.PerformIndexing(Examine.IndexOperation[])">
+            <summary>
+            Forces a particular XML node to be reindexed
+            </summary>
+            <param name="items">XML node to reindex</param>
+        </member>
+        <member name="M:Examine.Providers.BaseIndexProvider.OnIndexingError(Examine.IndexingErrorEventArgs)">
+            <summary>
+            Raises the <see cref="E:IndexingError"/> event.
+            </summary>
+            <param name="e">The <see cref="T:Examine.IndexingErrorEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Examine.Providers.BaseIndexProvider.OnNodeIndexed(Examine.IndexedNodeEventArgs)">
+            <summary>
+            Raises the <see cref="E:NodeIndexed"/> event.
+            </summary>
+            <param name="e">The <see cref="T:Examine.IndexedNodeEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Examine.Providers.BaseIndexProvider.OnNodeIndexing(Examine.IndexingNodeEventArgs)">
+            <summary>
+            Raises the <see cref="E:NodeIndexing"/> event.
+            </summary>
+            <param name="e">The <see cref="T:Examine.IndexingNodeEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Examine.Providers.BaseIndexProvider.OnIndexDeleted(Examine.DeleteIndexEventArgs)">
+            <summary>
+            Raises the <see cref="E:IndexDeleted"/> event.
+            </summary>
+            <param name="e">The <see cref="T:Examine.DeleteIndexEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Examine.Providers.BaseIndexProvider.OnNodesIndexed(Examine.IndexedNodesEventArgs)">
+            <summary>
+            Raises the <see cref="E:NodesIndexed"/> event.
+            </summary>
+            <param name="e">The <see cref="T:Examine.IndexedNodesEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Examine.Providers.BaseIndexProvider.Dispose">
+            <summary>
+            When the object is disposed, all data should be written
+            </summary>
+        </member>
+        <member name="M:Examine.Providers.BaseIndexProvider.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="E:Examine.Providers.BaseIndexProvider.IndexingError">
+            <summary>
+            Occurs for an Indexing Error
+            </summary>
+        </member>
+        <member name="E:Examine.Providers.BaseIndexProvider.NodeIndexing">
+            <summary>
+            Occurs when a node is in its Indexing phase
+            </summary>
+        </member>
+        <member name="E:Examine.Providers.BaseIndexProvider.NodeIndexed">
+            <summary>
+            Occurs when a node is in its Indexed phase
+            </summary>
+        </member>
+        <member name="E:Examine.Providers.BaseIndexProvider.NodesIndexed">
+            <summary>
+            Occurs when the collection of nodes have been indexed
+            </summary>
+        </member>
+        <member name="E:Examine.Providers.BaseIndexProvider.IndexDeleted">
+            <summary>
+            Occurs when a node is deleted from the index
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer.SpecialFieldPrefix">
+            <summary>
+            The prefix characters denoting a special field stored in the lucene index for use internally
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer.SortedFieldNamePrefix">
+            <summary>
+            The prefix added to a field when it is included in the index for sorting
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer.IndexCategoryFieldName">
+            <summary>
+            Used to store a non-tokenized category for the document
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer.IndexNodeIdFieldName">
+            <summary>
+            Used to store a non-tokenized type for the document
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.#ctor">
+            <summary>
+            Default constructor for use with provider implementation
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.#ctor(System.Collections.Generic.IEnumerable{Examine.LuceneEngine.Config.IndexSet})">
+            <summary>
+            Default constructor for use with provider implementation
+            </summary>
+            <param name="indexSetConfig">
+            All index sets specified to be queried against in order to setup the indexer
+            </param>
+            <remarks>>
+            Once constructed, a call must be made to Initialize
+            </remarks>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.#ctor(System.IO.DirectoryInfo,Lucene.Net.Analysis.Analyzer,Examine.LuceneEngine.Providers.SynchronizationType)">
+            <summary>
+            Constructor to allow for creating an indexer at runtime which uses the Lucene SimpleFSDirectory
+            </summary>
+            <param name="workingFolder"></param>
+            <param name="analyzer"></param>
+            <param name="synchronizationType"></param>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.#ctor(Lucene.Net.Analysis.Analyzer,Examine.LuceneEngine.Providers.SynchronizationType,Lucene.Net.Store.Directory)">
+            <summary>
+            Constructor to allow for creating an indexer at runtime which allows specifying a custom lucene 'Directory'
+            </summary>
+            <param name="analyzer"></param>
+            <param name="synchronizationType"></param>
+            <param name="luceneDirectory"></param>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer._asyncQueue">
+            <summary>
+            This is our threadsafe queue of items which can be read by our background worker to process the queue
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Set up all properties for the indexer based on configuration information specified. This will ensure that
+            all of the folders required by the indexer are created and exist. This will also create an instruction
+            file declaring the computer name that is part taking in the indexing. This file will then be used to
+            determine the master indexer machine in a load balanced environment (if one exists).
+            </summary>
+            <param name="name">The friendly name of the provider.</param>
+            <param name="config">A collection of the name/value pairs representing the provider-specific attributes specified in the configuration for this provider.</param>
+            <exception cref="T:System.ArgumentNullException">
+            The name of the provider is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The name of the provider has a length of zero.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            An attempt is made to call <see cref="M:System.Configuration.Provider.ProviderBase.Initialize(System.String,System.Collections.Specialized.NameValueCollection)"/> on a provider after the provider has already been initialized.
+            </exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeToTicks(System.DateTime)">
+            <summary>
+            Converts a DateTime to total number of milliseconds for storage in a numeric field
+            </summary>
+            <param name="t">The t.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeToSeconds(System.DateTime)">
+            <summary>
+            Converts a DateTime to total number of seconds for storage in a numeric field
+            </summary>
+            <param name="t">The t.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeToMinutes(System.DateTime)">
+            <summary>
+            Converts a DateTime to total number of minutes for storage in a numeric field
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeToHours(System.DateTime)">
+            <summary>
+            Converts a DateTime to total number of hours for storage in a numeric field
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeToDays(System.DateTime)">
+            <summary>
+            Converts a DateTime to total number of days for storage in a numeric field
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeFromTicks(System.Int64)">
+            <summary>
+            Converts a number of milliseconds to a DateTime from DateTime.MinValue
+            </summary>
+            <param name="ticks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeFromSeconds(System.Double)">
+            <summary>
+            Converts a number of seconds to a DateTime from DateTime.MinValue
+            </summary>
+            <param name="seconds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeFromMinutes(System.Double)">
+            <summary>
+            Converts a number of minutes to a DateTime from DateTime.MinValue
+            </summary>
+            <param name="minutes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeFromHours(System.Double)">
+            <summary>
+            Converts a number of hours to a DateTime from DateTime.MinValue
+            </summary>
+            <param name="hours"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DateTimeFromDays(System.Double)">
+            <summary>
+            Converts a number of days to a DateTime from DateTime.MinValue
+            </summary>
+            <param name="days"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.IsNumericFieldType(Examine.ItemField)">
+            <summary>
+            Returns true if the ItemField DataType is not a string
+            </summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer._indexSetConfiguration">
+            <summary>
+            Gets or sets the index set configuration, used for the provider implementation
+            </summary>
+            <value>
+            The index set configuration.
+            </value>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer._indexerLocker">
+            <summary>
+            Used to perform thread locking
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer._folderLocker">
+            <summary>
+            used to thread lock calls for creating and verifying folders
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer._isIndexing">
+            <summary>
+            Used for double check locking during an index operation
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer._asyncTask">
+            <summary>
+            The async task that runs during an async indexing operation
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneIndexer._isCancelling">
+            <summary>
+            Used to cancel the async operation
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.OnNodeIndexing(Examine.IndexingNodeEventArgs)">
+            <summary>
+            Overrides the handler to strip out any null values that might remain
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.OnIndexingError(Examine.IndexingErrorEventArgs)">
+            <summary>
+            Called when an indexing error occurs
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.PerformIndexing(Examine.IndexOperation[])">
+            <summary>
+            Reindexes an item
+            </summary>
+            <param name="items">XML node to reindex</param>       
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndex(System.Boolean)">
+            <summary>
+            Creates a brand new index, this will override any existing index with an empty one
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.IndexReady">
+            <summary>
+            Checks if the index is ready to open/write to.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.IndexExists">
+            <summary>
+            Check if there is an index in the index folder
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.OptimizeIndex">
+            <summary>
+            This wil optimize the index for searching, this gets executed when this class instance is instantiated.
+            </summary>
+            <remarks>
+            
+            This can be an expensive operation and should only be called when there is no indexing activity.
+            
+            This method is NOT threadsafe
+            
+            </remarks>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.DeleteFromIndex(Lucene.Net.Index.Term,Lucene.Net.Index.IndexWriter)">
+            <summary>
+            Removes the specified term from the index
+            </summary>
+            <param name="indexTerm"></param>
+            <param name="iw"></param>
+            <returns>Boolean if it successfully deleted the term, or there were on errors</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.GetPolicy(System.String,System.String)">
+            <summary>
+            Determines the indexing policy for the field specified, by default unless thsi method is overridden, all fields will be "Analyzed"
+            </summary>
+            <param name="fieldName"></param>
+            <param name="indexCategory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.TranslateFieldIndexTypeToLuceneType(Examine.LuceneEngine.FieldIndexTypes)">
+            <summary>
+            Translates our FieldIndexTypes to Lucene field index types
+            </summary>
+            <param name="fieldIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.AddDocument(Examine.IndexItem,Lucene.Net.Index.IndexWriter)">
+            <summary>
+            Collects the data for the fields and adds the document which is then committed into Lucene.Net's index
+            </summary>
+            <param name="item"></param>
+            <param name="writer">The writer that will be used to update the Lucene index.</param>
+            <remarks>
+            This will normalize (lowercase) all text before it goes in to the index.
+            </remarks>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.GetSpecialFieldsToIndex(System.Collections.Generic.IDictionary{System.String,Examine.ItemField})">
+            <summary>
+            Returns a dictionary of special key/value pairs to store in the lucene index which will be stored by:
+            - Field.Store.YES
+            - Field.Index.NOT_ANALYZED_NO_NORMS
+            - Field.TermVector.NO
+            </summary>
+            <param name="allValuesForIndexing">
+            The dictionary object containing all name/value pairs that are to be put into the index
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.SafelyProcessQueueItems(System.Collections.Generic.Queue{Examine.IndexOperation})">
+            <summary>
+            Process all of the queue items
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(System.Collections.Concurrent.ConcurrentQueue{Examine.IndexOperation})">
+            <summary>
+            Loop through all files in the queue item folder and index them.        
+            </summary>
+            <returns>
+            The number of queue items processed
+            </returns>
+            <remarks>
+            
+            Inheritors should be very carefully using this method, SafelyProcessQueueItems will ensure threadsafe operation.
+            
+            This method is NOT threadsafe
+            
+            </remarks>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.TryConvert``1(System.Object,System.Object@)">
+            <summary>
+            Tries to parse a type using the Type's type converter
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="val"></param>
+            <param name="parsedVal"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Examine.LuceneEngine.Providers.LuceneIndexer.AddSpecialFieldsToDocument(Lucene.Net.Documents.Document,System.Collections.Generic.IDictionary{System.String,Examine.ItemField})" -->
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.StartIndexing">
+            <summary>
+            Processes the queue and checks if optimization needs to occur at the end
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter">
+            <summary>
+            Returns a Lucene index writer        
+            </summary>        
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.GetNewInMemoryWriter">
+            <summary>
+            Creates a new in-memory index with a writer for it
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.ProcessDeleteQueueItem(Examine.IndexItem,Lucene.Net.Index.IndexWriter)">
+            <summary>
+            Reads the FileInfo passed in into a dictionary object and deletes it from the index
+            </summary>
+            <param name="x"></param>
+            <param name="iw"></param>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.ProcessAddQueueItem(Examine.IndexItem,Lucene.Net.Index.IndexWriter)">
+            <summary>
+            Reads the FileInfo passed in into a dictionary object and adds it to the index
+            </summary>
+            <param name="x"></param>
+            <param name="writer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneIndexer.VerifyFolder(System.IO.DirectoryInfo)">
+            <summary>
+            Creates the folder if it does not exist.
+            </summary>
+            <param name="folder"></param>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneIndexer.InternalSearcher">
+            <summary>
+            We need an internal searcher used to search against our own index.
+            This is used for finding all descendant nodes of a current node when deleting indexes.
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneIndexer.AutomaticallyOptimize">
+            <summary>
+             This will automatically optimize the index every 'AutomaticCommitThreshold' commits
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneIndexer.OptimizationCommitThreshold">
+            <summary>
+            The number of commits to wait for before optimizing the index if AutomaticallyOptimize = true
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneIndexer.IndexingAnalyzer">
+            <summary>
+            The analyzer to use when indexing content, by default, this is set to StandardAnalyzer
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneIndexer.CommitCount">
+            <summary>
+            Used to keep track of how many index commits have been performed.
+            This is used to determine when index optimization needs to occur.
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneIndexer.SynchronizationType">
+            <summary>
+            Indicates whether or this system will process the queue items asynchonously. Default is true.
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneIndexer.LuceneDirectory">
+            <summary>
+            The Lucene 'Directory' of where the index is stored
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneIndexer.IndexSetName">
+            <summary>
+            The index set name which references an Examine <see cref="T:Examine.LuceneEngine.Config.IndexSet"/>
+            </summary>
+        </member>
+        <member name="E:Examine.LuceneEngine.Providers.LuceneIndexer.IndexOptimizing">
+            <summary>
+            Occurs when [index optimizing].
+            </summary>
+        </member>
+        <member name="E:Examine.LuceneEngine.Providers.LuceneIndexer.IndexOptimized">
+            <summary>
+             Occurs when the index is finished optmizing
+            </summary>
+        </member>
+        <member name="E:Examine.LuceneEngine.Providers.LuceneIndexer.IndexOperationComplete">
+            <summary>
+            Fires once an index operation is completed
+            </summary>
+        </member>
+        <member name="E:Examine.LuceneEngine.Providers.LuceneIndexer.DocumentWriting">
+            <summary>
+            Occurs when [document writing].
+            </summary>
+        </member>
+        <member name="T:Examine.IndexOperationType">
+            <summary>
+            The type of index operation
+            </summary>
+        </member>
+        <member name="T:Examine.Config.SearchProvidersSection">
+            <summary>
+            Config section for the Examine search providers
+            </summary>
+        </member>
+        <member name="P:Examine.Config.SearchProvidersSection.Providers">
+            <summary>
+            Gets the search providers.
+            </summary>
+            <value>The providers.</value>
+        </member>
+        <member name="P:Examine.Config.SearchProvidersSection.DefaultProvider">
+            <summary>
+            Gets or sets the default provider.
+            </summary>
+            <value>The default provider.</value>
+        </member>
+        <member name="T:Examine.Providers.IndexProviderCollection">
+            <summary>
+            A collection of Examine Index Providers
+            </summary>
+        </member>
+        <member name="M:Examine.Providers.IndexProviderCollection.Add(System.Configuration.Provider.ProviderBase)">
+            <summary>
+            Adds a provider to the collection.
+            </summary>
+            <param name="provider">The provider to be added.</param>
+            <exception cref="T:System.NotSupportedException">
+            The collection is read-only.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            	<paramref name="provider"/> is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The <see cref="P:System.Configuration.Provider.ProviderBase.Name"/> of <paramref name="provider"/> is null.
+            - or -
+            The length of the <see cref="P:System.Configuration.Provider.ProviderBase.Name"/> of <paramref name="provider"/> is less than 1.
+            </exception>
+            <PermissionSet>
+            	<IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence"/>
+            </PermissionSet>
+        </member>
+        <member name="M:Examine.Providers.IndexProviderCollection.System#Collections#Generic#IEnumerable{Examine#Providers#BaseIndexProvider}#GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.Providers.IndexProviderCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an object that implements the <see cref="T:System.Collections.IEnumerator"/> interface to iterate through the collection.
+            </summary>
+            <returns>
+            An object that implements <see cref="T:System.Collections.IEnumerator"/> to iterate through the collection.
+            </returns>
+        </member>
+        <member name="P:Examine.Providers.IndexProviderCollection.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:Examine.Providers.BaseIndexProvider"/> with the specified name.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Examine.Providers.IndexProviderCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:Examine.Providers.BaseIndexProvider"/> at the specified index.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Examine.LuceneEngine.SearchCriteria.LuceneBooleanOperation">
+            <summary>
+            An implementation of the fluent API boolean operations
+            </summary>
+        </member>
+        <member name="T:Examine.SearchCriteria.IBooleanOperation">
+            <summary>
+            Defines the supported operation for addition of additional clauses in the fluent API
+            </summary>
+        </member>
+        <member name="M:Examine.SearchCriteria.IBooleanOperation.Must">
+            <summary>
+            Sets the next operation to be AND
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IBooleanOperation.Should">
+            <summary>
+            Sets the next operation to be OR
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IBooleanOperation.Not">
+            <summary>
+            Sets the next operation to be NOT
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchCriteria.IBooleanOperation.Compile">
+            <summary>
+            Compiles this instance for fluent API conclusion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneBooleanOperation.Must">
+            <summary>
+            Sets the next operation to be AND
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneBooleanOperation.Should">
+            <summary>
+            Sets the next operation to be OR
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneBooleanOperation.Not">
+            <summary>
+            Sets the next operation to be NOT
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneBooleanOperation.Compile">
+            <summary>
+            Compiles this instance for fluent API conclusion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Examine.LuceneEngine.Providers.BaseLuceneSearcher">
+            <summary>
+             Simple abstract class containing basic properties for Lucene searchers
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.BaseLuceneSearcher.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.BaseLuceneSearcher.#ctor(Lucene.Net.Analysis.Analyzer)">
+            <summary>
+            Constructor to allow for creating an indexer at runtime
+            </summary>
+            <param name="analyzer"></param>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.BaseLuceneSearcher.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the provider.
+            </summary>
+            <param name="name">The friendly name of the provider.</param>
+            <param name="config">A collection of the name/value pairs representing the provider-specific attributes specified in the configuration for this provider.</param>
+            <exception cref="T:System.ArgumentNullException">
+            The name of the provider is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The name of the provider has a length of zero.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            An attempt is made to call <see cref="M:System.Configuration.Provider.ProviderBase.Initialize(System.String,System.Collections.Specialized.NameValueCollection)"/> on a provider after the provider has already been initialized.
+            </exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.BaseLuceneSearcher.GetSearcher">
+            <summary>
+             returns the underlying Lucene searcher
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.BaseLuceneSearcher.Search(System.String,System.Boolean)">
+            <summary>
+            Simple search method which defaults to searching content nodes
+            </summary>
+            <param name="searchText"></param>
+            <param name="useWildcards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.BaseLuceneSearcher.Search(Examine.SearchCriteria.IQuery)">
+            <summary>
+            Performs a search
+            </summary>
+            <param name="searchParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.BaseLuceneSearcher.CreateSearchCriteria">
+            <summary>
+            Creates search criteria that defaults to IndexType.Any and BooleanOperation.And
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.BaseLuceneSearcher.EnableLeadingWildcards">
+            <summary>
+            Used to specify if leading wildcards are allowed. WARNING SLOWS PERFORMANCE WHEN ENABLED!
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.BaseLuceneSearcher.IndexingAnalyzer">
+            <summary>
+            The analyzer to use when searching content, by default, this is set to StandardAnalyzer
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.FileSystemExtensions.ClearFiles(System.IO.DirectoryInfo)">
+            <summary>
+            Deletes all files in the folder and returns the number deleted.
+            </summary>
+            <param name="di"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Examine.IndexingNodeEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Examine.IndexingNodeEventArgs.#ctor(Examine.IndexItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.IndexingNodeEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Examine.IndexingNodeEventArgs.Item">
+            <summary>
+            Gets the id.
+            </summary>
+        </member>
+        <member name="T:Examine.Config.IndexProvidersSection">
+            <summary>
+            Config section for the Examine Index Providers
+            </summary>
+        </member>
+        <member name="P:Examine.Config.IndexProvidersSection.Providers">
+            <summary>
+            Gets the indexing providers.
+            </summary>
+            <value>The providers.</value>
+        </member>
+        <member name="T:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions">
+            <summary>
+            A set of helpers for working with Lucene.Net in Examine
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions.SingleCharacterWildcard(System.String)">
+            <summary>
+            Adds a single character wildcard to the string for Lucene wildcard matching
+            </summary>
+            <param name="s">The string to wildcard.</param>
+            <returns>An IExamineValue for the required operation</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the string is null or empty</exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions.MultipleCharacterWildcard(System.String)">
+            <summary>
+            Adds a multi-character wildcard to a string for Lucene wildcard matching
+            </summary>
+            <param name="s">The string to wildcard.</param>
+            <returns>An IExamineValue for the required operation</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the string is null or empty</exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions.Fuzzy(System.String)">
+            <summary>
+            Configures the string for fuzzy matching in Lucene using the default fuzziness level
+            </summary>
+            <param name="s">The string to configure fuzzy matching on.</param>
+            <returns>An IExamineValue for the required operation</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the string is null or empty</exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions.Fuzzy(System.String,System.Single)">
+            <summary>
+            Configures the string for fuzzy matching in Lucene using the supplied fuzziness level
+            </summary>
+            <param name="s">The string to configure fuzzy matching on.</param>
+            <param name="fuzzieness">The fuzzieness level.</param>
+            <returns>
+            An IExamineValue for the required operation
+            </returns>
+            <exception cref="T:System.ArgumentException">Thrown when the string is null or empty</exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions.Boost(System.String,System.Single)">
+            <summary>
+            Configures the string for boosting in Lucene
+            </summary>
+            <param name="s">The string to wildcard.</param>
+            <param name="boost">The boost level.</param>
+            <returns>
+            An IExamineValue for the required operation
+            </returns>
+            <exception cref="T:System.ArgumentException">Thrown when the string is null or empty</exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions.Proximity(System.String,System.Int32)">
+            <summary>
+            Configures the string for proximity matching
+            </summary>
+            <param name="s">The string to wildcard.</param>
+            <param name="proximity">The proximity level.</param>
+            <returns>
+            An IExamineValue for the required operation
+            </returns>
+            <exception cref="T:System.ArgumentException">Thrown when the string is null or empty</exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions.Escape(System.String)">
+            <summary>
+            Escapes the string within Lucene
+            </summary>
+            <param name="s">The string to wildcard.</param>
+            <returns>An IExamineValue for the required operation</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the string is null or empty</exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions.ToLuceneOccurance(Examine.SearchCriteria.BooleanOperation)">
+            <summary>
+            Converts an Examine boolean operation to a Lucene representation
+            </summary>
+            <param name="o">The operation.</param>
+            <returns>The translated Boolean operation</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchExtensions.ToBooleanOperation(Lucene.Net.Search.BooleanClause.Occur)">
+            <summary>
+            Converts a Lucene boolean occurrence to an Examine representation
+            </summary>
+            <param name="o">The occurrence to translate.</param>
+            <returns>The translated boolean occurrence</returns>
+        </member>
+        <member name="F:Examine.DictionaryExtensions.DefaultFileEncoding">
+            <summary>
+             The encoding to use when saving the file
+            </summary>
+        </member>
+        <member name="T:Examine.SearchCriteria.DateResolution">
+            <summary>
+            The precision of a date
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.DateResolution.Day">
+            <summary>
+            Date is just the Year, Month and Day component
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.DateResolution.Hour">
+            <summary>
+            Date is just the Year, Month, Day and Hour component
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.DateResolution.Minute">
+            <summary>
+            Date is just the Year, Month, Day, Hour and Minute component
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.DateResolution.Second">
+            <summary>
+            Date is just the Year, Month, Day, Hour, Minute and Second component
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.DateResolution.Millisecond">
+            <summary>
+            Date is just the Year, Month, Day, Hour, Minute, Second and Millisecond component
+            </summary>
+        </member>
+        <member name="T:Examine.LuceneEngine.Providers.MultiIndexSearcher">
+            <summary>
+             A provider that allows for searching across multiple indexes
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.MultiIndexSearcher.#ctor">
+            <summary>
+            Default constructor for use with provider implementation
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.MultiIndexSearcher.#ctor(Examine.LuceneEngine.Config.IndexSets)">
+            <summary>
+            Default constructor for use with provider implementation
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.MultiIndexSearcher.#ctor(System.Collections.Generic.IEnumerable{System.IO.DirectoryInfo},Lucene.Net.Analysis.Analyzer)">
+            <summary>
+            Constructor to allow for creating an indexer at runtime
+            </summary>
+            <param name="indexPath"></param>
+            <param name="analyzer"></param>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.MultiIndexSearcher.GetSearchFields">
+            <summary>
+            Returns a list of fields to search on based on all distinct fields found in the sub searchers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.MultiIndexSearcher.GetSearcher">
+            <summary>
+            Gets the searcher for this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.MultiIndexSearcher.IndexSetConfiguration">
+            <summary>
+            Gets or sets the index set configuration.
+            </summary>
+            <value>
+            The index set configuration.
+            </value>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.MultiIndexSearcher.Searchers">
+            <summary>
+             The underlying LuceneSearchers that will be searched across
+            </summary>
+        </member>
+        <member name="T:Examine.IndexedNodeEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Examine.IndexedNodeEventArgs.#ctor(Examine.IndexItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.IndexedNodeEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Examine.IndexedNodeEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+        </member>
+        <member name="T:Examine.ExamineManager">
+            <summary>
+             Exposes searchers and indexers via the providers configuration
+            </summary>
+        </member>
+        <member name="M:Examine.ExamineManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.ExamineManager"/> class using the default configuration/providers
+            </summary>
+        </member>
+        <member name="M:Examine.ExamineManager.#ctor(Examine.Config.ExamineSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.ExamineManager"/> class using the specified provider's configuration
+            </summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Examine.ExamineManager.#ctor(System.Collections.Generic.IEnumerable{Examine.ISearcher},System.Collections.Generic.IEnumerable{Examine.IIndexer},Examine.ISearcher)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.ExamineManager"/> class with the specified pre-configured searchers/indexers
+            </summary>
+            <param name="searchers">The searchers.</param>
+            <param name="indexers">The indexers.</param>
+            <param name="defaultSearcher"></param>
+        </member>
+        <member name="M:Examine.ExamineManager.LoadProviders">
+            <summary>
+            Loads the providers from the config
+            </summary>
+        </member>
+        <member name="M:Examine.ExamineManager.PerformIndexing(Examine.IndexOperation[],System.Collections.Generic.IEnumerable{Examine.IIndexer})">
+            <summary>
+            Reindex nodes for the providers specified
+            </summary>
+            <param name="items"></param>
+            <param name="providers"></param>
+        </member>
+        <member name="M:Examine.ExamineManager.PerformIndexing(Examine.IndexOperation[])">
+            <summary>
+            Reindex nodes for all providers
+            </summary>
+        </member>
+        <member name="M:Examine.ExamineManager.Search(Examine.SearchCriteria.IQuery)">
+            <summary>
+            Uses the default provider specified to search
+            </summary>
+            <param name="searchParameters"></param>
+            <returns></returns>
+            <remarks>This is just a wrapper for the default provider</remarks>
+        </member>
+        <member name="M:Examine.ExamineManager.Search(System.String,System.Boolean)">
+            <summary>
+            Uses the default provider specified to search
+            </summary>
+            <param name="searchText"></param>
+            <param name="useWildcards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.ExamineManager.CreateSearchCriteria">
+            <summary>
+            Creates search criteria that defaults to IndexType.Any and BooleanOperation.And
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.ExamineManager.Dispose">
+            <summary>
+            When the object is disposed, all data should be written
+            </summary>
+        </member>
+        <member name="M:Examine.ExamineManager.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Examine.ExamineManager.DisposeResources">
+            <summary>
+            Disposes the indexers and searchers
+            </summary>
+        </member>
+        <member name="P:Examine.ExamineManager.DefaultSearchProvider">
+            <summary>
+             Returns the default search provider
+            </summary>
+        </member>
+        <member name="P:Examine.ExamineManager.SearchProviderCollection">
+            <summary>
+            Returns the collection of searchers
+            </summary>
+        </member>
+        <member name="P:Examine.ExamineManager.IndexProviderCollection">
+            <summary>
+            Return the colleciton of indexers
+            </summary>
+        </member>
+        <member name="T:Examine.LuceneEngine.Config.IndexSet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Config.IndexSet.SetName">
+            <summary>
+            Gets the name of the set.
+            </summary>
+            <value>
+            The name of the set.
+            </value>
+        </member>
+        <member name="P:Examine.LuceneEngine.Config.IndexSet.IndexPath">
+            <summary>
+            The folder path of where the lucene index is stored
+            </summary>
+            <value>The index path.</value>
+            <remarks>
+            This can be set at runtime but will not be persisted to the configuration file
+            </remarks>
+        </member>
+        <member name="P:Examine.LuceneEngine.Config.IndexSet.IndexDirectory">
+            <summary>
+            Returns the DirectoryInfo object for the index path.
+            </summary>
+            <value>The index directory.</value>
+        </member>
+        <member name="T:Examine.SearchResult">
+            <summary>
+            Represents a search result
+            </summary>
+        </member>
+        <member name="M:Examine.SearchResult.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.SearchResult"/> class.
+            </summary>
+        </member>
+        <member name="M:Examine.SearchResult.Equals(System.Object)">
+            <summary>
+            Override this method so that the Distinct() operator works
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.SearchResult.GetHashCode">
+            <summary>
+            Override this method so that the Distinct() operator works
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Examine.SearchResult.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value>
+            The id.
+            </value>
+        </member>
+        <member name="P:Examine.SearchResult.Score">
+            <summary>
+            Gets or sets the score.
+            </summary>
+            <value>
+            The score.
+            </value>
+        </member>
+        <member name="P:Examine.SearchResult.Fields">
+            <summary>
+            Gets or sets the fields.
+            </summary>
+            <value>
+            The fields.
+            </value>
+        </member>
+        <member name="P:Examine.SearchResult.Item(System.Int32)">
+            <summary>
+            Returns the key value pair for the index specified
+            </summary>
+            <param name="resultIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Examine.SearchResult.Item(System.String)">
+            <summary>
+            Returns the value for the key specified
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria">
+            <summary>
+            This class is used to query against Lucene.Net
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.Id(System.String)">
+            <summary>
+            Query on the id
+            </summary>
+            <param name="id">The id.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.Field(System.String,System.String)">
+            <summary>
+            Query on the specified field
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="fieldValue">The field value.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.Field(System.String,Examine.SearchCriteria.IExamineValue)">
+            <summary>
+            Query on the specified field
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="fieldValue">The field value.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.GetFieldInternalQuery(System.String,Examine.SearchCriteria.IExamineValue,System.Boolean)">
+            <summary>
+            Returns the Lucene query object for a field given an IExamineValue
+            </summary>
+            <param name="fieldName"></param>
+            <param name="fieldValue"></param>
+            <param name="useQueryParser">True to use the query parser to parse the search text, otherwise, manually create the queries</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.ParseRawQuery(System.String)">
+            <summary>
+            This parses a raw query into a non-tokenized query.
+            not analyzing/tokenizing the search string
+            </summary>
+            <remarks>
+            Currently this is done by just using the keyword analyzer which doesn't parse special chars, whitespace, etc..
+            however there may be a better way to acheive this, or could manually parse into a boolean query
+            using TermQueries.
+            </remarks>
+            <param name="rawQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.Range(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.Range(System.String,System.DateTime,System.DateTime,System.Boolean,System.Boolean)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.Range(System.String,System.DateTime,System.DateTime,System.Boolean,System.Boolean,Examine.SearchCriteria.DateResolution)">
+            <summary>
+            Ranges the specified field name.
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="includeLower">if set to <c>true</c> [include lower].</param>
+            <param name="includeUpper">if set to <c>true</c> [include upper].</param>
+            <param name="resolution">The resolution.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.GetMultiFieldQuery(System.String[],Examine.SearchCriteria.IExamineValue[],Lucene.Net.Search.BooleanClause.Occur)">
+            <summary>
+            Creates our own style 'multi field query' used internal for the grouped operations
+            </summary>
+            <param name="fields"></param>
+            <param name="fieldVals"></param>
+            <param name="occurance"></param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.RawQuery(System.String)">
+            <summary>
+            Passes a raw search query to the provider to handle
+            </summary>
+            <param name="query">The query.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.Join(Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria,Lucene.Net.Search.BooleanClause.Occur)">
+            <summary>
+            Joins the specified criteria.
+            </summary>
+            <param name="criteria">The criteria.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.OrderBy(System.String[])">
+            <summary>
+            Orders the results by the specified fields
+            </summary>
+            <param name="fieldNames">The field names.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.OrderByDescending(System.String[])">
+            <summary>
+            Orders the results by the specified fields in a descending order
+            </summary>
+            <param name="fieldNames">The field names.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.SearchCriteria.LuceneSearchCriteria.OrderByInternal(System.Boolean,System.String[])">
+            <summary>
+            Internal operation for adding the ordered results
+            </summary>
+            <param name="descending">if set to <c>true</c> [descending].</param>
+            <param name="fieldNames">The field names.</param>
+            <returns>A new <see cref="T:Examine.SearchCriteria.IBooleanOperation"/> with the clause appended</returns>
+        </member>
+        <member name="T:Examine.FieldDataType">
+            <summary>
+            The data type of a field
+            </summary>
+        </member>
+        <member name="T:Examine.LuceneEngine.Config.IndexSetCollection">
+            <summary>
+            A collection of IndexSet's
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.Config.IndexSetCollection.Item(System.String)">
+            <summary>
+            Default property for accessing Image Sets
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Examine.IndexingFieldDataEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Examine.IndexingFieldDataEventArgs.#ctor(Examine.IndexItem,System.String,Examine.ItemField,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.IndexingFieldDataEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="fieldName">Name of the field.</param>
+            <param name="fieldValue">The field value.</param>
+            <param name="isStandardField">if set to <c>true</c> [is standard field].</param>
+        </member>
+        <member name="P:Examine.IndexingFieldDataEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+        </member>
+        <member name="P:Examine.IndexingFieldDataEventArgs.FieldName">
+            <summary>
+            Gets the name of the field.
+            </summary>
+            <value>
+            The name of the field.
+            </value>
+        </member>
+        <member name="P:Examine.IndexingFieldDataEventArgs.FieldValue">
+            <summary>
+            Gets the field value.
+            </summary>
+        </member>
+        <member name="P:Examine.IndexingFieldDataEventArgs.IsStandardField">
+            <summary>
+            Gets a value indicating whether this instance is standard field.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is standard field; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Examine.IIndexFieldDefinition">
+            <summary>
+            Represents a field to index
+            </summary>
+        </member>
+        <member name="P:Examine.IIndexFieldDefinition.Name">
+            <summary>
+            The name of the index field
+            </summary>
+        </member>
+        <member name="P:Examine.IIndexFieldDefinition.EnableSorting">
+            <summary>
+            Whether or not this field has sorting enabled in search results
+            </summary>
+        </member>
+        <member name="P:Examine.IIndexFieldDefinition.DataType">
+            <summary>
+            The data type
+            </summary>
+        </member>
+        <member name="T:Examine.SearchCriteria.Examineness">
+            <summary>
+            Different ways to match terms
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.Examineness.Fuzzy">
+            <summary>
+            Matches terms using 'fuzzy' logic
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.Examineness.SimpleWildcard">
+            <summary>
+            Wildcard matching a single character
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.Examineness.ComplexWildcard">
+            <summary>
+            Wildcard matching multiple characters
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.Examineness.Default">
+            <summary>
+            A normal phrase query
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.Examineness.Escaped">
+            <summary>
+            Becomes exact match
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.Examineness.Boosted">
+            <summary>
+            Makes the term rank differently than normal
+            </summary>
+        </member>
+        <member name="F:Examine.SearchCriteria.Examineness.Proximity">
+            <summary>
+            Searches for terms within a proximity of each other
+            </summary>
+        </member>
+        <member name="T:Examine.LuceneEngine.Providers.SynchronizationType">
+            <summary>
+            The index ingestion thread synchronization type
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.SynchronizationType.Synchronized">
+            <summary>
+            Processes index queue in the same thread as the application
+            </summary>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.SynchronizationType.Asynchronous">
+            <summary>
+            Processes index queue using a System.Threading.Task
+            </summary>
+        </member>
+        <member name="T:Examine.LuceneEngine.Providers.LuceneSearcher">
+            <summary>
+             Standard object used to search a Lucene index
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.#ctor">
+            <summary>
+            Default constructor for use with Provider implementation
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.#ctor(System.Collections.Generic.IEnumerable{Examine.LuceneEngine.Config.IndexSet})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Examine.LuceneEngine.Providers.LuceneSearcher"/> class.
+            </summary>
+            <param name="indexSetConfig">The index set config.</param>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.#ctor(System.IO.DirectoryInfo,Lucene.Net.Analysis.Analyzer)">
+            <summary>
+            Constructor to allow for creating an indexer at runtime
+            </summary>
+            <param name="indexFolder"></param>
+            <param name="analyzer"></param>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.#ctor(Lucene.Net.Analysis.Analyzer,Lucene.Net.Store.Directory)">
+            <summary>
+            Constructor to allow for creating an indexer at runtime using the specified Lucene 'Directory'
+            </summary>
+            <param name="analyzer"></param>
+            <param name="luceneDirectory"></param>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneSearcher._searcher">
+            <summary>
+            Used as a singleton instance
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the provider.
+            </summary>
+            <param name="name">The friendly name of the provider.</param>
+            <param name="config">A collection of the name/value pairs representing the provider-specific attributes specified in the configuration for this provider.</param>
+            <exception cref="T:System.ArgumentNullException">
+            The name of the provider is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The name of the provider has a length of zero.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            An attempt is made to call <see cref="M:System.Configuration.Provider.ProviderBase.Initialize(System.String,System.Collections.Specialized.NameValueCollection)"/> on a provider after the provider has already been initialized.
+            </exception>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.Search(System.String,System.Boolean,System.String)">
+            <summary>
+            A simple search mechanism to search all fields based on an index type.
+            </summary>
+            <remarks>
+            This can be used to do a simple search against an index type instead of the entire index.
+            </remarks>
+            <param name="searchText"></param>
+            <param name="useWildcards"></param>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.Search(Examine.SearchCriteria.IQuery)">
+            <summary>
+            Searches the data source using the Examine Fluent API
+            </summary>
+            <param name="searchParams">The fluent API search.</param>
+            <returns></returns>
+        </member>
+        <member name="F:Examine.LuceneEngine.Providers.LuceneSearcher._indexSetName">
+            <summary>
+            Name of the Lucene.NET index set
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.GetSearcher">
+            <summary>
+            Gets the searcher for this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.IndexExists">
+            <summary>
+            Check if there is an index in the index folder
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.GetSearchFields">
+            <summary>
+            Returns a list of fields to search on
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Examine.LuceneEngine.Providers.LuceneSearcher.ValidateSearcher(System.Boolean)">
+            <summary>
+            This checks if the singleton IndexSearcher is initialized and up to date.
+            </summary>
+            <param name="forceReopen"></param>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneSearcher.IndexSetConfiguration">
+            <summary>
+            Gets or sets the index set configuration.
+            </summary>
+            <value>
+            The index set configuration.
+            </value>
+        </member>
+        <member name="P:Examine.LuceneEngine.Providers.LuceneSearcher.LuceneDirectory">
+            <summary>
+            The Lucene 'Directory' of where the index is stored
+            </summary>
+        </member>
+        <member name="T:Examine.LuceneEngine.DocumentWritingEventArgs">
+            <summary>
+            Event arguments for a Document Writing event
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.DocumentWritingEventArgs.#ctor(Lucene.Net.Documents.Document,Examine.IndexItem)">
+            <summary>
+            
+            </summary>
+            <param name="d"></param>
+            <param name="item"></param>
+        </member>
+        <member name="P:Examine.LuceneEngine.DocumentWritingEventArgs.Document">
+            <summary>
+            Lucene.NET Document, including all previously added fields
+            </summary>
+        </member>
+        <member name="P:Examine.LuceneEngine.DocumentWritingEventArgs.Item">
+            <summary>
+            Fields of the indexer
+            </summary>
+        </member>
+        <member name="T:Examine.LuceneEngine.Config.IndexSets">
+            <summary>
+            Defines an Index set
+            </summary>
+        </member>
+        <member name="M:Examine.LuceneEngine.Config.IndexSets.GetDefaultInstance">
+            <summary>
+             Returns a default instance of the config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Examine.LuceneEngine.Config.IndexSets.Sets">
+            <summary>
+            Gets the sets.
+            </summary>
+        </member>
+        <member name="T:Examine.Config.ExamineSettings">
+            <summary>
+            Config section for Examine
+            </summary>
+        </member>
+        <member name="M:Examine.Config.ExamineSettings.GetDefaultInstance">
+            <summary>
+            Gets the instance of the Examine settings.
+            </summary>
+            <value>The instance.</value>
+        </member>
+        <member name="P:Examine.Config.ExamineSettings.SearchProviders">
+            <summary>
+            Gets the search providers.
+            </summary>
+            <value>The search providers.</value>
+        </member>
+        <member name="P:Examine.Config.ExamineSettings.IndexProviders">
+            <summary>
+            Gets the index providers.
+            </summary>
+            <value>The index providers.</value>
+        </member>
+        <member name="T:Examine.IndexOperation">
+            <summary>
+            Represents an indexing operation (either add/remove)
+            </summary>
+        </member>
+        <member name="P:Examine.IndexOperation.Item">
+            <summary>
+            Gets the Index item
+            </summary>
+        </member>
+        <member name="P:Examine.IndexOperation.Operation">
+            <summary>
+            Gets or sets the operation.
+            </summary>
+            <value>
+            The operation.
+            </value>
+        </member>
+    </members>
+</doc>

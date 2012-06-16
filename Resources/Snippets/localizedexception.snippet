@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>localizedexception</Title>
+			<Shortcut>LocalizedException</Shortcut>
+			<Description>Code snippet for localized exception</Description>
+			<Author>Niels Kühnel</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>				
+				<Literal>
+					<ID>baseException</ID>
+					<ToolTip>Base type</ToolTip>
+					<Default>Exception</Default>
+				</Literal>								
+				<Literal Editable="false">
+					<ID>SystemSerializable</ID>
+					<Function>SimpleTypeName(global::System.Serializable)</Function>
+				</Literal>				
+				<Literal Editable="false">
+					<ID>ExceptionHelper</ID>
+					<Function>SimpleTypeName(global::Umbraco.Foundation.Localization.ExceptionHelper)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[$SystemSerializable$]
+public class Localized$baseException$ : $baseException$
+{    
+  public $ExceptionHelper$ Localization { get; private set; }
+  
+  public Localized$baseException$(string key = "Exceptions.$baseException$", string defaultMessage = null, object parameters = null, Exception innerException = null)
+	  :base(defaultMessage, innerException)
+  {           
+	Localization = new $ExceptionHelper$(this, key, defaultMessage, parameters);
+  }
+
+  public override string Message { get { return Localization.GetMessage(base.Message); } }
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

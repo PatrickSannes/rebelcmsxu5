@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Framework</RootNamespace>
+    <AssemblyName>Umbraco.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugForcex86|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugForcex86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugForcex86|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugForcex86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugForcex86|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugForcex86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dynamic">
+      <HintPath>..\..\packages\DynamicQuery.1.0\lib\35\Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Resources\References\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq">
+      <HintPath>..\..\..\Resources\References\Relinq\1.13.122\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SolutionInfo.UmbracoFramework.cs">
+      <Link>Properties\SolutionInfo.UmbracoFramework.cs</Link>
+    </Compile>
+    <Compile Include="AbstractApplicationCache.cs" />
+    <Compile Include="AbstractEquatableObject.cs" />
+    <Compile Include="ActivatorHelper.cs" />
+    <Compile Include="Caching\AbstractCacheProvider.cs" />
+    <Compile Include="Caching\CacheCreationResult.cs" />
+    <Compile Include="Caching\CacheEntry.cs" />
+    <Compile Include="Caching\CacheKey.cs" />
+    <Compile Include="Caching\CacheModificationResult.cs" />
+    <Compile Include="Caching\CacheProviderExtensions.cs" />
+    <Compile Include="Caching\CacheValue.cs" />
+    <Compile Include="Caching\CacheValueOf.cs" />
+    <Compile Include="Caching\DictionaryCacheProvider.cs" />
+    <Compile Include="Caching\ICachePolicy.cs" />
+    <Compile Include="Caching\ICacheValue.cs" />
+    <Compile Include="Caching\ICacheValueOf.cs" />
+    <Compile Include="Caching\PerHttpRequestCacheProvider.cs" />
+    <Compile Include="Caching\RuntimeCacheProvider.cs" />
+    <Compile Include="Caching\StaticCachePolicy.cs" />
+    <Compile Include="Caching\StringKey.cs" />
+    <Compile Include="CancellableEventArgs.cs" />
+    <Compile Include="CloneOf.cs" />
+    <Compile Include="ConfigurationElementExtensions.cs" />
+    <Compile Include="Configuration\ConfigurationHelper.cs" />
+    <Compile Include="Configuration\ConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\ConfigurationElementEnumerator.cs" />
+    <Compile Include="Configuration\DeepConfigManager.cs" />
+    <Compile Include="Configuration\PluginManagerConfiguration.cs" />
+    <Compile Include="Context\DefaultFrameworkContext.cs" />
+    <Compile Include="Context\IFrameworkContext.cs" />
+    <Compile Include="Context\IRequiresFrameworkContext.cs" />
+    <Compile Include="AbstractFinalizer.cs" />
+    <Compile Include="AbstractScopedCache.cs" />
+    <Compile Include="ControllerContextExtensions.cs" />
+    <Compile Include="CustomBooleanTypeConverter.cs" />
+    <Compile Include="Data\DataSerializationType.cs" />
+    <Compile Include="Data\HierarchyScope.cs" />
+    <Compile Include="Data\ITracksConcurrency.cs" />
+    <Compile Include="DeepConfigManagerExtensions.cs" />
+    <Compile Include="DeferredEqualityComparer.cs" />
+    <Compile Include="DependencyManagement\DependencyRegistrarExtensions.cs" />
+    <Compile Include="DependencyManagement\IDependencyDemandBuilder.cs" />
+    <Compile Include="DependencyManagement\IDependencyRegistrar.cs" />
+    <Compile Include="DependencyManagement\IDependencyResolver.cs" />
+    <Compile Include="DependencyManagement\IScopeManager.cs" />
+    <Compile Include="Diagnostics\AbstractCounterManager.cs" />
+    <Compile Include="Diagnostics\AverageDurationCounter.cs" />
+    <Compile Include="Diagnostics\CounterAvailability.cs" />
+    <Compile Include="Diagnostics\CounterDescriptor.cs" />
+    <Compile Include="Diagnostics\LogHelper.cs" />
+    <Compile Include="DictionaryExtensions.cs" />
+    <Compile Include="DictionaryScopedCache.cs" />
+    <Compile Include="DisposableObject.cs" />
+    <Compile Include="DisposableTimer.cs" />
+    <Compile Include="Dynamics\BendyBuilder.cs" />
+    <Compile Include="Dynamics\BendyObject.cs" />
+    <Compile Include="Dynamics\BendyObjectCollection.cs" />
+    <Compile Include="Dynamics\Expressions\DynamicMemberFilterExpressionNode.cs" />
+    <Compile Include="Dynamics\Expressions\DynamicMemberFilterResultOperator.cs" />
+    <Compile Include="Dynamics\Expressions\DynamicMemberMetadata.cs" />
+    <Compile Include="Dynamics\Expressions\DynamicOrdering.cs" />
+    <Compile Include="Dynamics\Expressions\ExpressionParser.cs" />
+    <Compile Include="Dynamics\DynamicNullableValueObject.cs" />
+    <Compile Include="Dynamics\QueryWrapperForDynamics.cs" />
+    <Compile Include="DynamicTypeConversionException.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="ExpressionExtensions.cs" />
+    <Compile Include="ExpressionHelper.cs" />
+    <Compile Include="Expressions\ExpressionVisitor.cs" />
+    <Compile Include="Expressions\PropertyVisitor.cs" />
+    <Compile Include="Expressions\Remotion\AbstractExtensionResultOperator.cs" />
+    <Compile Include="Expressions\Remotion\CustomPartialEvaluatingExpressionTreeVisitor.cs" />
+    <Compile Include="Expressions\Remotion\ExpressionNodeModifierRegistry.cs" />
+    <Compile Include="Expressions\Remotion\ExpressionTreeParserHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Expressions\Remotion\ModifiedPartialEvaluatingExpressionTreeProcessor.cs" />
+    <Compile Include="Expressions\Remotion\CustomQueryParser.cs" />
+    <Compile Include="FileSystemInfoExtensions.cs" />
+    <Compile Include="GlobalExtensions.cs" />
+    <Compile Include="HiveId.cs" />
+    <Compile Include="HiveIdEqualityComparer.cs" />
+    <Compile Include="HiveIdExtensions.cs" />
+    <Compile Include="HiveIdFormatStyle.cs" />
+    <Compile Include="HiveIdTypeConverter.cs" />
+    <Compile Include="HiveIdValue.cs" />
+    <Compile Include="HiveIdValueTypeConverter.cs" />
+    <Compile Include="HttpRequestScopedCache.cs" />
+    <Compile Include="HttpRequestScopedFinalizer.cs" />
+    <Compile Include="HttpRuntimeApplicationCache.cs" />
+    <Compile Include="HttpRuntimeCacheParameters.cs" />
+    <Compile Include="ICanBeDirty.cs" />
+    <Compile Include="DirtyExtensions.cs" />
+    <Compile Include="IReferenceByAlias.cs" />
+    <Compile Include="IReferenceByHiveId.cs" />
+    <Compile Include="IReferenceByName.cs" />
+    <Compile Include="LambdaExpressionCacheKey.cs" />
+    <Compile Include="LazyConcurrentDictionary.cs" />
+    <Compile Include="LazyDictionary.cs" />
+    <Compile Include="Linq\AbstractQueryContext.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\AbstractExpressionExtension.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\AbstractPredicateExpression.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\AbstractValueExpression.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\FieldPredicateExpression.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\FieldSelectorExpression.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\FieldValueExpression.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\SchemaPredicateExpression.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\SchemaSelectorExpression.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\SchemaValueExpression.cs" />
+    <Compile Include="Linq\CriteriaGeneration\Expressions\ValuePredicateType.cs" />
+    <Compile Include="Linq\CriteriaGeneration\ExpressionVisitors\AbstractExpressionTreeVisitor.cs" />
+    <Compile Include="Linq\CriteriaGeneration\ExpressionVisitors\DefaultExpressionTreeVisitor.cs" />
+    <Compile Include="Linq\CriteriaGeneration\ExpressionVisitors\FieldPredicateExpressionRewriter.cs" />
+    <Compile Include="Linq\CriteriaGeneration\ExpressionVisitors\QueryModelVisitor.cs" />
+    <Compile Include="Linq\CriteriaGeneration\StructureMetadata\AbstractQueryStructureBinder.cs" />
+    <Compile Include="Linq\CriteriaGeneration\StructureMetadata\BindingSignatureSupport.cs" />
+    <Compile Include="Linq\CriteriaGeneration\StructureMetadata\DefaultQueryStructureBinder.cs" />
+    <Compile Include="Linq\CriteriaGeneration\StructureMetadata\QueryStructureBinderOfTypeAttribute.cs" />
+    <Compile Include="Linq\CriteriaGeneration\StructureMetadata\SignatureSupportType.cs" />
+    <Compile Include="Linq\CriteriaTranslation\AbstractSimpleCriteriaVisitor.cs" />
+    <Compile Include="Linq\DefaultSchemaForQueryingAttribute.cs" />
+    <Compile Include="Linq\Executor.cs" />
+    <Compile Include="Linq\IQueryableDataSource.cs" />
+    <Compile Include="Linq\IQueryContext.cs" />
+    <Compile Include="Linq\Queryable.cs" />
+    <Compile Include="Linq\QueryModel\FromClause.cs" />
+    <Compile Include="Linq\QueryModel\QueryDescription.cs" />
+    <Compile Include="Linq\QueryModel\QueryDescriptionBuilder.cs" />
+    <Compile Include="Linq\QueryModel\ResultFilterClause.cs" />
+    <Compile Include="Linq\QueryModel\ResultFilterType.cs" />
+    <Compile Include="Linq\QueryModel\SortClause.cs" />
+    <Compile Include="Linq\QueryModel\SortDirection.cs" />
+    <Compile Include="Linq\ResultBinding\ObjectBinder.cs" />
+    <Compile Include="Linq\ResultBinding\QueryResultMapperForAttribute.cs" />
+    <Compile Include="Linq\ResultBinding\SourceFieldBinder.cs" />
+    <Compile Include="LocalizationHtmlHelperExtensions.cs" />
+    <Compile Include="Localization\Configuration\LocalizationConfig.cs" />
+    <Compile Include="Localization\Configuration\LocalizationSourceAttribute.cs" />
+    <Compile Include="Localization\Configuration\LocalizationXmlSourceAttribute.cs" />
+    <Compile Include="Localization\DateTimeHelpers.cs" />
+    <Compile Include="Localization\DefaultTextManager.cs" />
+    <Compile Include="Localization\ExceptionHelper.cs" />
+    <Compile Include="Localization\LanguageInfo.cs" />
+    <Compile Include="Localization\Localization.cs" />
+    <Compile Include="Localization\LocalizedText.cs" />
+    <Compile Include="Localization\Maintenance\AssemblySourceLoader.cs" />
+    <Compile Include="Localization\Maintenance\BatchUpdatableTextSource.cs" />
+    <Compile Include="Localization\Maintenance\DupplicateTextProcessor.cs" />
+    <Compile Include="Localization\Maintenance\Extraction\CStyleLanguageTextExtractor.cs" />
+    <Compile Include="Localization\Maintenance\Extraction\SourceFileList.cs" />
+    <Compile Include="Localization\Maintenance\Extraction\TextExtractor.cs" />
+    <Compile Include="Localization\Maintenance\ITextSource.cs" />
+    <Compile Include="Localization\Maintenance\LanguageComparer.cs" />
+    <Compile Include="Localization\Maintenance\LocalizedTextState.cs" />
+    <Compile Include="Localization\Maintenance\SimpleTextSource.cs" />
+    <Compile Include="Localization\Maintenance\TextSourceAggregator.cs" />
+    <Compile Include="Localization\Maintenance\TextSourceMerger.cs" />
+    <Compile Include="Localization\Maintenance\XmlTextSource.cs" />
+    <Compile Include="Localization\ParameterSet.cs" />
+    <Compile Include="Localization\Parsing\DefaultExpressionParser.cs" />
+    <Compile Include="Localization\Parsing\ExpressionParser.cs" />
+    <Compile Include="Localization\Parsing\ExpressionParts.cs" />
+    <Compile Include="Localization\Parsing\HtmlPatternTransformer.cs" />
+    <Compile Include="Localization\Parsing\IPatternTransformer.cs" />
+    <Compile Include="Localization\Parsing\IPatternVisitor.cs" />
+    <Compile Include="Localization\Parsing\PatternPartPrinter.cs" />
+    <Compile Include="Localization\Parsing\StringTrimmer.cs" />
+    <Compile Include="Localization\Parsing\TextParser.cs" />
+    <Compile Include="Localization\Parsing\XmlExpressionParser.cs" />
+    <Compile Include="Localization\PatternExceptions.cs" />
+    <Compile Include="Localization\Processing\DefaultDialect.cs" />
+    <Compile Include="Localization\Processing\DelegateParameterEvaluatorFactory.cs" />
+    <Compile Include="Localization\Processing\DelegateSwitchConditionEvaluatorFactory.cs" />
+    <Compile Include="Localization\Processing\DelegateValueFormatterFactory.cs" />
+    <Compile Include="Localization\Processing\EvaluationContext.cs" />
+    <Compile Include="Localization\Processing\IFormatGroupExpander.cs" />
+    <Compile Include="Localization\Processing\IParameterEvaluator.cs" />
+    <Compile Include="Localization\Processing\IParameterEvaluatorFactory.cs" />
+    <Compile Include="Localization\Processing\IPatternProcessorFactory.cs" />
+    <Compile Include="Localization\Processing\ISwitchConditionEvaluator.cs" />
+    <Compile Include="Localization\Processing\ISwitchConditionEvaluatorFactory.cs" />
+    <Compile Include="Localization\Processing\IValueFormatter.cs" />
+    <Compile Include="Localization\Processing\IValueFormatterFactory.cs" />
+    <Compile Include="Localization\Processing\ParameterEvaluators\PatternLookupEvaluator.cs" />
+    <Compile Include="Localization\Processing\ParameterEvaluators\ReflectionParameterEvaluator.cs" />
+    <Compile Include="Localization\Processing\ParameterEvaluators\SimpleParameterEvaluator.cs" />
+    <Compile Include="Localization\Processing\ParameterValue.cs" />
+    <Compile Include="Localization\Processing\ParameterValues\DelegateFormatWrapper.cs" />
+    <Compile Include="Localization\Processing\ParameterValues\FormatWrapper.cs" />
+    <Compile Include="Localization\Processing\ParameterValues\UnencodedParameterValue.cs" />
+    <Compile Include="Localization\Processing\PatternDecorator.cs" />
+    <Compile Include="Localization\Processing\PatternDialect.cs" />
+    <Compile Include="Localization\Processing\PatternEvaluator.cs" />
+    <Compile Include="Localization\Processing\StringBasedSwitchConditionEvaluatorFactory.cs" />
+    <Compile Include="Localization\Processing\SwitchConditions\ArithmeticCondition.cs" />
+    <Compile Include="Localization\Processing\SwitchConditions\BooleanExpressionCondition.cs" />
+    <Compile Include="Localization\Processing\SwitchConditions\IntervalCondition.cs" />
+    <Compile Include="Localization\Processing\SwitchConditions\LookupCondition.cs" />
+    <Compile Include="Localization\Processing\SwitchConditions\TakeAllCondition.cs" />
+    <Compile Include="Localization\Processing\SwitchConditions\ValueListCondition.cs" />
+    <Compile Include="Localization\Processing\SwitchDecorator.cs" />
+    <Compile Include="Localization\Processing\TextDialect.cs" />
+    <Compile Include="Localization\Processing\ValueFormatters\DefaultFormatter.cs" />
+    <Compile Include="Localization\Processing\ValueFormatters\RomanToNumberConvertor.cs" />
+    <Compile Include="Localization\Processing\ValueFormatters\StringCaseFormatter.cs" />
+    <Compile Include="Localization\Processing\ValueFormatters\StringFormatFormatter.cs" />
+    <Compile Include="Localization\StringHelpers.cs" />
+    <Compile Include="Localization\Support\Arithmetic.cs" />
+    <Compile Include="Localization\Support\ObjectHelper.cs" />
+    <Compile Include="Localization\TextManager.cs" />
+    <Compile Include="Localization\Web\JavaScript\FormatGroupExpanders\HashTagFormatGroupExpanderGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\IJavaScriptGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\JavaScriptExpressionChecker.cs" />
+    <Compile Include="Localization\Web\JavaScript\JavaScriptExpressionWriter.cs" />
+    <Compile Include="Localization\Web\JavaScript\JavaScriptGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\ParameterEvaluators\PatternLookupGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\ParameterEvaluators\ReflectionParameterGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\ParameterEvaluators\SimpleParameterGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\PatternProcessorGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\SwitchConditions\ArithmeticGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\SwitchConditions\BooleanExpressionGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\SwitchConditions\IntervalGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\SwitchConditions\LookupGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\SwitchConditions\TakeAllGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\SwitchConditions\ValueListGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\ValueFormatters\DefaultGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\ValueFormatters\StringCaseGenerator.cs" />
+    <Compile Include="Localization\Web\JavaScript\ValueFormatters\StringFormatGenerator.cs" />
+    <Compile Include="Localization\Web\LocalizationWebConfig.cs" />
+    <Compile Include="Localization\Web\Mvc\Areas\LocalizationAreaRegistration.cs" />
+    <Compile Include="Localization\Web\Mvc\Controllers\ClientSideScriptController.cs" />
+    <Compile Include="Localization\Web\Mvc\ExceptionHelper.cs" />
+    <Compile Include="Localization\Web\Mvc\Exceptions.cs" />
+    <Compile Include="Localization\Web\Mvc\LocalizationHelper.cs" />
+    <Compile Include="Localization\Web\Mvc\LocalizedTextJavascriptResult.cs" />
+    <Compile Include="Localization\Web\Mvc\LocalizedValidationAttribute.cs" />
+    <Compile Include="Localization\Web\Mvc\LocalizingDataAnnotationsModelValidatorProvider.cs" />
+    <Compile Include="Localization\Web\Mvc\LocalizingDefaultModelBinder.cs" />
+    <Compile Include="Localization\Web\Mvc\LocalizingModelMetadataProvider.cs" />
+    <Compile Include="Localization\Web\Mvc\ResourceHelper.cs" />
+    <Compile Include="LocalizedArgumentException.cs" />
+    <Compile Include="LocalizedArgumentNullException.cs" />
+    <Compile Include="LocalizedArgumentOutOfRangeException.cs" />
+    <Compile Include="LocalizedFileNotFoundException.cs" />
+    <Compile Include="LocalizedInvalidOperationException.cs" />
+    <Compile Include="LocalizedKeyNotFoundException.cs" />
+    <Compile Include="LocalizedNotImplementedException.cs" />
+    <Compile Include="LocalizedNotSupportedException.cs" />
+    <Compile Include="LocalizedObjectDisposedException.cs" />
+    <Compile Include="LocalizedString.cs" />
+    <Compile Include="LocalizedStringConverter.cs" />
+    <Compile Include="Mandate.cs" />
+    <Compile Include="MemberInfoAttribute.cs" />
+    <Compile Include="MetadataComposition.cs" />
+    <Compile Include="NestedLifetimeFinalizer.cs" />
+    <Compile Include="ObjectExtensions.cs" />
+    <Compile Include="AttemptTuple.cs" />
+    <Compile Include="DemandsDependenciesAttribute.cs" />
+    <Compile Include="EntityPath.cs" />
+    <Compile Include="EntityPathCollection.cs" />
+    <Compile Include="ProviderSetupModuleAttribute.cs" />
+    <Compile Include="ProviderSupport\AbstractProviderConfigurationSection.cs" />
+    <Compile Include="ProviderSupport\InstallStatus.cs" />
+    <Compile Include="ProviderSupport\InstallStatusType.cs" />
+    <Compile Include="ReadOnlyDictionary.cs" />
+    <Compile Include="RevisionStatusType.cs" />
+    <Compile Include="ScopedCacheExtensions.cs" />
+    <Compile Include="StreamExtensions.cs" />
+    <Compile Include="StringAliasCaseType.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="TaskTriggers.cs" />
+    <Compile Include="Tasks\DelegateTask.cs" />
+    <Compile Include="Tasks\ProviderInstallTask.cs" />
+    <Compile Include="Tasks\TaskEventArgs.cs" />
+    <Compile Include="ThreadStaticScopedCache.cs" />
+    <Compile Include="Data\Common\BasicConcurrencyToken.cs" />
+    <Compile Include="DependencyManagement\DefaultBuilderContext.cs" />
+    <Compile Include="DependencyManagement\AbstractContainerBuilder.cs" />
+    <Compile Include="Configuration\DefaultConfigurationResolver.cs" />
+    <Compile Include="DependencyManagement\DemandBuilders\FrameworkSetup.cs" />
+    <Compile Include="DependencyManagement\DemandBuilders\FrameworkSetupHttpLifetime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DependencyManagement\DemandBuilders\LocalizationSetup.cs" />
+    <Compile Include="DependencyManagement\IBuilderContext.cs" />
+    <Compile Include="Configuration\IConfigurationResolver.cs" />
+    <Compile Include="DependencyManagement\IContainerBuilder.cs" />
+    <Compile Include="DependencyManagement\AbstractDependencyResolver.cs" />
+    <Compile Include="DependencyManagement\IInstanceRegistrar.cs" />
+    <Compile Include="DependencyManagement\IInstanceRegistrarModifier.cs" />
+    <Compile Include="DependencyManagement\IResolutionContext.cs" />
+    <Compile Include="DependencyManagement\IRuntimeTypeRegistrar.cs" />
+    <Compile Include="DependencyManagement\IRuntimeTypeRegistrarModifier.cs" />
+    <Compile Include="DependencyManagement\IServiceRegistrar.cs" />
+    <Compile Include="DependencyManagement\IServiceRegistrarModifier.cs" />
+    <Compile Include="DependencyManagement\ResolutionAttempt.cs" />
+    <Compile Include="Data\Common\IConcurrencyToken.cs" />
+    <Compile Include="IProviderManifest.cs" />
+    <Compile Include="IReferenceByGuid.cs" />
+    <Compile Include="ISupportsProviderInjection.cs" />
+    <Compile Include="IReferenceByOrdinal.cs" />
+    <Compile Include="PluginAttribute.cs" />
+    <Compile Include="PluginDefinition.cs" />
+    <Compile Include="PluginMetadataComposition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\Common\RepositoryGeneratedToken.cs" />
+    <Compile Include="Tasks\AbstractTask.cs" />
+    <Compile Include="Tasks\ApplicationTaskManager.cs" />
+    <Compile Include="Tasks\TaskExecutionContext.cs" />
+    <Compile Include="Tasks\TaskMetadata.cs" />
+    <Compile Include="Tasks\TaskAttribute.cs" />
+    <Compile Include="TypeExtensions.cs" />
+    <Compile Include="TypeFinder.cs" />
+    <Compile Include="TypeMapping\AbstractLookupHelper.cs" />
+    <Compile Include="TypeMapping\AbstractMappingEngine.cs" />
+    <Compile Include="AbstractTypeMapperExtensions.cs" />
+    <Compile Include="TypeMapping\AbstractTypeMapper.cs" />
+    <Compile Include="TypeMapping\FrameworkModelMapper.cs" />
+    <Compile Include="TypeMapping\MapperDefinition.cs" />
+    <Compile Include="TypeMapping\MappingExecutionScope.cs" />
+    <Compile Include="TypeMapping\ObjectDefinition.cs" />
+    <Compile Include="TypeMapping\PropertyCache.cs" />
+    <Compile Include="TypeMapping\PropertyDefinition.cs" />
+    <Compile Include="TypeMapping\PropertyMapDefinition.cs" />
+    <Compile Include="PropertyMapDefinitionExtensions.cs" />
+    <Compile Include="TypeMapping\DelegatedMapHandlerList.cs" />
+    <Compile Include="TypeMapping\AbstractFluentMappingEngine.cs" />
+    <Compile Include="TypeMapping\Creator.cs" />
+    <Compile Include="TypeMapping\EnumerableTypeMapper.cs" />
+    <Compile Include="TypeMapping\ITypeMapper.cs" />
+    <Compile Include="TypeMapping\IMemberMappingExpression.cs" />
+    <Compile Include="TypeMapping\IMappingExpression.cs" />
+    <Compile Include="TypeMapping\IMemberMapper.cs" />
+    <Compile Include="TypeMapping\TypeMapDefinition.cs" />
+    <Compile Include="TypeMapping\TypeMapper.cs" />
+    <Compile Include="TypeMapping\FluentMappingEngineContext.cs" />
+    <Compile Include="TypeMapping\MemberMappingExpression.cs" />
+    <Compile Include="TypeMapping\MappingExpression.cs" />
+    <Compile Include="TypeMapping\MemberExpressionSignature.cs" />
+    <Compile Include="TypeMapping\MemberMapper.cs" />
+    <Compile Include="TypeMapping\ObjectMapper.cs" />
+    <Compile Include="MappingEngineExtensions.cs" />
+    <Compile Include="MappingExpressionExtensions.cs" />
+    <Compile Include="TypeMapping\TypeMapDelegatePair.cs" />
+    <Compile Include="TypeMapping\MappingEngineCollection.cs" />
+    <Compile Include="TypeMapping\TypeMapperMetadata.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnreachableException.cs" />
+    <Compile Include="WildcardRegex.cs" />
+    <Compile Include="WriteLockDisposable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Defaults\Enumerations.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Defaults\Exceptions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Defaults\PluralForms.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Defaults\Time.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Localization\Parsing\Default Parser Syntax.txt" />
+    <EmbeddedResource Include="Localization\Web\JavaScript\Resources\MicrosoftAjaxGlobalization.js" />
+    <EmbeddedResource Include="Localization\Web\JavaScript\Resources\MicrosoftAjaxGlobalization.debug.js" />
+    <EmbeddedResource Include="Localization\Web\JavaScript\Resources\MicrosoftAjaxCore.js" />
+    <EmbeddedResource Include="Localization\Web\JavaScript\Resources\MicrosoftAjaxCore.debug.js" />
+    <EmbeddedResource Include="Localization\Web\JavaScript\Resources\Localization.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

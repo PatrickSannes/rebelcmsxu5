@@ -1,0 +1,28 @@
+﻿@inherits System.Web.Mvc.WebViewPage<Umbraco.Cms.Web.PropertyEditors.UmbracoSystemEditors.SelectedTemplate.SelectedTemplateEditorModel>
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.TextBox;
+
+@{
+    //need to select the correct item in the list
+    // (APN) Note that the model's TemplateId property has been changed to HiveId? because currently the modelmetadata
+    // is considering a non-nullable value type to be implicitly required, making it impossible to save content without a template assigned (Sep 11)
+    // (MB) Removed the HiveId.Empty check to allow for "No Template" selections. Please note that there is now a difference between null (no value selected)
+    // and HiveId.Empty ("No Template" value selected) (2012/01/18)
+    if (Model.TemplateId != null)
+    {
+        Model.AvailableTemplates.SelectItems(Model.TemplateId.ToString());
+    }
+}
+    
+@Html.DropDownListFor(x => Model.TemplateId, Model.AvailableTemplates)

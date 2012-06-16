@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UmbracoFramework.EntityGraph.Synonyms.Content">
+    <Position X="8.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="UmbracoFramework.EntityGraph.Synonyms.SecurityUser">
+    <Position X="11.75" Y="3.5" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="UmbracoFramework.EntityGraph.Domain.IGraphableEntitySynonym&lt;TEntitySynonym&gt;">
+    <Position X="1.25" Y="3.75" Width="3.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="UmbracoFramework.EntityGraph.Domain.IEntity">
+    <Position X="3.5" Y="1" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="UmbracoFramework.EntityGraph.Synonyms.IContentEntitySynonym" Collapsed="true">
+    <Position X="5" Y="6.25" Width="3" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="UmbracoFramework.EntityGraph.Synonyms.IUserEntitySynonym">
+    <Position X="5" Y="4.5" Width="3" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

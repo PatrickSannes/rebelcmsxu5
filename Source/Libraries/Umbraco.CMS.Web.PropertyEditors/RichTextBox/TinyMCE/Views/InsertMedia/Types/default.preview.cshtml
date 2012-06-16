@@ -1,0 +1,41 @@
+﻿@using Umbraco.Framework
+@inherits InsertMediaPage
+              
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Trees;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+@using Umbraco.Cms.Web.Model.BackOffice.TinyMCE.InsertMedia;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Controllers;
+
+<style>
+ #image-container
+        {
+            position:absolute;
+            right:5px;
+            background: #fff; 
+            width: 100px; 
+            height: 100px;
+            border: 1px solid #ccc;
+            overflow:hidden;
+            padding: 2px;
+            color:#ccc;
+            font-size:0.8em;
+            
+        }
+</style>
+
+<div id="image-container">
+    <img src="@Url.GetMediaUrl(Model.MediaId, Model.FilePropertyAlias, 100)" />
+</div>
+<span>Selected image:</span>

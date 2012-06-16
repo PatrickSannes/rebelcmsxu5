@@ -1,0 +1,53 @@
+﻿@inherits System.Web.Mvc.WebViewPage<Umbraco.Cms.Web.PropertyEditors.DateTimePicker.DateTimePickerEditorModel>
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.DateTimePicker;
+
+@Html.ValidationMessageFor(x => Model.Value)
+@{
+    Html
+        .RequiresCss("DateTimePicker/datetimepicker.css", "Modules")
+        .RequiresJs("DateTimePicker/jquery-ui-timepicker-addon.js", "Modules", 100)
+        .RequiresJs("DateTimePicker/UmbracoDateTimePicker.js", "Modules", 101);
+
+
+    string dateFormat = Html.ConvertDateFormat();
+}
+
+
+
+<div class="date-time-picker">
+   @Html.TextBoxFor(x => Model.Value,  new { @class = "date-time"})
+</div>
+
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {
+            var id = "@Html.IdFor(x => Model.Value)";
+
+            @if(Model.PreValueModel.ShowTime){
+                <text>$("#" + id).umbracoDateTimePicker(true, 
+                                                        "Choose Date", 
+                                                        "No date chosen", 
+                                                        "Clear date",
+                                                        "@dateFormat");</text>
+            }
+            else{
+                <text>$("#" + id).umbracoDateTimePicker(false, 
+                                                            "Choose Date", 
+                                                            "No date chosen", 
+                                                            "Clear date",
+                                                            "@dateFormat");</text>
+            }
+        });
+    })(jQuery);
+</script>

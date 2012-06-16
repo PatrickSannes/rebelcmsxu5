@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="UmbracoFramework.EntityGraph.Domain.IGraphableEntitySynonym&lt;TEntitySynonym&gt;">
+    <Position X="1.5" Y="3.5" Width="3.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="UmbracoFramework.EntityGraph.Domain.IEntity">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="UmbracoFramework.EntityGraph.Domain.IGraphableEntity">
+    <Position X="5.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

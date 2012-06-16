@@ -1,0 +1,17 @@
+﻿.text-box-controls
+{
+    text-align: right;
+    margin-bottom: 2px;
+}
+
+.text-box-bold-button,
+.text-box-italic-button,
+.text-box-link-button
+{
+    background: url('<%= WebResource("Umbraco.Cms.Web.PropertyEditors.TextBox.Resources.icons.gif")%>') no-repeat center center;
+    text-indent: -999px;
+}
+
+.text-box-bold-button { background-position: 0 0; }
+.text-box-italic-button { background-position: -20px 0; }
+.text-box-link-button { background-position: -40px 0; }

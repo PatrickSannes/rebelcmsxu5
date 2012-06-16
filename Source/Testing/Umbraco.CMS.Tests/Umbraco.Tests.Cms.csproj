@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D3D2E41-6977-47B8-BD87-45ABFB7F60D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Tests.Cms</RootNamespace>
+    <AssemblyName>Umbraco.Tests.Cms</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Umbraco.Tests.Cms.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Umbraco.Tests.Cms.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\DebugNoTests\Umbraco.Tests.Cms.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientDependency.Core">
+      <HintPath>..\..\..\Resources\References\ClientDependency\ClientDependency.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core.Mvc">
+      <HintPath>..\..\..\Resources\References\ClientDependency\ClientDependency.Core.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MvcContrib.TestHelper, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvcContrib.Mvc3.TestHelper-ci.3.0.90.0\lib\MvcContrib.TestHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Resources\References\FluentNHibernate\fluentnhibernate-NH3.1-1.2\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\..\packages\NSubstitute.1.3.0.0\lib\NET40\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=1.5.20902.9026, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NuGet.Core.1.5.20902.9026\lib\net40-Client\NuGet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.10.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Resources\References\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq">
+      <HintPath>..\..\..\Resources\References\Relinq\1.13.122\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RhinoMocks.3.6\lib\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <HintPath>..\..\..\Resources\References\SQLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractRenderViewModelExtensionsFixture.cs" />
+    <Compile Include="ClientNotificationsTests.cs" />
+    <Compile Include="CmsMappingTest.cs" />
+    <Compile Include="ContentExtensionsTests.cs" />
+    <Compile Include="ControllerExtensions.cs" />
+    <Compile Include="ControllerExtensionsTests.cs" />
+    <Compile Include="DictionaryHelperTests.cs" />
+    <Compile Include="Editors\AbstractContentControllerTest.cs" />
+    <Compile Include="Editors\ContentEditorControllerTests.cs" />
+    <Compile Include="Editors\DataTypeEditorControllerTests.cs" />
+    <Compile Include="Editors\DocumentTypeEditorControllerTests.cs" />
+    <Compile Include="Editors\PublishControllerTests.cs" />
+    <Compile Include="Editors\SortControllerTests.cs" />
+    <Compile Include="EmbeddedViewEngine\ViewPathTests.cs" />
+    <Compile Include="ExpressionConversionTests.cs" />
+    <Compile Include="LinkSyntaxParserTests.cs" />
+    <Compile Include="MacroSerializerTest.cs" />
+    <Compile Include="MacroSyntaxParserTests.cs" />
+    <Compile Include="Mvc\Controllers\MediaProxyControllerTests.cs" />
+    <Compile Include="Mvc\ModelBinders\HiveIdModelBinderTest.cs" />
+    <Compile Include="PropertyEditors\PropertyEditorModelTests.cs" />
+    <Compile Include="RenderViewModelDynamicQueryExtensionsFixture.cs" />
+    <Compile Include="RenderViewModelExtensionsFixture.cs" />
+    <Compile Include="RouteEngineTests.cs" />
+    <Compile Include="Security\BackOfficeRoleProviderTests.cs" />
+    <Compile Include="Security\SecurityServiceTests.cs" />
+    <Compile Include="StandardWebTest.cs" />
+    <Compile Include="Mvc\Routing\RegistrationViaAbstractedIoC.cs" />
+    <Compile Include="Stubs\FakeRenderModelFactory.cs" />
+    <Compile Include="Stubs\NullController.cs" />
+    <Compile Include="Stubs\Surface\BlahSurfaceController.cs" />
+    <Compile Include="Stubs\Surface\CustomSurfaceController.cs" />
+    <Compile Include="Stubs\Trees\ApplicationTreeController.cs" />
+    <Compile Include="Stubs\Editors\ContentEditorController.cs" />
+    <Compile Include="Stubs\Trees\ContentTreeController.cs" />
+    <Compile Include="Stubs\Editors\MediaEditorController.cs" />
+    <Compile Include="Stubs\Trees\MediaTreeController.cs" />
+    <Compile Include="Mvc\ModelBinders\ModelBinderTest.cs" />
+    <Compile Include="Mvc\Routing\BackOfficeRouting.cs" />
+    <Compile Include="Mvc\Routing\FrontEndRouting.cs" />
+    <Compile Include="Mvc\Routing\RoutingTest.cs" />
+    <Compile Include="Stubs\TestControllerFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyEditors\PropertyEditorPreValueModelTest.cs" />
+    <Compile Include="StylesheetHelperTests.cs" />
+    <Compile Include="TemplateParserTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Cms.Packages.DevDataset\Umbraco.Cms.Packages.DevDataset.csproj">
+      <Project>{23078C45-56CA-4F7A-99A2-0B2B677A56E7}</Project>
+      <Name>Umbraco.Cms.Packages.DevDataset</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.CMS.Web.Editors\Umbraco.Cms.Web.Editors.csproj">
+      <Project>{340DCA60-FC0D-40E6-AE88-4788D62A0F01}</Project>
+      <Name>Umbraco.Cms.Web.Editors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.CMS.Web.EmbeddedViewEngine\Umbraco.Cms.Web.EmbeddedViewEngine.csproj">
+      <Project>{8F9C0D9E-CD6A-4CA6-84FC-CEE7474988FF}</Project>
+      <Name>Umbraco.Cms.Web.EmbeddedViewEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.CMS.Web.PropertyEditors\Umbraco.Cms.Web.PropertyEditors.csproj">
+      <Project>{6E2C1BD8-6652-41B0-9174-D85484AFE703}</Project>
+      <Name>Umbraco.Cms.Web.PropertyEditors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.CMS.Web.Trees\Umbraco.Cms.Web.Trees.csproj">
+      <Project>{8D847BD0-44E2-428F-9872-3DAF6000EA5F}</Project>
+      <Name>Umbraco.Cms.Web.Trees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.CMS.Web\Umbraco.Cms.Web.csproj">
+      <Project>{8F320595-7764-4E31-AEC5-94F1B128EDFE}</Project>
+      <Name>Umbraco.Cms.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.DependencyManagement.Autofac\Umbraco.Framework.DependencyManagement.Autofac.csproj">
+      <Project>{5420EF90-DA2F-405F-A0EC-18FBED4B4438}</Project>
+      <Name>Umbraco.Framework.DependencyManagement.Autofac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.Security\Umbraco.Framework.Security.csproj">
+      <Project>{72EBBDF6-24FE-4B6D-B1B5-001D8A96AACE}</Project>
+      <Name>Umbraco.Framework.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.Persistence.NHibernate\Umbraco.Framework.Persistence.NHibernate.csproj">
+      <Project>{E119331A-011C-4EDB-8840-A52AFCDF5CD1}</Project>
+      <Name>Umbraco.Framework.Persistence.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.Persistence\Umbraco.Framework.Persistence.csproj">
+      <Project>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</Project>
+      <Name>Umbraco.Framework.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Hive.Providers.IO\Umbraco.Hive.Providers.IO.csproj">
+      <Project>{F685A510-6DF8-4138-9759-B09CF3CF29D6}</Project>
+      <Name>Umbraco.Hive.Providers.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Hive\Umbraco.Hive.csproj">
+      <Project>{8E44FCAB-2597-48F9-8F88-984DD47787C5}</Project>
+      <Name>Umbraco.Hive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.Testing\Umbraco.Framework.Testing.csproj">
+      <Project>{C2E8F096-9E07-429F-B22D-D13D63154893}</Project>
+      <Name>Umbraco.Framework.Testing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Web Apps\Umbraco.CMS.Web.UI\Umbraco.Cms.Web.UI.csproj">
+      <Project>{D17A89C5-54ED-49A4-B07A-14CBFA47E793}</Project>
+      <Name>Umbraco.Cms.Web.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.TestExtensions\Umbraco.Tests.Extensions.csproj">
+      <Project>{26A70ABF-3C79-463A-A950-DDF5400DFC2A}</Project>
+      <Name>Umbraco.Tests.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Tests.CoreAndFramework\Umbraco.Tests.CoreAndFramework.csproj">
+      <Project>{9D4DA63D-8664-4602-918E-2F75B94F1BBA}</Project>
+      <Name>Umbraco.Tests.CoreAndFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Web Apps\Umbraco.CMS.Web.UI\App_Data\Umbraco\Config\ClientDependency.config">
+      <Link>App_Data\Umbraco\Config\ClientDependency.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Web Apps\Umbraco.CMS.Web.UI\App_Data\Umbraco\Config\log4net.config">
+      <Link>App_Data\Umbraco\Config\log4net.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Web Apps\Umbraco.CMS.Web.UI\App_Data\Umbraco\Config\umbraco.cms.applications.config">
+      <Link>App_Data\Umbraco\Config\umbraco.cms.applications.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Web Apps\Umbraco.CMS.Web.UI\App_Data\Umbraco\Config\umbraco.cms.system.config">
+      <Link>App_Data\Umbraco\Config\umbraco.cms.system.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Web Apps\Umbraco.CMS.Web.UI\App_Data\Umbraco\Config\umbraco.hive.config">
+      <Link>App_Data\Umbraco\Config\umbraco.hive.config</Link>
+    </None>
+    <None Include="..\..\Web Apps\Umbraco.CMS.Web.UI\Web.config">
+      <Link>Web.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\Umbraco.Tests.DomainDesign\unit-test-log4net.config">
+      <Link>unit-test-log4net.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="EmbeddedViewEngine\TestView.cshtml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mvc\Controllers\BackOffice\" />
+    <Folder Include="Stubs\Metadata\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

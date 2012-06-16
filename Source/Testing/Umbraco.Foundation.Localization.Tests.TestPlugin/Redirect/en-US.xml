@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Localizations Language="en-US">
+  <Text Key="Plugin.SingleTest1">I'm test 1</Text>
+  <Text Key="Plugin.SingleTest2">I'm test 2</Text>
+
+  <Text Key="Plugin.Tulips1">resource:Umbraco.Foundation.Localization.Tests.TestPlugin.Tulips.jpg</Text>
+  <Text Key="Plugin.Tulips2">resource:Umbraco.Foundation.Localization.Tests.TestPlugin.Tulips.jpg</Text>
+</Localizations>

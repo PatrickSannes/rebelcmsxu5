@@ -1,0 +1,29 @@
+﻿@inherits System.Web.Mvc.WebViewPage<Umbraco.Cms.Web.PropertyEditors.UmbracoSystemEditors.UserGroupUsers.UserGroupUsersEditorModel>
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.TextBox;
+
+<div class="table-box list-picker">
+    <table class="standard highlight-row">
+        <tbody>
+            @foreach (var user in Model.Value)
+            {
+                <tr>
+                    <td>
+                        <a href="@Url.Action("Edit", "UserEditor", new { id = @user.Value })">@user.Text</a>
+                    </td>
+                </tr> 
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4FBFC07A-FBDA-4CA5-A432-C2395CFF5A52}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sandbox.Hive.Domain</RootNamespace>
+    <AssemblyName>Sandbox.Hive.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\Resources\References\AutoMapper\1.1\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataManagement\IDataContextFactory.cs" />
+    <Compile Include="DataManagement\ITransaction.cs" />
+    <Compile Include="DataManagement\IUnitOfWork.cs" />
+    <Compile Include="DataManagement\UnitOfWork.cs" />
+    <Compile Include="HiveDomain\HiveRepository.cs" />
+    <Compile Include="HiveDomain\MappedEntityAssociateList.cs" />
+    <Compile Include="HiveDomain\MappedEntityGraph.cs" />
+    <Compile Include="HiveDomain\PersistenceProviderCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataManagement\IDataContext.cs" />
+    <Compile Include="ServiceRepositoryDomain\MappedIdentifier.cs" />
+    <Compile Include="ServiceRepositoryDomain\MappingModel\AssociationType.cs" />
+    <Compile Include="ServiceRepositoryDomain\MappingModel\IdentityResolver.cs" />
+    <Compile Include="ServiceRepositoryDomain\MappingModel\MappedEntity.cs" />
+    <Compile Include="ServiceRepositoryDomain\MappingModel\MappingRepository.cs" />
+    <Compile Include="ServiceRepositoryDomain\PersistenceModel\IPersistenceProvider.cs" />
+    <Compile Include="ServiceRepositoryDomain\PersistenceModel\IPersistenceRepository.cs" />
+    <Compile Include="ServiceRepositoryDomain\PersistenceModel\PersistedAttribute.cs" />
+    <Compile Include="ServiceRepositoryDomain\PersistenceModel\PersistedAttributeTypeDefinition.cs" />
+    <Compile Include="ServiceRepositoryDomain\PersistenceModel\PersistedEntity.cs" />
+    <Compile Include="ServiceRepositoryDomain\PersistenceModel\PersistenceProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sandbox.Hive.Foundation\Sandbox.Hive.Foundation.csproj">
+      <Project>{2146902D-6956-4F6B-BC5E-A8D442FD5BFF}</Project>
+      <Name>Sandbox.Hive.Foundation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

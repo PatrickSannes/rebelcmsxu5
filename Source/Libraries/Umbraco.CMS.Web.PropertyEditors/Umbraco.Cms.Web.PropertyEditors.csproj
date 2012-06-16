@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E2C1BD8-6652-41B0-9174-D85484AFE703}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Cms.Web.PropertyEditors</RootNamespace>
+    <AssemblyName>Umbraco.Cms.Web.PropertyEditors</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsContainerAnalysis>False</CodeContractsContainerAnalysis>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientDependency.Core">
+      <HintPath>..\..\..\Resources\References\ClientDependency\ClientDependency.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core.Mvc">
+      <HintPath>..\..\..\Resources\References\ClientDependency\ClientDependency.Core.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>..\..\..\Resources\References\Microsoft.Web.Mvc\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 3\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.WorkflowServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebMatrix.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="WebMatrix.WebData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ColorSwatchPicker\ColorSwatchPickerEditorModel.cs" />
+    <Compile Include="ColorSwatchPicker\ColorSwatchPickerPreValueModel.cs" />
+    <Compile Include="ColorSwatchPicker\ColorSwatchPickerEditor.cs" />
+    <Compile Include="ColorSwatchPicker\ColorSwatchPickerPreValueModelBinder.cs" />
+    <Compile Include="CollectionEditingHtmlExtensions.cs" />
+    <Compile Include="ListPicker\DataSources\ApplicationsListPickerDataSource.cs" />
+    <Compile Include="ListPicker\DataSources\UserGroupsListPickerDataSource.cs" />
+    <Compile Include="ListPicker\IListPickerDataSource.cs" />
+    <Compile Include="ListPicker\ListItem.cs" />
+    <Compile Include="ListPicker\ListPickerEditor.cs" />
+    <Compile Include="ListPicker\ListPickerEditorModel.cs" />
+    <Compile Include="ListPicker\ListPickerEditorModelBinder.cs" />
+    <Compile Include="ListPicker\ListPickerMode.cs" />
+    <Compile Include="ListPicker\ListPickerPreValueModel.cs" />
+    <Compile Include="ListPicker\ListPickerPreValueModelBinder.cs" />
+    <Compile Include="MultipleTextstring\MultipleTextstringEditor.cs" />
+    <Compile Include="MultipleTextstring\MultipleTextstringEditorModel.cs" />
+    <Compile Include="MultipleTextstring\MultipleTextstringPreValueModel.cs" />
+    <Compile Include="Numeric\NumericEditor.cs" />
+    <Compile Include="Numeric\NumericEditorModel.cs" />
+    <Compile Include="Numeric\NumericPreValueModel.cs" />
+    <Compile Include="Password\PasswordEditor.cs" />
+    <Compile Include="Password\PasswordEditorModel.cs" />
+    <Compile Include="Password\PasswordPreValueModel.cs" />
+    <Compile Include="RichTextBox\TinyMCE\Controllers\InsertLinkController.cs" />
+    <Compile Include="RichTextBox\TinyMCE\Controllers\InsertMediaController.cs" />
+    <Compile Include="RichTextBox\TinyMCE\Controllers\InsertMacroController.cs" />
+    <Compile Include="RichTextBox\TinyMCE\Controllers\InsertCharController.cs" />
+    <Compile Include="RichTextBox\TinyMCE\Controllers\InsertAnchorController.cs" />
+    <Compile Include="RichTextBox\Resources\RichTextBoxResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RichTextBoxResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TreeNodePicker\TreeNodePickerPreValueModelBinder.cs" />
+    <Compile Include="UmbracoSystemEditors\DictionaryItemTranslations\DictionaryItemTranslationsEditorModelBinder.cs" />
+    <Compile Include="UmbracoSystemEditors\DictionaryItemTranslations\DictionaryItemTranslationsEditor.cs" />
+    <Compile Include="UmbracoSystemEditors\DictionaryItemTranslations\DictionaryItemTranslationsEditorModel.cs" />
+    <Compile Include="UmbracoSystemEditors\NodeName\NodeNameModelBinder.cs" />
+    <Compile Include="UmbracoSystemEditors\SelectedTemplate\SelectedTemplateEditor.cs" />
+    <Compile Include="UmbracoSystemEditors\SelectedTemplate\SelectedTemplateEditorModel.cs" />
+    <Compile Include="DateTimePicker\DateTimePickerEditor.cs" />
+    <Compile Include="DateTimePicker\DateTimePickerEditorModel.cs" />
+    <Compile Include="DateTimePicker\DateTimePickerPreValueModel.cs" />
+    <Compile Include="DateTimePicker\JQueryUIDatePickerHelper.cs" />
+    <Compile Include="Label\LabelEditor.cs" />
+    <Compile Include="Label\LabelEditorModel.cs" />
+    <Compile Include="UmbracoSystemEditors\NodeName\NodeNameEditor.cs" />
+    <Compile Include="UmbracoSystemEditors\NodeName\NodeNameEditorModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RichTextBox\RichTextBoxEditor.cs" />
+    <Compile Include="RichTextBox\RichTextBoxEditorModel.cs" />
+    <Compile Include="RichTextBox\RichTextBoxPreValueModel.cs" />
+    <Compile Include="RichTextBox\RichTextBoxPreValueModelBinder.cs" />
+    <Compile Include="Slider\SliderEditor.cs" />
+    <Compile Include="Slider\SliderEditorModel.cs" />
+    <Compile Include="Slider\SliderOptionsOrientation.cs" />
+    <Compile Include="Slider\SliderOptionsRange.cs" />
+    <Compile Include="Slider\SliderPreValueModel.cs" />
+    <Compile Include="Tags\TagsEditorModel.cs" />
+    <Compile Include="Tags\TagsPreValueModel.cs" />
+    <Compile Include="Tags\TagsEditor.cs" />
+    <Compile Include="TextBox\TextBoxEditorModel.cs" />
+    <Compile Include="TextBox\TextBoxMode.cs" />
+    <Compile Include="TextBox\TextBoxPreValueModel.cs" />
+    <Compile Include="TextBox\TextBoxEditor.cs" />
+    <Compile Include="TrueFalse\TrueFalseEditor.cs" />
+    <Compile Include="TrueFalse\TrueFalseEditorModel.cs" />
+    <Compile Include="UmbracoSystemEditors\UserGroupUsers\UserGroupUsersEditor.cs" />
+    <Compile Include="UmbracoSystemEditors\UserGroupUsers\UserGroupUsersEditorModel.cs" />
+    <Compile Include="Upload\UploadEditor.cs" />
+    <Compile Include="Upload\UploadEditorModel.cs" />
+    <Compile Include="Upload\UploadEditorModelBinder.cs" />
+    <Compile Include="Upload\UploadPreValueModel.cs" />
+    <Compile Include="UrlPicker\UrlPickerEditor.cs" />
+    <Compile Include="UrlPicker\UrlPickerEditorModel.cs" />
+    <Compile Include="UrlPicker\UrlPickerMode.cs" />
+    <Compile Include="UrlPicker\UrlPickerPreValueModel.cs" />
+    <Compile Include="UrlPicker\UrlPickerDataFormat.cs" />
+    <Compile Include="TreeNodePicker\TreeNodePicker.cs" />
+    <Compile Include="TreeNodePicker\TreeNodePickerModel.cs" />
+    <Compile Include="TreeNodePicker\TreeNodePickerPreValueModel.cs" />
+    <Compile Include="TreeNodePicker\TreeDefinition.cs" />
+    <Compile Include="UrlPicker\UrlPickerPreValueModelBinder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.CMS.Web.EmbeddedViewEngine\Umbraco.Cms.Web.EmbeddedViewEngine.csproj">
+      <Project>{8F9C0D9E-CD6A-4CA6-84FC-CEE7474988FF}</Project>
+      <Name>Umbraco.Cms.Web.EmbeddedViewEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.CMS.Web\Umbraco.Cms.Web.csproj">
+      <Project>{8F320595-7764-4E31-AEC5-94F1B128EDFE}</Project>
+      <Name>Umbraco.Cms.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework.Persistence\Umbraco.Framework.Persistence.csproj">
+      <Project>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</Project>
+      <Name>Umbraco.Framework.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Hive\Umbraco.Hive.csproj">
+      <Project>{8E44FCAB-2597-48F9-8F88-984DD47787C5}</Project>
+      <Name>Umbraco.Hive</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RichTextBox\Resources\RichTextBoxResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RichTextBoxResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RichTextBox\Views\RichTextBoxEditor.cshtml">
+      <LastGenOutput>TinyMCEEditorPropertyEditor.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RichTextBox\Views\FeaturesCheckboxList.cshtml" />
+    <EmbeddedResource Include="RichTextBox\Views\SizeInputField.cshtml" />
+    <EmbeddedResource Include="TreeNodePicker\Views\TreeNodePicker.cshtml" />
+    <EmbeddedResource Include="TreeNodePicker\Views\TreeTypeDropDown.cshtml" />
+    <EmbeddedResource Include="Slider\Views\SliderEditor.cshtml" />
+    <EmbeddedResource Include="DateTimePicker\Views\DateTimePickerEditor.cshtml" />
+    <EmbeddedResource Include="UmbracoSystemEditors\SelectedTemplate\Views\SelectedTemplateEditor.cshtml" />
+    <EmbeddedResource Include="Upload\Views\UploadEditor.cshtml" />
+    <EmbeddedResource Include="ColorSwatchPicker\Views\ColorItem.cshtml" />
+    <EmbeddedResource Include="ColorSwatchPicker\Views\ColorItems.cshtml" />
+    <EmbeddedResource Include="ListPicker\Views\ListPickerEditor.cshtml" />
+    <EmbeddedResource Include="ListPicker\Views\ListPickerItems.cshtml" />
+    <EmbeddedResource Include="ListPicker\Views\ListPickerItem.cshtml" />
+    <EmbeddedResource Include="Password\Views\PasswordEditor.cshtml">
+      <SubType>Code</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RichTextBox\Views\StylesheetsCheckboxList.cshtml" />
+    <EmbeddedResource Include="Label\Views\LabelEditor.cshtml" />
+    <EmbeddedResource Include="Numeric\Views\NumericEditor.cshtml" />
+    <EmbeddedResource Include="RichTextBox\Views\PreValueEditor.cshtml">
+      <LastGenOutput>TinyMCEEditorPropertyEditor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RichTextBox\Views\InsertMacroDialog.cshtml">
+      <LastGenOutput>TinyMCEEditorPropertyEditor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Views\InsertAnchor\InsertAnchor.cshtml" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Views\InsertMacro\InsertMacro.cshtml" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Views\InsertMacro\SelectMacro.cshtml" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Views\InsertMacro\SetParameters.cshtml" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Views\InsertChar\InsertChar.cshtml" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Views\InsertLink\InsertLink.cshtml" />
+    <EmbeddedResource Include="UmbracoSystemEditors\UserGroupUsers\Views\UserGroupUsersEditor.cshtml" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Views\InsertMedia\InsertMedia.cshtml" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Views\InsertMedia\Types\default.cshtml" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Views\InsertMedia\Types\default.preview.cshtml" />
+    <EmbeddedResource Include="MultipleTextstring\Views\MultipleTextstringEditor.cshtml" />
+    <EmbeddedResource Include="UmbracoSystemEditors\DictionaryItemTranslations\Views\DictionaryItemTranslationsEditor.cshtml" />
+    <None Include="web.config" />
+    <EmbeddedResource Include="ColorSwatchPicker\Views\ColorSwatchPickerEditor.cshtml" />
+    <EmbeddedResource Include="Tags\Views\TagsEditor.cshtml" />
+    <EmbeddedResource Include="TextBox\Views\TextBoxEditor.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TrueFalse\Views\" />
+    <Folder Include="UmbracoSystemEditors\NodeName\Resources\" />
+    <Folder Include="UmbracoSystemEditors\NodeName\Views\" />
+    <Folder Include="UrlPicker\Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TextBox\Resources\TextBoxPropertyEditor.css" />
+    <EmbeddedResource Include="TextBox\Resources\TextBoxPropertyEditor.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColorSwatchPicker\Resources\ColorSwatchPicker.css" />
+    <EmbeddedResource Include="ColorSwatchPicker\Resources\ColorSwatchPicker.js" />
+    <EmbeddedResource Include="ColorSwatchPicker\Resources\select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RichTextBox\Resources\FeaturesIcons.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RichTextBox\Resources\FeaturesCheckboxList.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RichTextBox\Resources\SizeInputField.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RichTextBox\Resources\RichTextBox.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tags\Resources\jquery.tagsinput.css" />
+    <EmbeddedResource Include="Tags\Resources\jquery.tagsinput.js" />
+    <EmbeddedResource Include="MultipleTextstring\Resources\MultipleTextstringPropertyEditor.js" />
+    <Content Include="RichTextBox\TinyMCE\Models\README.txt" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Resources\InsertMedia\InsertMedia.js" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Resources\InsertAnchor\InsertAnchor.js" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Resources\InsertMacro\InsertMacro.js" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Resources\InsertMacro\SelectMacro.js" />
+    <EmbeddedResource Include="RichTextBox\TinyMCE\Resources\InsertLink\InsertLink.js" />
+    <EmbeddedResource Include="TextBox\Resources\icons.gif" />
+    <EmbeddedResource Include="RichTextBox\Resources\StylesheetsCheckboxList.css" />
+    <EmbeddedResource Include="ColorSwatchPicker\Resources\ColorSwatchPickerPrevalueEditor.js" />
+    <EmbeddedResource Include="ColorSwatchPicker\Resources\ColorSwatchPickerPrevalueEditor.css" />
+    <EmbeddedResource Include="ListPicker\Resources\ListPickerPrevalueEditor.css" />
+    <EmbeddedResource Include="ListPicker\Resources\ListPickerPrevalueEditor.js" />
+    <EmbeddedResource Include="Numeric\Resources\NumericPropertyEditor.js" />
+    <EmbeddedResource Include="RichTextBox\Resources\RTEPreValueEditor.js" />
+    <Content Include="RichTextBox\Resources\FeaturesList.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="UrlPicker\Views\MultipleUrlPickerModeEditor.cshtml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>robocopy "$(TargetDir) " "$(SolutionDir)Web Apps\Umbraco.CMS.Web.UI\App_Plugins\Core\lib\ " "*.PropertyEditors.dll" /NP /NJS
+if errorlevel 4 goto BuildEventFailed 
+if errorlevel 0 goto end 
+:BuildEventFailed echo FILECOPY for $(ProjectName) FAILED 
+exit 1 
+:end echo FILECOPY for $(ProjectName) COMPLETED OK 
+exit 0</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

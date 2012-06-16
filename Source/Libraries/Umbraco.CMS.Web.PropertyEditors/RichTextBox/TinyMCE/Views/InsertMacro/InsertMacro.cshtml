@@ -1,0 +1,55 @@
+﻿@inherits WebViewPage<InsertMacroModel>
+              
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Trees;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+@using Umbraco.Cms.Web.Model.BackOffice.TinyMCE.InsertMacro;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Controllers;
+
+@{
+    ViewBag.Title = "Insert/edit macro";
+    Layout = "~/Areas/Umbraco/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    @{
+        Html
+            .RequiresJs("../Modules/TinyMCE/tiny_mce_popup.js", "Scripts", 100)
+            .RequiresJsResource(typeof(InsertMacroController), "Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Resources.InsertMacro.InsertMacro.js", 101);
+    }
+
+    <style type="text/css">
+        html, body, form, .progress-bar { width: 100%; height: 100%; overflow: hidden; }
+        .progress-bar { background-position: 49% 49%; }
+    </style>
+}
+
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {
+            Umbraco.Controls.TinyMCE.InsertMacro.init({
+                isNew: @Model.IsNew.ToString().ToLower(),
+                currentNodeId: "@Model.ContentId",
+                macroAlias: "@Model.MacroAlias",
+                macroParams: @Html.ToJsonString(Model.MacroParameters, PropertyNamesCaseType.CaseInsensitive),
+                inlineMacroId: "@Model.InlineMacroId"
+            });
+        });
+    })(jQuery);
+</script>
+
+@using (Html.BeginForm("MacroContents", "Macro", FormMethod.Post))
+{
+	<div class="progress-bar">&nbsp;</div>
+}

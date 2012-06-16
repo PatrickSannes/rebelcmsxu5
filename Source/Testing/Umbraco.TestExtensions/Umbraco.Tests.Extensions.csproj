@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26A70ABF-3C79-463A-A950-DDF5400DFC2A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Tests.Extensions</RootNamespace>
+    <AssemblyName>Umbraco.Tests.Extensions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Examine">
+      <HintPath>..\..\..\Resources\References\Examine\Examine.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Resources\References\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\..\..\Resources\References\Examine\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\Resources\References\FluentNHibernate\fluentnhibernate-NH3.1-1.2\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\..\packages\NSubstitute.1.3.0.0\lib\NET40\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RhinoMocks.3.6\lib\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="DemoDataHelper.cs" />
+    <Compile Include="ExamineTestSetupHelper.cs" />
+    <Compile Include="FakeBackOfficeRequestContext.cs" />
+    <Compile Include="FakeHiveCmsManager.cs" />
+    <Compile Include="FakeHiveProviderBootstrapper.cs" />
+    <Compile Include="FakeRoutableRequestContext.cs" />
+    <Compile Include="FakeRoutingEngine.cs" />
+    <Compile Include="FakeUmbracoApplicationContext.cs" />
+    <Compile Include="IoHiveTestSetupHelper.cs" />
+    <Compile Include="MockedIconFileResolver.cs" />
+    <Compile Include="MockedMapResolverContext.cs" />
+    <Compile Include="MockedParameterEditorFactory.cs" />
+    <Compile Include="MockedPropertyEditorFactory.cs" />
+    <Compile Include="HiveModelCreationHelper.cs" />
+    <Compile Include="FixedPropertyEditors.cs" />
+    <Compile Include="MockHiveManager.cs" />
+    <Compile Include="ModelForCloneTests\CloneTest.cs" />
+    <Compile Include="ModelForCloneTests\CloneTestBase.cs" />
+    <Compile Include="ModelForCloneTests\ICloneInterfaceTest.cs" />
+    <Compile Include="NhibernateTestSetupHelper.cs" />
+    <Compile Include="NodeNameAttribute.cs" />
+    <Compile Include="RouteTestExtensions.cs" />
+    <Compile Include="SelectedTemplateAttribute.cs" />
+    <Compile Include="FakeFrameworkContext.cs" />
+    <Compile Include="FakeHttpContextFactory.cs" />
+    <Compile Include="FakeHttpResponse.cs" />
+    <Compile Include="FakeTypeMapperCollection.cs" />
+    <Compile Include="Stubs\PropertyEditors\NonMandatoryPropertyEditor.cs" />
+    <Compile Include="Stubs\PropertyEditors\MandatoryPreValueModel.cs" />
+    <Compile Include="Stubs\PropertyEditors\MandatoryPropertyEditor.cs" />
+    <Compile Include="Stubs\PropertyEditors\PreValueRegexPropertyEditor.cs" />
+    <Compile Include="Stubs\PropertyEditors\RegexPropertyEditor.cs" />
+    <Compile Include="Stubs\PropertyEditors\TestContentAwarePropertyEditor.cs" />
+    <Compile Include="Stubs\PropertyEditors\TestEditorModel.cs" />
+    <Compile Include="TestHelper.cs" />
+    <Compile Include="TestOwner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Cms.Packages.DevDataset\Umbraco.Cms.Packages.DevDataset.csproj">
+      <Project>{23078C45-56CA-4F7A-99A2-0B2B677A56E7}</Project>
+      <Name>Umbraco.Cms.Packages.DevDataset</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.CMS.Web.PropertyEditors\Umbraco.Cms.Web.PropertyEditors.csproj">
+      <Project>{6E2C1BD8-6652-41B0-9174-D85484AFE703}</Project>
+      <Name>Umbraco.Cms.Web.PropertyEditors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.CMS.Web\Umbraco.Cms.Web.csproj">
+      <Project>{8F320595-7764-4E31-AEC5-94F1B128EDFE}</Project>
+      <Name>Umbraco.Cms.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.Persistence.Examine\Umbraco.Framework.Persistence.Examine.csproj">
+      <Project>{B3CD7F2C-D4BE-4731-8D0E-607E571649AD}</Project>
+      <Name>Umbraco.Framework.Persistence.Examine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.Security\Umbraco.Framework.Security.csproj">
+      <Project>{72EBBDF6-24FE-4B6D-B1B5-001D8A96AACE}</Project>
+      <Name>Umbraco.Framework.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.Persistence.NHibernate\Umbraco.Framework.Persistence.NHibernate.csproj">
+      <Project>{E119331A-011C-4EDB-8840-A52AFCDF5CD1}</Project>
+      <Name>Umbraco.Framework.Persistence.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.Persistence\Umbraco.Framework.Persistence.csproj">
+      <Project>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</Project>
+      <Name>Umbraco.Framework.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Hive.Providers.IO\Umbraco.Hive.Providers.IO.csproj">
+      <Project>{F685A510-6DF8-4138-9759-B09CF3CF29D6}</Project>
+      <Name>Umbraco.Hive.Providers.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Hive\Umbraco.Hive.csproj">
+      <Project>{8E44FCAB-2597-48F9-8F88-984DD47787C5}</Project>
+      <Name>Umbraco.Hive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Umbraco.Framework.Testing\Umbraco.Framework.Testing.csproj">
+      <Project>{C2E8F096-9E07-429F-B22D-D13D63154893}</Project>
+      <Name>Umbraco.Framework.Testing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\web apps\umbraco.cms.web.ui\app_data\umbraco\config\ClientDependency.config">
+      <Link>App_Data\Umbraco\Config\ClientDependency.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\web apps\umbraco.cms.web.ui\app_data\umbraco\config\umbraco.cms.applications.config">
+      <Link>App_Data\Umbraco\Config\umbraco.cms.applications.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\web apps\umbraco.cms.web.ui\app_data\umbraco\config\umbraco.cms.system.config">
+      <Link>App_Data\Umbraco\Config\umbraco.cms.system.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Web Apps\Umbraco.CMS.Web.UI\App_Data\Umbraco\Config\umbraco.hive.config">
+      <Link>App_Data\Umbraco\Config\umbraco.hive.config</Link>
+    </None>
+    <None Include="..\..\Web Apps\Umbraco.CMS.Web.UI\Web.config">
+      <Link>Web.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="unit-test-log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

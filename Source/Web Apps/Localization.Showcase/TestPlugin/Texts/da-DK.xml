@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Translations Language="da-DK">
+
+  <Text Key="Hello">Hej dér</Text>
+
+  <!-- Tulips1 comes from the custom factory in TextFactory.cs-->
+  <Text Key="Tulips2">resource:TestPlugin.Tulips.jpg</Text>
+
+</Translations>

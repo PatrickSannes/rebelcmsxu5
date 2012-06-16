@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D632EF9A-C033-4788-AC5B-2836986FF83E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.CMS.DataPersistence</RootNamespace>
+    <AssemblyName>Umbraco.CMS.DataPersistence</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\Resources\References\Autofac\2.3.2.632-NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SolutionInfo.Umbraco.CMS.cs">
+      <Link>Properties\SolutionInfo.Umbraco.CMS.cs</Link>
+    </Compile>
+    <Compile Include="Repositories\ContentEntityRepositoryReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\PackageXml\TabRepositoryReader.cs" />
+    <Compile Include="Repositories\PackageXml\PropertyRepositoryReader.cs" />
+    <Compile Include="Repositories\PackageXml\DataTypeRepositoryReader.cs" />
+    <Compile Include="Repositories\PackageXml\DocTypeEntityRepositoryReader.cs" />
+    <Compile Include="Repositories\PackageXml\XmlDbContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Framework.EntityGraph.DataPersistence\Umbraco.Framework.EntityGraph.DataPersistence.csproj">
+      <Project>{5037EB67-BD88-4761-AD46-04CA4F88F8E5}</Project>
+      <Name>Umbraco.Framework.EntityGraph.DataPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework.EntityGraph.Domain.EntityAdaptors\Umbraco.Framework.EntityGraph.Domain.EntityAdaptors.csproj">
+      <Project>{0B8019BA-E5DE-4E54-94AE-DF60DD4B8297}</Project>
+      <Name>Umbraco.Framework.EntityGraph.Domain.EntityAdaptors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework.EntityGraph.Domain\Umbraco.Framework.EntityGraph.Domain.csproj">
+      <Project>{41ED84AF-AAB1-4DF9-99AA-6EB242BFC251}</Project>
+      <Name>Umbraco.Framework.EntityGraph.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.CMS.Domain\Umbraco.CMS.Domain.csproj">
+      <Project>{E55823D4-3BE6-4E78-9DDE-41AD741BD3EB}</Project>
+      <Name>Umbraco.CMS.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

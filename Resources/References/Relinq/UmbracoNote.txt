@@ -1,0 +1,2 @@
+This is the same version used by NH3 but kept in a separate place for organisational purposes; it is used by Umbraco.Framework in order to power the Linq provider for querying Hive and Peristence and may need ilmerging in order to avoid conflicts.
+Bit of history: the latest stable build of Relinq as of Umbraco 5 production is a fairly comprehensive namespace refactor vs the version used by NH3, so the two aren't compatible, so for the initial release we're using the same version as NH3 at time of shipping.

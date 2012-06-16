@@ -1,0 +1,36 @@
+﻿@inherits WebViewPage<Umbraco.Cms.Web.PropertyEditors.RichTextBox.RichTextBoxPreValueModel>
+@using Umbraco.Cms.Web;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+@using Umbraco.Cms.Web.EmbeddedViewEngine;
+@{
+    Html.RequiresJsResource(typeof(RichTextBoxEditor), "Umbraco.Cms.Web.PropertyEditors.RichTextBox.Resources.RTEPreValueEditor.js");
+}
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {                
+            Umbraco.PropertyEditors.RTEPreValueEditor.init({
+                showAdvanced: @((!string.IsNullOrEmpty(Model.ValidElements)).ToString().ToLower())
+            }); 
+        });
+    })(jQuery);
+</script>
+<div id="rtePreValueEditor">
+    @Html.UmbEditorFor(x => Model.ShowLabel, x => Model.ShowLabel, x => Model.ShowLabel)
+    @Html.UmbEditorFor(x => Model.ShowContextMenu, x => Model.ShowContextMenu, x => Model.ShowContextMenu)
+    @Html.UmbEditorFor(x => Model.Size, Html.GetEmbeddedViewPath((object)Model.Size), "Size")
+    @Html.UmbEditorFor(x => Model.Features, Html.GetEmbeddedViewPath((object)Model.Features), "Features")
+    @Html.UmbEditorFor(x => Model.Stylesheets, Html.GetEmbeddedViewPath((object)Model.Stylesheets), "Stylesheets")
+    <div data-bind="visible: showAdvanced()">
+        @Html.UmbEditorFor(x => Model.ValidElements, x => Model.ValidElements, Html.TextAreaFor(x => Model.ValidElements, 15, 30, null))
+    </div>
+    <a href="javascript:void(0);" data-bind="click: toggleAdvanced">Toggle advanced options</a>
+</div>

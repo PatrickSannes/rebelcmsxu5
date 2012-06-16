@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Framework.Persistence</RootNamespace>
+    <AssemblyName>Umbraco.Framework.Persistence</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugForcex86|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugForcex86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugForcex86|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugForcex86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugForcex86|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugForcex86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Abstractions\Attribution\MetaData\IAttributeSerializationDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModelFirst\AnnotationQueryStructureBinder.cs" />
+    <Compile Include="ModelFirst\Annotations\AttributeAliasAttribute.cs" />
+    <Compile Include="ModelFirst\CustomTypedEntity.cs" />
+    <Compile Include="AttributeTypeRegistry.cs" />
+    <Compile Include="DefaultAttributeTypeRegistry.cs" />
+    <Compile Include="IAttributeTypeRegistry.cs" />
+    <Compile Include="Model\AbstractSchemaPart.cs" />
+    <Compile Include="Model\Associations\IReadonlyRelation.cs" />
+    <Compile Include="Model\Associations\IRelation.cs" />
+    <Compile Include="Model\Associations\IRelationById.cs" />
+    <Compile Include="Model\Associations\Relation.cs" />
+    <Compile Include="Model\Associations\Relation2.cs" />
+    <Compile Include="Model\Associations\RelationLoadStatus.cs" />
+    <Compile Include="Model\Associations\RelationMetaDataCollection.cs" />
+    <Compile Include="Model\Associations\_Revised\RelationById.cs" />
+    <Compile Include="Model\Associations\_Revised\RelationProxy.cs" />
+    <Compile Include="Model\Associations\_Revised\RelationProxyBucket.cs" />
+    <Compile Include="Model\Associations\_Revised\RelationProxyCollection.cs" />
+    <Compile Include="Model\Associations\_Revised\RelationProxyStatus.cs" />
+    <Compile Include="Model\Attribution\MetaData\AttributeTypeDefinitionComparer.cs" />
+    <Compile Include="Model\Attribution\MetaData\InheritedAttributeDefinition.cs" />
+    <Compile Include="Model\Attribution\MetaData\InheritedAttributeGroup.cs" />
+    <Compile Include="Model\Attribution\MetaData\CompositeEntitySchema.cs" />
+    <Compile Include="Model\CompositeTypedEntity.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\BytesAttributeType.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\DictionaryItemTranslationsAttributeType.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\FileUploadAttributeType.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\UserGroupUsersAttributeType.cs" />
+    <Compile Include="Model\Constants\Entities\Hostname.cs" />
+    <Compile Include="Model\Constants\Entities\Member.cs" />
+    <Compile Include="Model\Constants\Entities\User.cs" />
+    <Compile Include="Model\Constants\Entities\UserGroup.cs" />
+    <Compile Include="Model\Constants\Schemas\DictionaryItemSchema.cs" />
+    <Compile Include="Model\Constants\Schemas\DictionaryRootSchema.cs" />
+    <Compile Include="Model\Constants\Schemas\HostnameSchema.cs" />
+    <Compile Include="Model\Constants\Schemas\MediaImageSchema.cs" />
+    <Compile Include="Model\Constants\Schemas\MemberSchema.cs" />
+    <Compile Include="Model\Constants\Schemas\UserGroupSchema.cs" />
+    <Compile Include="Model\Constants\SerializationTypes\BoolSerializationType.cs" />
+    <Compile Include="Model\Constants\Schemas\ContentRootSchema.cs" />
+    <Compile Include="Model\Constants\FixedEntities.cs" />
+    <Compile Include="Model\Constants\FixedHiveIds.cs" />
+    <Compile Include="Model\Associations\RelationType.cs" />
+    <Compile Include="Model\Constants\SerializationTypes\ByteArraySerializationType.cs" />
+    <Compile Include="Model\Constants\SerializationTypes\DateTimeSerializationType.cs" />
+    <Compile Include="Model\Constants\FixedLocales.cs" />
+    <Compile Include="Model\Constants\FixedSchemaTypes.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\ApplicationsListPickerAttributeType.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\BoolAttributeType.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\ContentPickerAttributeType.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\MediaPickerAttributeType.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\ReadOnlyAttributeType.cs" />
+    <Compile Include="Model\Constants\SerializationTypes\IntegerSerializationType.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\DateTimeAttributeType.cs" />
+    <Compile Include="Model\Constants\DefaultAttributeLocale.cs" />
+    <Compile Include="Model\Constants\FixedGroupDefinitions.cs" />
+    <Compile Include="Model\Constants\FixedRelationTypes.cs" />
+    <Compile Include="Model\Constants\FixedSchemas.cs" />
+    <Compile Include="Model\Constants\FixedStatusTypes.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\StringAttributeType.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\IntegerAttributeType.cs" />
+    <Compile Include="Model\Constants\Schemas\MediaFolderSchema.cs" />
+    <Compile Include="Model\Constants\Schemas\MediaRootSchema.cs" />
+    <Compile Include="Model\Constants\AttributeDefinitions\NodeNameAttributeDefinition.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\NodeNameAttributeType.cs" />
+    <Compile Include="Model\Constants\Schemas\UserSchema.cs" />
+    <Compile Include="Model\Constants\AttributeDefinitions\SelectedTemplateAttributeDefinition.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\SelectedTemplateAttributeType.cs" />
+    <Compile Include="Model\Constants\Entities\SubContentRoot.cs" />
+    <Compile Include="Model\Constants\Schemas\SystemSchema.cs" />
+    <Compile Include="Model\IEntity.cs" />
+    <Compile Include="Model\IO\File.cs" />
+    <Compile Include="Model\IO\FileSchema.cs" />
+    <Compile Include="Model\IRelatableEntity.cs" />
+    <Compile Include="Model\Constants\AttributeTypes\TextAttributeType.cs" />
+    <Compile Include="Model\LinqSupport\PersistenceModelStructureBinder.cs" />
+    <Compile Include="Model\PersistenceMetadata.cs" />
+    <Compile Include="Model\Versioning\EntitySnapshot.cs" />
+    <Compile Include="Model\Versioning\IVersionableEntity.cs" />
+    <Compile Include="Model\Versioning\Revision.cs" />
+    <Compile Include="Model\Versioning\RevisionCollection.cs" />
+    <Compile Include="ProviderMetadata.cs" />
+    <Compile Include="RdbmsModel\Mapping\RdbmsToModelMapper.cs" />
+    <Compile Include="RdbmsModel\Mapping\ManualMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RelationSerializer.cs" />
+    <Compile Include="PersistenceProviderConstants.cs" />
+    <Compile Include="RdbmsModel\AttributeDecimalValue.cs" />
+    <Compile Include="RdbmsModel\Mapping\ModelToRdbmsMapper.cs" />
+    <Compile Include="Model\Associations\AbstractRelationType.cs" />
+    <Compile Include="Model\Associations\RelationMetaDatum.cs" />
+    <Compile Include="Model\Attribution\MetaData\AttributeDefinition.cs" />
+    <Compile Include="Model\Attribution\MetaData\AttributeGroup.cs" />
+    <Compile Include="Model\Attribution\MetaData\AttributeType.cs" />
+    <Compile Include="Model\Attribution\MetaData\EntitySchema.cs" />
+    <Compile Include="Model\Constants\SerializationTypes\LongStringSerializationType.cs" />
+    <Compile Include="Model\Constants\SerializationTypes\StringSerializationType.cs" />
+    <Compile Include="Model\Attribution\TypedAttribute.cs" />
+    <Compile Include="Model\Attribution\TypedAttributeCollection.cs" />
+    <Compile Include="Model\Attribution\TypedAttributeValueCollection.cs" />
+    <Compile Include="Model\Constants\RootEntitySchema.cs" />
+    <Compile Include="Model\Constants\Entities\SystemRoot.cs" />
+    <Compile Include="PersistenceExtensions.cs" />
+    <Compile Include="Model\AbstractEntity.cs" />
+    <Compile Include="Model\EntityCollection.cs" />
+    <Compile Include="Model\TypedEntity.cs" />
+    <Compile Include="Model\Versioning\_forDeleting\Branch.cs" />
+    <Compile Include="Model\Versioning\_forDeleting\Changeset.cs" />
+    <Compile Include="Model\Versioning\_forDeleting\RevisionData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RdbmsModel\Attribute.cs" />
+    <Compile Include="RdbmsModel\AttributeDateValue.cs" />
+    <Compile Include="RdbmsModel\AttributeDefinition.cs" />
+    <Compile Include="RdbmsModel\AttributeDefinitionGroup.cs" />
+    <Compile Include="RdbmsModel\AttributeIntegerValue.cs" />
+    <Compile Include="RdbmsModel\AttributeLongStringValue.cs" />
+    <Compile Include="RdbmsModel\AttributeSchemaDefinition.cs" />
+    <Compile Include="RdbmsModel\AttributeStringValue.cs" />
+    <Compile Include="RdbmsModel\AttributeType.cs" />
+    <Compile Include="RdbmsModel\Locale.cs" />
+    <Compile Include="RdbmsModel\Node.cs" />
+    <Compile Include="RdbmsModel\NodeRelation.cs" />
+    <Compile Include="RdbmsModel\NodeRelationCache.cs" />
+    <Compile Include="RdbmsModel\NodeRelationTag.cs" />
+    <Compile Include="RdbmsModel\NodeRelationType.cs" />
+    <Compile Include="RdbmsModel\NodeVersion.cs" />
+    <Compile Include="RdbmsModel\NodeVersionSchedule.cs" />
+    <Compile Include="RdbmsModel\NodeVersionStatusHistory.cs" />
+    <Compile Include="RdbmsModel\NodeVersionStatusType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Model\PersistenceModel.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,28 @@
+﻿@inherits WebViewPage<Umbraco.Cms.Web.PropertyEditors.ColorSwatchPicker.ColorItem>
+                       
+@using Umbraco.Cms.Web;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using Umbraco.Cms.Web.PropertyEditors;
+@using Umbraco.Cms.Web.PropertyEditors.ColorSwatchPicker;
+
+<li>
+    @using (Html.BeginCollectionItem("colors"))
+    {
+        @Html.ValidationMessageFor(x => Model.HexValue)
+
+        <div class="color-item-preview" style="background-color:@Model.HexValue">
+        </div>
+        @Html.TextBoxFor(x => Model.HexValue, new { @class = "color-item-hexvalue" })
+    }
+    <a href="#" class="delete">Delete</a>
+</li>
+
+

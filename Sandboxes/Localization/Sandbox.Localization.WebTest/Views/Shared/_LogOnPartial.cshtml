@@ -1,0 +1,15 @@
+﻿@if(Request.IsAuthenticated) {
+        
+    
+    @L10n.Get("Greeting" /* @L10n @da-DK Hej {Username} @en-GB Welcome {Username} */, 
+         new { Username = Context.User.Identity.Name, 
+            NameFormat="<span style='font-weight:Bold'>{#}</span>"})
+
+    @: [ @Html.ActionLink("Log Off", "LogOff", "Account") ]
+}
+else {
+    @:[ @Html.ActionLink("Log On", "LogOn", "Account") ]
+}
+
+
+@("Foo" /* @L10n @da-DK Test  */)

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{124CF288-DD01-4832-9745-BAE3CB4A052F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sandbox.Hive.BootStrappers.AutoFac</RootNamespace>
+    <AssemblyName>Sandbox.Hive.BootStrappers.AutoFac</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\Resources\References\Autofac\2.3.2.632-NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutofacContrib.CommonServiceLocator">
+      <HintPath>..\..\..\Resources\References\Autofac\Contrib-2.3.2.632-NET40\Library\AutofacContrib.CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\Resources\References\AutoMapper\1.1\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\Resources\References\Microsoft.Practices\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoFacResolver.cs" />
+    <Compile Include="Modules\ElementExtensions.cs" />
+    <Compile Include="Modules\HiveServicesModule.cs" />
+    <Compile Include="Modules\LoadConfigurationModule.cs" />
+    <Compile Include="Modules\ProviderAutoSetupModule.cs" />
+    <Compile Include="Modules\ServiceComponentModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Permissions.xml" />
+    <Content Include="Security.xml" />
+    <Content Include="Media.xml" />
+    <Content Include="HiveMap.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sandbox.Hive.Domain\Sandbox.Hive.Domain.csproj">
+      <Project>{4FBFC07A-FBDA-4CA5-A432-C2395CFF5A52}</Project>
+      <Name>Sandbox.Hive.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sandbox.Hive.Foundation\Sandbox.Hive.Foundation.csproj">
+      <Project>{2146902D-6956-4F6B-BC5E-A8D442FD5BFF}</Project>
+      <Name>Sandbox.Hive.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sandbox.PersistenceProviders.MockedInMemory\Sandbox.PersistenceProviders.MockedInMemory.csproj">
+      <Project>{1635B93A-00B1-4FEF-922A-F696FB5B82A0}</Project>
+      <Name>Sandbox.PersistenceProviders.MockedInMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sandbox.PersistenceProviders.NHibernate\Sandbox.PersistenceProviders.NHibernate.csproj">
+      <Project>{7EE6C7BC-FF29-42CE-9AEA-4207452DD79B}</Project>
+      <Name>Sandbox.PersistenceProviders.NHibernate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

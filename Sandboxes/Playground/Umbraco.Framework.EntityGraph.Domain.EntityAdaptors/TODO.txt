@@ -1,0 +1,19 @@
+﻿Roadmap for Synonyms model:
+
+Possibly remove dependency on IGraphableEntity and redefine this more loosely in the Synonyms model
+which is a higher level conceptually than the EntityGraph model
+
+Reason: the point of a Synonym is that it can expose the object graph in a more strongly typed way for the
+need of that particular concept.
+
+For example, a Content item may need flexibility for linking to different types of content
+but a User only needs to be a flat model with links to other Users and Groups (or other items)
+
+IGraphableEntity exposes Attributes, AttributeSchema etc. which would be confusing to consume for the caller on
+something like a User
+
+UNLESS we just make it part of the Framework that even the AttributeSchema of a User is definable by the plugin,
+i.e. ActiveDirectory specifies a shitload more attributes than a basic MembershipProvider....
+
+Storage:
+- Need to move concept of Files / Folders into the Synonyms model 

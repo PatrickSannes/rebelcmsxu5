@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F320595-7764-4E31-AEC5-94F1B128EDFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Cms.Web</RootNamespace>
+    <AssemblyName>Umbraco.Cms.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsContainerAnalysis>False</CodeContractsContainerAnalysis>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientDependency.Core, Version=1.0.2.21606, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Resources\References\ClientDependency\ClientDependency.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Resources\References\ClientDependency\ClientDependency.Core.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAnnotationsExtensions, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DataAnnotationsExtensions.0.6.0.0\lib\NETFramework40\DataAnnotationsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAnnotationsExtensions.ClientValidation">
+      <HintPath>..\..\packages\DataAnnotationsExtensions.MVC3.0.6.0.0\lib\NETFramework40\DataAnnotationsExtensions.ClientValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Resources\References\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>..\..\..\Resources\References\Microsoft.Web.Mvc\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=1.5.20902.9026, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NuGet.Core.1.5.20902.9026\lib\net40-Client\NuGet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SolutionInfo.Umbraco.Cms.cs">
+      <Link>Properties\SolutionInfo.Umbraco.Cms.cs</Link>
+    </Compile>
+    <Compile Include="BendyContentList.cs" />
+    <Compile Include="Caching\UrlCacheKey.cs" />
+    <Compile Include="Configuration\UmbracoSystem\UmbracoUrlsElement.cs" />
+    <Compile Include="Configuration\UmbracoSystem\CharReplacementElement.cs" />
+    <Compile Include="Configuration\UmbracoSystem\CharReplacementElementCollection.cs" />
+    <Compile Include="ContentExtensions.cs" />
+    <Compile Include="DependencyManagement\CmsAttributeTypeRegistry.cs" />
+    <Compile Include="ComponentRegistrationExtensions.cs" />
+    <Compile Include="Configuration\ApplicationSettings\IApplication.cs" />
+    <Compile Include="Configuration\ApplicationSettings\IApplicationCollection.cs" />
+    <Compile Include="Configuration\ApplicationSettings\ITree.cs" />
+    <Compile Include="Configuration\ApplicationSettings\ITreeCollection.cs" />
+    <Compile Include="Configuration\Dashboards\IDashboard.cs" />
+    <Compile Include="Configuration\Dashboards\IDashboardApplication.cs" />
+    <Compile Include="Configuration\Dashboards\IDashboardConfig.cs" />
+    <Compile Include="Configuration\Dashboards\IDashboardGroup.cs" />
+    <Compile Include="Configuration\Dashboards\IDashboardMatch.cs" />
+    <Compile Include="Configuration\Dashboards\IDashboardMatchFilter.cs" />
+    <Compile Include="Configuration\Languages\FallbackCollection.cs" />
+    <Compile Include="Configuration\Languages\FallbackElement.cs" />
+    <Compile Include="Configuration\Languages\LanguageElement.cs" />
+    <Compile Include="Configuration\Languages\LanguagesCollection.cs" />
+    <Compile Include="Configuration\Languages\LanguagesConfiguration.cs" />
+    <Compile Include="Configuration\Tasks\ITask.cs" />
+    <Compile Include="Configuration\Tasks\ITaskCollection.cs" />
+    <Compile Include="Configuration\Tasks\ITaskParameter.cs" />
+    <Compile Include="Context\IRequiresUmbracoHelper.cs" />
+    <Compile Include="ControllerExtensions.cs" />
+    <Compile Include="Configuration\ApplicationSettings\ApplicationConfiguration.cs" />
+    <Compile Include="Configuration\ApplicationSettings\ApplicationElement.cs" />
+    <Compile Include="Configuration\ApplicationSettings\ApplicationsCollection.cs" />
+    <Compile Include="Configuration\ApplicationSettings\TreeCollection.cs" />
+    <Compile Include="Configuration\ApplicationSettings\TreeConfiguration.cs" />
+    <Compile Include="Configuration\ApplicationSettings\TreeElement.cs" />
+    <Compile Include="Configuration\ConfigurationTextElement.cs" />
+    <Compile Include="Configuration\Dashboards\DashboardApplicationElement.cs" />
+    <Compile Include="Configuration\Dashboards\DashboardApplicationsCollection.cs" />
+    <Compile Include="Configuration\Dashboards\DashboardElement.cs" />
+    <Compile Include="Configuration\Dashboards\DashboardGroupCollection.cs" />
+    <Compile Include="Configuration\Dashboards\DashboardGroupConfiguration.cs" />
+    <Compile Include="Configuration\Dashboards\DashboardGroupElement.cs" />
+    <Compile Include="Configuration\Dashboards\DashboardsCollection.cs" />
+    <Compile Include="Configuration\Dashboards\MatchElement.cs" />
+    <Compile Include="Configuration\Dashboards\MatchesCollection.cs" />
+    <Compile Include="Configuration\Dashboards\MatchFilterCollection.cs" />
+    <Compile Include="Configuration\Dashboards\MatchFilterElement.cs" />
+    <Compile Include="Configuration\Tasks\TaskElement.cs" />
+    <Compile Include="Configuration\Tasks\TaskParameterConfigurationCollection.cs" />
+    <Compile Include="Configuration\Tasks\TaskParameterElement.cs" />
+    <Compile Include="Configuration\Tasks\TasksCollection.cs" />
+    <Compile Include="Configuration\Tasks\TasksConfiguration.cs" />
+    <Compile Include="Configuration\UmbracoSettings.cs" />
+    <Compile Include="Configuration\UmbracoSystem\PublicPackageRepositoryElement.cs" />
+    <Compile Include="Configuration\UmbracoSystem\RouteMatchElement.cs" />
+    <Compile Include="Configuration\UmbracoSystem\RouteMatchElementCollection.cs" />
+    <Compile Include="Configuration\UmbracoSystem\RouteMatchTypes.cs" />
+    <Compile Include="Configuration\UmbracoSystem\UmbracoFoldersElement.cs" />
+    <Compile Include="Configuration\UmbracoSystem\UmbracoPathsElement.cs" />
+    <Compile Include="Configuration\UmbracoSystem\UmbracoSystemConfiguration.cs" />
+    <Compile Include="Context\IUmbracoApplicationContext.cs" />
+    <Compile Include="Context\MapResolverContext.cs" />
+    <Compile Include="Context\UmbracoApplicationContext.cs" />
+    <Compile Include="ControllerContextExtensions.cs" />
+    <Compile Include="DependencyManagement\DemandBuilders\DemandsDependenciesDemandRunniner.cs" />
+    <Compile Include="DependencyManagement\DependencyResolverAttributeTypeRegistry.cs" />
+    <Compile Include="DependencyManagement\MvcDependencyResolver.cs" />
+    <Compile Include="Dictionary\DictionaryHelper.cs" />
+    <Compile Include="Dictionary\DictionaryResult.cs" />
+    <Compile Include="HtmlHelperClientDependencyExtensions.cs" />
+    <Compile Include="CmsHiveManagerExtensions.cs" />
+    <Compile Include="Macros\AbstractMacroEngine.cs" />
+    <Compile Include="Macros\ChildActionMacroEngine.cs" />
+    <Compile Include="FieldRenderer.cs" />
+    <Compile Include="Macros\MacroEngineAttribute.cs" />
+    <Compile Include="Macros\MacroEngineMetadata.cs" />
+    <Compile Include="Macros\PartialViewMacroEngine.cs" />
+    <Compile Include="Macros\UmbracoMacroEngineAttribute.cs" />
+    <Compile Include="Mapping\ContentEditorModelToRevision.cs" />
+    <Compile Include="Mapping\ContentPropertyToTypedAttribute.cs" />
+    <Compile Include="Mapping\RenderTypesModelMapper.cs" />
+    <Compile Include="Mapping\RevisionToContentEditorModel.cs" />
+    <Compile Include="Mapping\UserEditorModelToTypedEntity.cs" />
+    <Compile Include="Mapping\UserToUserEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\AbstractSchemaEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\LanguageModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\CreateFileType.cs" />
+    <Compile Include="Mapping\DocumentTypePropertyToAttributeDefinition.cs" />
+    <Compile Include="Mapping\DocumentTypePropertyToAttributeType.cs" />
+    <Compile Include="Model\BackOffice\Editors\DialogModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\DictionaryItemEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\EditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\ImplementSectionModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\InsertFieldModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\InsertPartialModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\MediaTypeEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\MemberEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\StylesheetRuleEditorModel.cs" />
+    <Compile Include="Model\BackOffice\UIElements\DialogSaveButtonUIElement.cs" />
+    <Compile Include="Model\BackOffice\UIElements\IHasUIElements.cs" />
+    <Compile Include="Model\BackOffice\UIElements\PublishButtonUIElement.cs" />
+    <Compile Include="Model\BackOffice\UIElements\SaveButtonUIElement.cs" />
+    <Compile Include="Model\BackOffice\UIElements\UIElementAttribute.cs" />
+    <Compile Include="Model\BackOffice\Editors\MediaEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\StandardContentEditorModel.cs" />
+    <Compile Include="Mvc\ActionFilters\HandleAuthorizationErrors.cs" />
+    <Compile Include="Mvc\ActionFilters\InternationalizeAttribute.cs" />
+    <Compile Include="Mvc\ActionInvokers\RoutableRequestActionInvoker.cs" />
+    <Compile Include="Mvc\Controllers\MediaProxyController.cs" />
+    <Compile Include="Mvc\HierarchicalSelectListItem.cs" />
+    <Compile Include="Mvc\ModelBinders\BackOffice\DocumentTypePropertyModelBinder.cs" />
+    <Compile Include="Mvc\ModelBinders\BackOffice\MediaTypeModelBinder.cs" />
+    <Compile Include="Mvc\ModelBinders\BackOffice\ModelBinderExtensions.cs" />
+    <Compile Include="Mvc\ModelBinders\BackOffice\NullableHiveIdModelBinder.cs" />
+    <Compile Include="Mvc\ModelBinders\BackOffice\StandardModelBinder.cs" />
+    <Compile Include="Mvc\RedirectToUmbracoPageResult.cs" />
+    <Compile Include="Mvc\UmbracoPageResult.cs" />
+    <Compile Include="Mvc\ViewEngines\IFilteredViewPageActivator.cs" />
+    <Compile Include="Mvc\ViewEngines\IPostViewPageActivator.cs" />
+    <Compile Include="Mvc\ViewEngines\MasterViewPageActivator.cs" />
+    <Compile Include="Mvc\ViewEngines\PostViewPageActivatorAttribute.cs" />
+    <Compile Include="Mvc\ViewEngines\PostViewPageActivatorExtensions.cs" />
+    <Compile Include="Mvc\ViewEngines\UmbracoHelperViewPageActivator.cs" />
+    <Compile Include="NameValueCollectionExtensions.cs" />
+    <Compile Include="RenderViewHiveManagerWrapper.cs" />
+    <Compile Include="RenderViewModelQueryExtensions.cs" />
+    <Compile Include="Routing\BackOfficeRouteConstraint.cs" />
+    <Compile Include="Routing\IgnorePluginRoute.cs" />
+    <Compile Include="Routing\MediaRouteConstraint.cs" />
+    <Compile Include="Routing\PostedDataProxyInfo.cs" />
+    <Compile Include="Security\Permissions\LanguagePermission.cs" />
+    <Compile Include="Security\Permissions\EmptyRecycleBinPermission.cs" />
+    <Compile Include="Surface\SurfaceAttribute.cs" />
+    <Compile Include="System\CoreCmsData.cs" />
+    <Compile Include="CorePluginConstants.cs" />
+    <Compile Include="DashboardItemModelExtensions.cs" />
+    <Compile Include="Dashboards\Filters\DashboardFilter.cs" />
+    <Compile Include="Dashboards\Filters\DashboardFilterMetadata.cs" />
+    <Compile Include="Dashboards\Filters\DisplayDashboard.cs" />
+    <Compile Include="Dashboards\Rules\DashboardMatchRule.cs" />
+    <Compile Include="Dashboards\Rules\DashboardRuleMetadata.cs" />
+    <Compile Include="Dashboards\Rules\UserRoleMatchRule.cs" />
+    <Compile Include="Dashboards\DashboardViewPage.cs" />
+    <Compile Include="DependencyManagement\ParameterEditorFactory.cs" />
+    <Compile Include="FileExtensions.cs" />
+    <Compile Include="EntityPathCollectionExtensions.cs" />
+    <Compile Include="HtmlHelperRenderExtensions.cs" />
+    <Compile Include="HttpServerUtilityExtensions.cs" />
+    <Compile Include="InsertMediaPage.cs" />
+    <Compile Include="IO\ApplicationIconFileResolver.cs" />
+    <Compile Include="IParameterEditorFactory.cs" />
+    <Compile Include="IPropertyEditorFactory.cs" />
+    <Compile Include="IResolver.cs" />
+    <Compile Include="LinqSupport\ViewModelStructureBinder.cs" />
+    <Compile Include="Macros\MacroSerializer.cs" />
+    <Compile Include="Mapping\ContentEditorModelToTypedEntity.cs" />
+    <Compile Include="Mapping\DataTypeToAttributeType.cs" />
+    <Compile Include="Mapping\DocumentTypePropertyToAttributeGroup.cs" />
+    <Compile Include="Mapping\DocumentTypeToNewContentModel.cs" />
+    <Compile Include="Mapping\EntitySnapshotToContentEditorModel.cs" />
+    <Compile Include="Mapping\StandardMemberMapper.cs" />
+    <Compile Include="Mapping\TypedEntityToContentEditorModel.cs" />
+    <Compile Include="Mapping\UtcCreatedMapper.cs" />
+    <Compile Include="Mapping\UtcModifiedMapper.cs" />
+    <Compile Include="MenuItemExtensions.cs" />
+    <Compile Include="Model\AttributedNode.cs" />
+    <Compile Include="Model\AttributedNodeWithAlias.cs" />
+    <Compile Include="Model\BackOffice\ApplicationTrayModel.cs" />
+    <Compile Include="Model\BackOffice\BackOfficeDefaultModel.cs" />
+    <Compile Include="Model\BackOffice\ControllerPluginMetadata.cs" />
+    <Compile Include="Model\BackOffice\CoreEntityModel.cs" />
+    <Compile Include="Model\BackOffice\DashboardApplicationModel.cs" />
+    <Compile Include="Model\BackOffice\DashboardItemModel.cs" />
+    <Compile Include="Model\BackOffice\DashboardType.cs" />
+    <Compile Include="Model\BackOffice\DashboardViewModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\AllowDocumentTypePropertyOverrideAttribute.cs" />
+    <Compile Include="Model\BackOffice\Editors\ClientNotifications.cs" />
+    <Compile Include="Model\BackOffice\Editors\ClientNotificationsJsonConverter.cs" />
+    <Compile Include="Model\BackOffice\Editors\ContentEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\BasicContentEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\ContentProperty.cs" />
+    <Compile Include="Model\BackOffice\Editors\CopyModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\CreateContentModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\CreateDataTypeModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\CreateDocumentTypeModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\CreateFileModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\CreateMacroModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\CreateUserModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\DataType.cs" />
+    <Compile Include="Model\BackOffice\Editors\DataTypeEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\DocumentTypeEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\DocumentTypeInfo.cs" />
+    <Compile Include="Model\BackOffice\Editors\DocumentTypeProperty.cs" />
+    <Compile Include="Editors\EditorAttribute.cs" />
+    <Compile Include="Editors\EditorMetadata.cs" />
+    <Compile Include="Model\BackOffice\Editors\EntityUIModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\FileEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\HostnameEntryModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\HostnamesModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\LanguageEditorModel.cs" />
+    <Compile Include="Macros\MacroDefinition.cs" />
+    <Compile Include="Model\BackOffice\Editors\MacroEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\MacroParameterDefinitionModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\MacroParameterModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\MoveModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\NotificationMessage.cs" />
+    <Compile Include="Model\BackOffice\Editors\NotificationType.cs" />
+    <Compile Include="Model\BackOffice\Editors\PermissionsModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\PermissionStatusModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\PublishModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\RollbackModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\SortItem.cs" />
+    <Compile Include="Model\BackOffice\Editors\SortModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\Tab.cs" />
+    <Compile Include="Model\BackOffice\Editors\TemplateEditorModel.cs" />
+    <Compile Include="Editors\UmbracoEditorAttribute.cs" />
+    <Compile Include="Model\BackOffice\Editors\UserEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\UserGroupEditorModel.cs" />
+    <Compile Include="Model\BackOffice\Editors\UserGroupPermissionsModel.cs" />
+    <Compile Include="Model\BackOffice\IconType.cs" />
+    <Compile Include="Model\BackOffice\IdentityModel.cs" />
+    <Compile Include="Model\BackOffice\IModelBindAware.cs" />
+    <Compile Include="Model\BackOffice\IModelUpdator.cs" />
+    <Compile Include="Model\BackOffice\LoginModel.cs" />
+    <Compile Include="Model\BackOffice\PackageFolder.cs" />
+    <Compile Include="Model\BackOffice\PackageInstallationState.cs" />
+    <Compile Include="Model\BackOffice\PackageInstallerStateModel.cs" />
+    <Compile Include="Model\BackOffice\PackageModel.cs" />
+    <Compile Include="Model\BackOffice\ParameterEditors\AbstractParameterEditor.cs" />
+    <Compile Include="Model\BackOffice\ParameterEditors\EditorModel.cs" />
+    <Compile Include="Model\BackOffice\ParameterEditors\ParameterEditor.cs" />
+    <Compile Include="Model\BackOffice\ParameterEditors\ParameterEditorAttribute.cs" />
+    <Compile Include="Model\BackOffice\ParameterEditors\ParameterEditorMetadata.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\BlankPreValueModel.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\ContentAwarePropertyEditor.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\EditorModel.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\EditorModel`T.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\IContentAwarePropertyEditor.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\PreValueModel.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\PropertyEditor.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\PropertyEditorAttribute.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\PropertyEditorMetadata.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\PropertyEditor`T.cs" />
+    <Compile Include="Model\BackOffice\PropertyEditors\UmbracoPropertyEditorAttribute.cs" />
+    <Compile Include="Model\BackOffice\SearchModel.cs" />
+    <Compile Include="Model\BackOffice\SearchResultItem.cs" />
+    <Compile Include="Model\BackOffice\ShowLabelAttribute.cs" />
+    <Compile Include="Surface\SurfaceMetadata.cs" />
+    <Compile Include="Model\BackOffice\TimestampedModel.cs" />
+    <Compile Include="Model\BackOffice\TinyMCE\InsertMacro\InsertMacroModel.cs" />
+    <Compile Include="Model\BackOffice\TinyMCE\InsertMacro\SelectMacroModel.cs" />
+    <Compile Include="Model\BackOffice\TinyMCE\InsertMacro\SetParametersModel.cs" />
+    <Compile Include="Model\BackOffice\TinyMCE\InsertMedia\InsertMediaModel.cs" />
+    <Compile Include="Model\BackOffice\TreePickerRenderModel.cs" />
+    <Compile Include="Model\BackOffice\TreeRenderModel.cs" />
+    <Compile Include="Model\BackOffice\Trees\MenuItem.cs" />
+    <Compile Include="Model\BackOffice\Trees\MenuItemAttribute.cs" />
+    <Compile Include="Model\BackOffice\Trees\MenuItemMetadata.cs" />
+    <Compile Include="Model\BackOffice\Trees\NodeStyle.cs" />
+    <Compile Include="Model\BackOffice\Trees\TreeAttribute.cs" />
+    <Compile Include="Model\BackOffice\Trees\TreeMetadata.cs" />
+    <Compile Include="Model\BackOffice\Trees\TreeNode.cs" />
+    <Compile Include="Model\BackOffice\Trees\TreeNodeCollection.cs" />
+    <Compile Include="Model\BackOffice\Trees\UmbracoTreeAttribute.cs" />
+    <Compile Include="Model\BackOffice\UIElements\ButtonUIElement.cs" />
+    <Compile Include="Model\BackOffice\UIElements\InteractiveUIElement.cs" />
+    <Compile Include="Model\BackOffice\UIElements\SelectListUIElement.cs" />
+    <Compile Include="Model\BackOffice\UIElements\SeperatorUIElement.cs" />
+    <Compile Include="Model\BackOffice\UIElements\SplitButtonUIElement.cs" />
+    <Compile Include="Model\BackOffice\UIElements\StateButtonUIElement.cs" />
+    <Compile Include="Model\BackOffice\UIElements\UIElement.cs" />
+    <Compile Include="Model\Content.cs" />
+    <Compile Include="Model\ContentType.cs" />
+    <Compile Include="Model\Field.cs" />
+    <Compile Include="Model\FieldDefinition.cs" />
+    <Compile Include="Security\Permissions\UnpublishPermission.cs" />
+    <Compile Include="Mvc\ActionFilters\AbstractTempDataCookieFilter.cs" />
+    <Compile Include="Mvc\ActionFilters\MenuItemsPermissionFilterAttribute.cs" />
+    <Compile Include="Mvc\ActionFilters\SupportsPathGeneration.cs" />
+    <Compile Include="Mvc\ActionInvokers\ControllerExtenderActionInvoker.cs" />
+    <Compile Include="Mvc\ActionFilters\UmbracoAuthorizeAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mvc\ActionInvokers\DashboardActionInvoker.cs" />
+    <Compile Include="Mvc\ActionInvokers\ExtendedByAttribute.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\IGeneratePath.cs" />
+    <Compile Include="Mvc\Controllers\ControllerExtender.cs" />
+    <Compile Include="Mvc\Validation\HiveIdRequiredAttribute.cs" />
+    <Compile Include="Model\Icon.cs" />
+    <Compile Include="Model\Install\CreateNewUserModel.cs" />
+    <Compile Include="Model\Install\DatabaseInstallModel.cs" />
+    <Compile Include="Model\Install\DatabaseServerType.cs" />
+    <Compile Include="Model\IRoutableItem.cs" />
+    <Compile Include="Model\IUmbracoRenderModel.cs" />
+    <Compile Include="Model\KeyedFieldValue.cs" />
+    <Compile Include="Model\Node.cs" />
+    <Compile Include="Model\NodeWithAlias.cs" />
+    <Compile Include="Model\PartialViewMacroModel.cs" />
+    <Compile Include="Model\StylesheetRule.cs" />
+    <Compile Include="Model\Template.cs" />
+    <Compile Include="Model\TemplateFile.cs" />
+    <Compile Include="Model\UmbracoRenderModel.cs" />
+    <Compile Include="Mvc\Validation\RequiredHiveIdAttributeAdapter.cs" />
+    <Compile Include="PackageExtensions.cs" />
+    <Compile Include="Packaging\IPackageContext.cs" />
+    <Compile Include="Packaging\DefaultPackageContext.cs" />
+    <Compile Include="Packaging\PackageInstallEventArgs.cs" />
+    <Compile Include="ParameterEditorExtensions.cs" />
+    <Compile Include="PropertyEditorExtensions.cs" />
+    <Compile Include="RoleProviderExtensions.cs" />
+    <Compile Include="Routing\EntityRouteResult.cs" />
+    <Compile Include="EntityRouteResultExtensions.cs" />
+    <Compile Include="Routing\EntityRouteStatus.cs" />
+    <Compile Include="Routing\HostnameCollection.cs" />
+    <Compile Include="Routing\HostnameEntry.cs" />
+    <Compile Include="Routing\IRoutingEngine.cs" />
+    <Compile Include="LinkSyntaxParser.cs" />
+    <Compile Include="MacroModelExtensions.cs" />
+    <Compile Include="Macros\MacroParserResult.cs" />
+    <Compile Include="Macros\MacroRenderer.cs" />
+    <Compile Include="Macros\MacroSyntaxParser.cs" />
+    <Compile Include="Mapping\CmsModelMapper.cs" />
+    <Compile Include="Mapping\MembershipModelMapper.cs" />
+    <Compile Include="MembershipProviderExtensions.cs" />
+    <Compile Include="Mvc\ActionFilters\SupportModelEditingAttribute.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\ContentController.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\MacroController.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\MediaController.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\TreePickerController.cs" />
+    <Compile Include="Mvc\ModelBinders\BackOffice\HiveIdModelBinder.cs" />
+    <Compile Include="Mvc\ModelBinders\JsonDictionaryModelBinder.cs" />
+    <Compile Include="Mvc\ViewEngines\AlternateLocationViewEngine.cs" />
+    <Compile Include="Mvc\ViewEngines\AlternateViewEnginePathAttribute.cs" />
+    <Compile Include="Mvc\ViewEngines\RenderViewPageActivator.cs" />
+    <Compile Include="Mvc\ViewEngines\TwoLevelViewCache.cs" />
+    <Compile Include="Mvc\ViewEngines\UmbracoContextViewPageActivator.cs" />
+    <Compile Include="Packaging\PackageInstallUtility.cs" />
+    <Compile Include="Macros\PartialViewMacroPage.cs" />
+    <Compile Include="RenderViewPage.cs" />
+    <Compile Include="RouteDataExtensions.cs" />
+    <Compile Include="RouteMatchExtensions.cs" />
+    <Compile Include="Context\DefaultBackOfficeRequestContext.cs" />
+    <Compile Include="Context\ConfigurationTaskContext.cs" />
+    <Compile Include="Context\DefaultRenderModelFactory.cs" />
+    <Compile Include="Context\IBackOfficeRequestContext.cs" />
+    <Compile Include="Context\IRequiresBackOfficeRequestContext.cs" />
+    <Compile Include="Context\IRequiresRoutableRequestContext.cs" />
+    <Compile Include="Context\IRoutableRequestContext.cs" />
+    <Compile Include="Context\IRenderModelFactory.cs" />
+    <Compile Include="Context\RoutableRequestContext.cs" />
+    <Compile Include="DependencyManagementExtensions.cs" />
+    <Compile Include="DependencyManagement\DemandBuilders\ContainerBuilderEventArgs.cs" />
+    <Compile Include="DependencyManagement\DemandBuilders\ModelMappingsDemandBuilder.cs" />
+    <Compile Include="DependencyManagement\DemandBuilders\MvcTypesDemandBuilder.cs" />
+    <Compile Include="DependencyManagement\DemandBuilders\UmbracoContainerBuilder.cs" />
+    <Compile Include="DependencyManagement\DemandBuilders\WebTypesDemandBuilder.cs" />
+    <Compile Include="DependencyManagement\ComponentRegistrations.cs" />
+    <Compile Include="DependencyManagement\ModelBinderMetadata.cs" />
+    <Compile Include="DependencyManagement\ModelBinderAdapter.cs" />
+    <Compile Include="DependencyManagement\ModelBinderProvider.cs" />
+    <Compile Include="DependencyManagement\PropertyEditorFactory.cs" />
+    <Compile Include="HtmlHelperEditorExtensions.cs" />
+    <Compile Include="IO\FolderResolver.cs" />
+    <Compile Include="IO\SpriteIconFileResolver.cs" />
+    <Compile Include="Mapping\EntitySchemaToSchemaEditorModel.cs" />
+    <Compile Include="Mapping\TypedEntityToContentProperties.cs" />
+    <Compile Include="Mapping\SchemaEditorModelToEntitySchema.cs" />
+    <Compile Include="Mvc\ActionFilters\InstalledFilterAttribute.cs" />
+    <Compile Include="Mvc\ActionFilters\UmbracoInstallAuthorizeAttribute.cs" />
+    <Compile Include="Mvc\ActionInvokers\UmbracoBackOfficeActionInvoker.cs" />
+    <Compile Include="Mvc\ActionInvokers\UmbracoInstallActionInvoker.cs" />
+    <Compile Include="Mvc\ControllerFactories\IExtendedControllerFactory.cs" />
+    <Compile Include="Mvc\ControllerFactories\IFilteredControllerFactory.cs" />
+    <Compile Include="Mvc\ControllerFactories\MasterControllerFactory.cs" />
+    <Compile Include="Mvc\ControllerFactories\RenderControllerFactory.cs" />
+    <Compile Include="Routing\IncludeExcludeRouteConstraint.cs" />
+    <Compile Include="Mvc\ViewEngines\RenderViewEngine.cs" />
+    <Compile Include="RenderViewModelExtensions.cs" />
+    <Compile Include="RoutingEngineExtensions.cs" />
+    <Compile Include="Routing\ReadonlyHostnameCollection.cs" />
+    <Compile Include="Routing\UrlResolutionResult.cs" />
+    <Compile Include="Security\Permissions\AuditPermission.cs" />
+    <Compile Include="Security\Permissions\ViewPermission.cs" />
+    <Compile Include="Security\Permissions\CopyPermission.cs" />
+    <Compile Include="Security\Permissions\CreatePermission.cs" />
+    <Compile Include="Security\Permissions\DeletePermission.cs" />
+    <Compile Include="Security\Permissions\HostnamesPermission.cs" />
+    <Compile Include="Security\Permissions\BackOfficeAccessPermission.cs" />
+    <Compile Include="Security\Permissions\MovePermission.cs" />
+    <Compile Include="Security\Permissions\PermissionsPermission.cs" />
+    <Compile Include="Security\Permissions\PublicAccessPermission.cs" />
+    <Compile Include="Security\Permissions\PublishPermission.cs" />
+    <Compile Include="Security\Permissions\RollbackPermission.cs" />
+    <Compile Include="Security\Permissions\SavePermission.cs" />
+    <Compile Include="Security\Permissions\SendToPublishPermission.cs" />
+    <Compile Include="Security\Permissions\SendToTranslatePermission.cs" />
+    <Compile Include="Security\Permissions\SortPermission.cs" />
+    <Compile Include="Security\Permissions\TranslatePermission.cs" />
+    <Compile Include="Security\Permissions\UpdatePermission.cs" />
+    <Compile Include="Security\UserData.cs" />
+    <Compile Include="Templates\TemplateHelper.cs" />
+    <Compile Include="Templates\TemplateParser.cs" />
+    <Compile Include="Templates\TemplateParserResult.cs" />
+    <Compile Include="TypedEntityExtensions.cs" />
+    <Compile Include="UmbracoHelper.cs" />
+    <Compile Include="UmbracoWebApplication.cs" />
+    <Compile Include="UrlResolutionResultExtensions.cs" />
+    <Compile Include="Routing\UrlResolutionStatus.cs" />
+    <Compile Include="Security\UmbracoBackOfficeIdentity.cs" />
+    <Compile Include="StylesheetHelper.cs" />
+    <Compile Include="System\Boot\BootManager.cs" />
+    <Compile Include="IO\AbstractIconFileResolver.cs" />
+    <Compile Include="IO\DocumentTypeIconFileResolver.cs" />
+    <Compile Include="IO\DocumentTypeThumbnailFileResolver.cs" />
+    <Compile Include="IO\FileResolver.cs" />
+    <Compile Include="Mapping\ContentEditorModelToEntitySchema.cs" />
+    <Compile Include="Mapping\AttributeTypeToPropertyEditorId.cs" />
+    <Compile Include="ModelStateExtensions.cs" />
+    <Compile Include="Mvc\Areas\InstallAreaRegistration.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\InstallController.cs" />
+    <Compile Include="Mvc\ModelBinders\BackOffice\DocumentTypeModelBinder.cs" />
+    <Compile Include="DependencyManagement\ModelBinderForAttribute.cs" />
+    <Compile Include="Mvc\ModelBinders\BackOffice\FileEditorModelBinder.cs" />
+    <Compile Include="Mvc\ModelBinders\SizeModelBinder.cs" />
+    <Compile Include="Mvc\ActionFilters\PersistTabIndexOnRedirectAttribute.cs" />
+    <Compile Include="Mvc\ActionFilters\SuccessfulOnRedirectAttribute.cs" />
+    <Compile Include="Mvc\ActionFilters\SupportsClientNotificationsAttribute.cs" />
+    <Compile Include="AreaRegistrationExtensions.cs" />
+    <Compile Include="Mvc\Areas\PackageAreaRegistration.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\INotificationController.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\SecuredBackOfficeController.cs" />
+    <Compile Include="Mvc\CustomJsonResult.cs" />
+    <Compile Include="Mvc\Metadata\UmbracoMetadataAdditionalInfo.cs" />
+    <Compile Include="Routing\RenderRouteConstraint.cs" />
+    <Compile Include="Surface\SurfaceController.cs" />
+    <Compile Include="AuthenticationExtensions.cs" />
+    <Compile Include="Security\BackOfficeAuthenticationModule.cs" />
+    <Compile Include="Security\BackofficeMembershipProvider.cs" />
+    <Compile Include="Security\BackofficeRoleProvider.cs" />
+    <Compile Include="SelectListExtensions.cs" />
+    <Compile Include="System\SystemUtilities.cs" />
+    <Compile Include="Tasks\AbstractWebTask.cs" />
+    <Compile Include="Tasks\ConfigurationTask.cs" />
+    <Compile Include="Trees\ApplicationTreeController.cs" />
+    <Compile Include="TreeHtmlHelperExtensions.cs" />
+    <Compile Include="Mvc\ModelBinders\FrontEnd\RenderModelBinder.cs" />
+    <Compile Include="Trees\ISearchableTree.cs" />
+    <Compile Include="Trees\SupportsEditorTreeController.cs" />
+    <Compile Include="TreeNodeExtensions.cs" />
+    <Compile Include="Trees\TreeQueryStringParameters.cs" />
+    <Compile Include="Trees\TreeSearchJsonResult.cs" />
+    <Compile Include="System\Boot\AbstractBootstrapper.cs" />
+    <Compile Include="System\Boot\CmsBootstrapper.cs" />
+    <Compile Include="System\Boot\RenderBootstrapper.cs" />
+    <Compile Include="DependencyManagement\IComponentRegistrar.cs" />
+    <Compile Include="DependencyManagement\UmbracoComponentRegistrar.cs" />
+    <Compile Include="Editors\AbstractEditorController.cs" />
+    <Compile Include="Editors\DashboardEditorController.cs" />
+    <Compile Include="Mvc\ActionFilters\RequiredFieldAttribute.cs" />
+    <Compile Include="Mvc\ActionFilters\SaveAttribute.cs" />
+    <Compile Include="AssemblyContainsPluginsAttribute.cs" />
+    <Compile Include="ModelBindingContextExtensions.cs" />
+    <Compile Include="Mvc\ViewEngines\PluginViewEngine.cs" />
+    <Compile Include="Editors\StandardEditorController.cs" />
+    <Compile Include="System\PluginManager.cs" />
+    <Compile Include="UmbracoApplicationContextExtensions.cs" />
+    <Compile Include="UrlHelperExtensions.cs" />
+    <Compile Include="Mvc\ActionFilters\QueryStringFilterAttribute.cs" />
+    <Compile Include="Mvc\ActionInvokers\UmbracoActionInvoker.cs" />
+    <Compile Include="RouteCollectionExtensions.cs" />
+    <Compile Include="Mvc\Areas\UmbracoAreaRegistration.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\BackOfficeController.cs" />
+    <Compile Include="Mvc\Controllers\BackOffice\DefaultController.cs" />
+    <Compile Include="Mvc\Controllers\UmbracoController.cs" />
+    <Compile Include="Mvc\Metadata\UmbracoModelMetadataProvider.cs" />
+    <Compile Include="RouteValueDictionaryExtensions.cs" />
+    <Compile Include="TreeControllerExtensions.cs" />
+    <Compile Include="Trees\UmbracoTreeResult.cs" />
+    <Compile Include="Routing\RenderRouteHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormCollectionExtensions.cs" />
+    <Compile Include="Trees\TreeController.cs" />
+    <Compile Include="Routing\DefaultRoutingEngine.cs" />
+    <Compile Include="ValueProviderExtensions.cs" />
+    <Compile Include="ViewContextExtensions.cs" />
+    <Compile Include="ViewDataContainerExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedViews\Views\NoTemplate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedViews\Views\TemplateNotFound.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EmbeddedViews\Views\BackOffice\" />
+    <Folder Include="Model\Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.CMS.Web.EmbeddedViewEngine\Umbraco.Cms.Web.EmbeddedViewEngine.csproj">
+      <Project>{8F9C0D9E-CD6A-4CA6-84FC-CEE7474988FF}</Project>
+      <Name>Umbraco.Cms.Web.EmbeddedViewEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework.Security\Umbraco.Framework.Security.csproj">
+      <Project>{72EBBDF6-24FE-4B6D-B1B5-001D8A96AACE}</Project>
+      <Name>Umbraco.Framework.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework.Persistence\Umbraco.Framework.Persistence.csproj">
+      <Project>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</Project>
+      <Name>Umbraco.Framework.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Hive\Umbraco.Hive.csproj">
+      <Project>{8E44FCAB-2597-48F9-8F88-984DD47787C5}</Project>
+      <Name>Umbraco.Hive</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Default.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedViews\Views\Resources\Site.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedViews\Views\Resources\umbraco-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\RenderViewModel.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

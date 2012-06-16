@@ -1,0 +1,61 @@
+﻿@inherits RenderViewPage
+@using Umbraco.Cms.Web;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@{
+    ViewBag.Title = @DynamicModel.Name;
+    Layout = "";
+    Html.RequiresCssResource(typeof(Umbraco.Cms.Web.Context.DefaultBackOfficeRequestContext), "Umbraco.Cms.Web.EmbeddedViews.Views.Resources.Site.css");    
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    @Html.Raw(Html.RenderCssHere(new List<IClientDependencyPath>() { Url.GetStylesPath(), Url.GetModulesPath() }))
+    @Html.Raw(Html.RenderJsHere(new List<IClientDependencyPath>() { Url.GetScriptsPath(), Url.GetModulesPath() }))
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>@DynamicModel.Name</h1>
+            </div>
+        </div>
+        <div id="main">
+
+            @if (Model.CurrentTemplate == null)
+            {
+                <h2>Oops, template not found</h2>
+            }
+            else
+            {
+                var template = Model.CurrentTemplate.Id.Value;
+                <h2>Oops, template '@template' not found</h2>
+            }
+            
+            <p>This is the default Umbraco view that is displayed when it couldn't find the template for your content, but don't panic, here's what to do:</p>
+            <h3>What can you do?</h3>
+            <ul>
+                <li>Make sure your document type ('@Model.ContentType.Name') has one or more template assigned to it.</li>
+                <li>Make sure your content has a template selected in the template dropdown, and then publish the page.</li>
+            </ul>
+            <h3>
+                Node properties</h3>
+            <ul>
+                <li><strong>Name: </strong>@DynamicModel.Name</li>
+                <li><strong>Id: </strong>@Model.Id</li>
+                <li><strong>Node Type: </strong>@Model.ContentType.Name</li>
+                <li><strong>Create Date: </strong>@Model.UtcCreated</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

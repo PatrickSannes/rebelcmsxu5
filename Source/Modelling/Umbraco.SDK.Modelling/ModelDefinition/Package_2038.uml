@@ -1,0 +1,2384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="70c093a4-223d-4281-96e3-631aa1cda6c0"
+  name="UmbracoFramework"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d04ddb61-b01a-4c18-8554-65a5497045c6"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=UmbracoFramework"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="982e0a52-92fd-42cf-9663-59b851ba2aa8">
+      <profileInstance
+        Id="68e822fc-274a-4673-972b-db39223ea624"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="cd1d4279-6988-4cba-8acd-e05fc326821d"
+        name="Validate"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="5309c014-c5b6-498a-960c-3e2e45e7586f"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=Validate"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="53853d51-0fc4-44a9-bf1b-3ad10c963d06"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9b789ec9-a2bb-49c9-b79c-8b8978875abe">
+                <propertyInstance
+                  Id="298b4b58-28b9-490d-9f18-0c6e73107df9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9eb93168-e2e6-4fc5-8aff-5a837f60f534">
+                <propertyInstance
+                  Id="0c162411-0887-46c1-8007-6709d698b72e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e3da1871-8457-4849-92f8-38ffd51cd8cb">
+                <propertyInstance
+                  Id="f2c989bc-7007-41bf-bae5-54179dfa10e7"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="20761bc9-0661-4f3b-9671-15c26b61551c">
+                <propertyInstance
+                  Id="d4a12dc3-3e49-43ee-ad37-a88b06701abe"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="13ae0fea-73c9-427f-9b55-51a60ac21846">
+                <propertyInstance
+                  Id="d3e51778-2865-4e42-b6ca-21abd104639e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8f6a7490-f330-4bcb-9087-1fc700954d97"
+            name="Array&lt;T&gt;"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="21af74c9-c9f6-4901-acce-21adcff46e59"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=Validate Member=(Name=Array GenericParameterCount=1 OverloadingParameters=[(Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Type=(Name=T ArrayRank=1 ParentType=T)),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Int32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a427e2ae-47be-4fa9-98cb-c9d1d1931e02"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6bf9a97-7394-423a-9e1e-a5647add7141">
+                    <propertyInstance
+                      Id="abc0ab30-4a64-4ac3-9e9d-116dd18d2870"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="151e34da-45f5-4afa-bed0-e0abf1af6fdb">
+                    <propertyInstance
+                      Id="9e5b73c7-0ef2-419f-87e4-2bbe410cdb16"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c447c562-667f-4366-adcb-3aea2be297ff">
+                    <propertyInstance
+                      Id="0b820b3d-58fe-4290-bf59-d20044d7fc2f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="199de627-4dd2-414d-8fe6-888e82e6db3c">
+                    <propertyInstance
+                      Id="35bc1147-dfc7-4ffe-8339-eb1f5b244831"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a4dbe5c-e433-420d-9056-bd82f27044c6">
+                    <propertyInstance
+                      Id="9c964bda-169c-4293-8560-e37375934938"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2a15eea3-04d3-4013-a472-d48cdaf168f1"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fb0e3fa7-9c09-4229-b1bb-266a3c22de96"
+                  name="source"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="39c034cb-45e2-4fa6-9212-1177f90afb9f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=Validate Member=(Name=Array GenericParameterCount=1 OverloadingParameters=[(Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Type=(Name=T ArrayRank=1 ParentType=T)),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Int32)]) ParameterIdentifier=source"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="67b53cea-7e26-45ed-aa8d-1875a67665a0"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b93358b8-262b-427f-80cf-ffe154410313"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6f9d0408-3ed5-460b-a5ff-542a1ce10192"
+                      LastKnownName="T"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9c0247d8-f979-428d-88a3-19d5401c083e"
+                  name="minimumLength"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f8160813-ede0-42bf-83f7-8d23fd3a6ac9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=Validate Member=(Name=Array GenericParameterCount=1 OverloadingParameters=[(Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Type=(Name=T ArrayRank=1 ParentType=T)),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Int32)]) ParameterIdentifier=minimumLength"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a3adf490-5621-40c0-a8bc-c84bb7a0dd5f"
+                  name="maximumLength"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ff793775-a473-459f-801b-24e1200a16c5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=Validate Member=(Name=Array GenericParameterCount=1 OverloadingParameters=[(Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Type=(Name=T ArrayRank=1 ParentType=T)),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Int32)]) ParameterIdentifier=maximumLength"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="43fe2170-c638-4a64-98ad-cd7eaea455e0"
+            name="IsNull"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3fd34142-0349-453b-a90a-ff4b4484ebc4"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=Validate Member=(Name=IsNull OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d634ad66-9e14-416c-92d4-4c3a987f0bfc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5a1dfc5f-adf7-46bc-8bd9-6336ae7c67d8">
+                    <propertyInstance
+                      Id="97819064-25cc-47fb-8a98-5090d5bf018c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c59f28c0-0515-4fb0-96e7-82fc41e0062d">
+                    <propertyInstance
+                      Id="529747ce-687c-4eb0-885e-78ed82a98b9a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d87be99b-549f-43b5-bcb9-97971049335b">
+                    <propertyInstance
+                      Id="dace5eaa-98a6-41dd-9bf1-607b285a6544"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11763739-eba3-44cb-876d-853392bbd233">
+                    <propertyInstance
+                      Id="b34afede-002f-48b5-a906-0a8634445cbb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e7f3d5b-28a7-49a7-adc7-493ba993d104">
+                    <propertyInstance
+                      Id="d7f3d1b8-3e6d-4041-be6d-57f07361785a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b4c2822e-0d17-47b3-8f1c-20f223c89819"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d0bdf6c0-ae88-4410-ab49-942314386a4c"
+                  name="source"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e0b28340-87c9-4376-9c9b-535b0c022e12"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=Validate Member=(Name=IsNull OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object)]) ParameterIdentifier=source"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="549db635-fcd7-4e1c-8d42-00cfdc7ea339"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+        name="LocalizedString"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="05521ef4-ad4b-4c1e-a12e-96540167e37c"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="535f7273-0d96-4ffa-868f-ca0a386bda0c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cf4db1d4-bdc0-423f-883a-70ad26ce6998">
+                <propertyInstance
+                  Id="ac560e16-a773-4e9a-bddf-c37d526260bd"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c5343ee6-081d-40a4-b3f7-52ffaca0fdf9">
+                <propertyInstance
+                  Id="bd2f7b2b-7609-4714-a5b7-b3a724c278c4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9f18b3fa-3c9f-4226-a659-e495e9ed31c8">
+                <propertyInstance
+                  Id="f7eaa003-7242-4756-b006-386f82af3130"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5847921b-c2c5-4cb5-a9c8-3787c8d4397a">
+                <propertyInstance
+                  Id="3d091403-00b8-4295-b8f3-0f4b86ebab8b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7a27e0a4-fe7e-46d9-bfc7-2f23e05585c8">
+                <propertyInstance
+                  Id="24b32f5a-37df-4dd4-b641-4391831d8d8a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="9e2783cf-1bec-4909-84ea-03f8e0eb4758">
+            <interfaceMoniker
+              Id="c59db5cc-6a5d-438e-8de2-a944e99676af"
+              LastKnownName="IEquatable&lt;LocalizedString&gt;"
+              LastKnownLocation="Package1_2038.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="5b5958f0-18e5-43e0-bc8f-86c7db040a66">
+            <interfaceMoniker
+              Id="7ef8a447-33ce-40ea-a30d-bd002b0f0c4e"
+              LastKnownName="IEquatable&lt;String&gt;"
+              LastKnownLocation="Package1_2038.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="b331cf2e-0d15-4b0c-ab2e-e5165235ffc3"
+            isDerived="false"
+            sourceEndRoleName="LocalizedString"
+            targetEndRoleName="DefaultCulture"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5249fe50-27ae-4252-825b-c4ee67017976"
+              LastKnownName="CultureInfo"
+              LastKnownLocation="Package2_2038.uml" />
+            <description>Property DefaultCulture references type CultureInfo.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="978aab03-aa56-4205-8501-cf7eae263032"
+                  name="LocalizedString"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b19e4a2c-e621-4f21-8407-b40a767e6076"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="98bb966e-bcd6-468f-b5b9-e9b1a3d93763"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ec7ec353-87d4-4b85-a93a-4f2940f2051c"
+                  name="DefaultCulture"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5913f4c4-7b2b-40d5-91d2-3fb5cf8870ca"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d5aa3552-383d-4505-8f5e-3a78f675ae7e"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="738f53ea-2b6d-4a75-b7cb-94c8c5d3537b"
+            name="DefaultCulture"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="46c8e64b-716d-4624-91fa-86cde05f6cc7"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=DefaultCulture"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="52572646-9f83-4c84-96aa-109383a1bfa8"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40f46886-142b-4d40-9089-8977102ea12f">
+                    <propertyInstance
+                      Id="27fd6745-b980-4e75-823c-fe5ebac234ed"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16961250-9008-45bd-818a-ade7852c7181">
+                    <propertyInstance
+                      Id="1ceaeb08-20f5-4642-a23e-04fed559bb15"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f7a121b-9572-406d-b913-fbd9bc4c5735">
+                    <propertyInstance
+                      Id="6c27f7b3-e4ab-42c2-8532-3eb5c6c1b18f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98a4f286-5dbd-45e9-95f3-d6ddd384086e">
+                    <propertyInstance
+                      Id="fdc3e9a5-5974-406d-b57a-75c87948e314"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24d007a4-3d7f-4217-963f-5396abf2467f">
+                    <propertyInstance
+                      Id="aa5bebd7-1bee-475b-a409-ab4995cf5f66"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d5d6295-6d3c-420a-87e3-a06218491353">
+                    <propertyInstance
+                      Id="41e0567c-884d-4498-ad98-0ce9ed4ff0d6"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="5249fe50-27ae-4252-825b-c4ee67017976"
+                LastKnownName="CultureInfo"
+                LastKnownLocation="Package2_2038.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="378d094d-19f7-4946-9b85-989901abf023"
+            name="Value"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="26d28023-40c2-4acf-977b-eaa52a88f2bb"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=Value"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="80df42fc-f05f-4096-8ea9-a9159fb4be69"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ef9406d-2c6e-4d54-a407-b4d6781b6f92">
+                    <propertyInstance
+                      Id="95cb4f8c-06e9-47a6-806f-c426112b0752"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be55faf4-4a22-400c-a6b9-50b247390d63">
+                    <propertyInstance
+                      Id="78f194f7-0202-460e-9e12-06b206896868"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="965f38bd-dc39-4e5e-a8fc-4ff19fe4d0ee">
+                    <propertyInstance
+                      Id="afe3c498-31a7-41c7-bf0d-4abf008cca36"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44c5203a-acd6-4bc9-823b-9b75f1ec9649">
+                    <propertyInstance
+                      Id="935b1a60-e730-4c52-a491-7492291ae481"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="495cf4f8-e63c-4972-ab32-c54f4ab718de">
+                    <propertyInstance
+                      Id="f92a09a1-ac1e-421d-8d9f-13867251ca60"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8c16d54-88b7-4ea0-a990-d7c00b848394">
+                    <propertyInstance
+                      Id="f40bba59-b3b6-4544-b0fe-13d269b77102"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1f7b84bb-4722-4682-9ec9-911ce38650b5"
+            name="_innerList"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fb9f7f50-2ebb-48d6-9de7-9c6f6059b6ce"
+                handle="viewcode://./CodeSchema_Field?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=_innerList"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="157d6ca1-6039-4723-b425-4f81c6733abe"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bfe2ce10-dff3-4fb8-966f-02d06dfd306f">
+                    <propertyInstance
+                      Id="1a8f528b-9ab2-4e2f-8b3a-a0d0e1b020e8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e183913c-0815-436b-b7e1-5ea79d1c5131">
+                    <propertyInstance
+                      Id="77b1ae33-e44f-490b-87a3-b5ccc53f3389"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68e84a80-1915-4c36-8cf4-71f2523c95dc">
+                    <propertyInstance
+                      Id="dd58604e-b73c-40c8-bfc7-15b045e90b6d"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d8245b9-61cf-418d-9e14-4be74ebe91ce">
+                    <propertyInstance
+                      Id="d162b225-350d-40fb-b6a9-e1563149a242"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f1af4a9-8c07-4ca1-942b-0356e58033f4">
+                    <propertyInstance
+                      Id="f0741aff-f220-4e94-88c5-caf95fb774c5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="5bde6580-2b4a-48ee-92f1-fe007d6a541f"
+                LastKnownName="Dictionary&lt;CultureInfo,String&gt;"
+                LastKnownLocation="Package4_2038.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="cd328238-777d-464d-ba19-2560b4856dc8"
+            name="LocalizedString"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a385b4da-25d5-43d5-b27e-1dec5dfbe536"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="37ecc530-3c5e-4ae7-a7cf-23f3b5d489f9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c4bc035-429b-48ff-9db9-60a379d52e71">
+                    <propertyInstance
+                      Id="dc19251e-9496-479e-9d82-1255b05503ef"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d58e91c5-760b-4bd1-8c36-2df2654a443e">
+                    <propertyInstance
+                      Id="37563cfa-1300-4abc-af0f-8a74ea2affcb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1aa8b3d2-82af-48df-8813-3b27719ca0eb">
+                    <propertyInstance
+                      Id="abed936d-c53e-4c62-bcb2-97b21f93e4a0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2513aa4-dcd3-4e42-93fd-1f8fb0ee738c">
+                    <propertyInstance
+                      Id="95f4bd29-cdcd-4dc8-a255-e344d275bf27"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2ed7193-5b6c-4981-abe9-9a6687fce84b">
+                    <propertyInstance
+                      Id="c5181a26-a758-4f9f-b5da-44069855dab4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a5de01c5-7e46-4864-9e56-c93aa80d4230"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="24d9de2d-6a9a-4119-a7db-38f5bf403ec5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=value"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="08daea17-4901-4951-992d-5e7134f9bbb5"
+            name="GetValue"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a55974c7-57cc-4454-bf76-a12ca7f2b663"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=GetValue OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Globalization Type=CultureInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1252cacc-ce12-4d56-b473-a9ebb515a710"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f454f998-62f3-4652-8b13-6ff144992ffb">
+                    <propertyInstance
+                      Id="d4e56509-b0a6-434d-8755-f122a72ebf94"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f35f3e28-e64f-46cd-b9ac-e07f3940af5b">
+                    <propertyInstance
+                      Id="d8614880-43ad-44b7-8d12-9451a5f6a0ba"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c99ca7b0-89c1-427b-991c-537e5f5d7264">
+                    <propertyInstance
+                      Id="2716c9ce-21c4-48dd-998a-b0be5f3943d4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a2ff802-aee5-4309-b081-2527fd6ce3f6">
+                    <propertyInstance
+                      Id="7aaff949-b240-4943-a742-732b1357f173"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35422a8e-db13-4611-a9d4-2674f544aa68">
+                    <propertyInstance
+                      Id="48eaef17-a191-4afb-ae27-08f52cec1b65"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0c55ebeb-eff9-48ad-b87f-75b8d056235c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2805ad0d-a1fd-4925-b7c2-e0df8d185207"
+                  name="culture"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="390edcb0-58af-4513-9d9f-a0df0faa33d6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=GetValue OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Globalization Type=CultureInfo)]) ParameterIdentifier=culture"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5249fe50-27ae-4252-825b-c4ee67017976"
+                      LastKnownName="CultureInfo"
+                      LastKnownLocation="Package2_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c673f633-2ad0-4bca-b18f-6c6644ae8e0e"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3094c53c-6ad8-472c-8221-fcd56475a9b3"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=Add OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Globalization Type=CultureInfo),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eed26975-d171-4774-a75e-043faebf66b7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a77c05d-a42b-493f-90b0-8dec4cad85c7">
+                    <propertyInstance
+                      Id="8631b288-7f57-498d-8759-c7fe4678c3c9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96ed8fa8-828e-4c11-bae9-1c34f1360ee0">
+                    <propertyInstance
+                      Id="b3145401-29b4-4a73-8155-832e21f3ac80"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0105198-2091-47cc-b06d-ae3ce2bbcad2">
+                    <propertyInstance
+                      Id="a14f9253-9983-4c55-8a01-e85c877d118d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3bd5a55-7960-49bc-b908-1873332173d8">
+                    <propertyInstance
+                      Id="1a5dd9fa-8d46-41b5-8e3d-cae3290e2b54"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d60bda4c-bee8-46e0-9ea4-26ff5408d294">
+                    <propertyInstance
+                      Id="ac64d711-c635-4d65-a427-8ce6eaeffbbc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0b344aab-cb6b-48a9-b87e-164ba74e8e11"
+                  name="culture"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ba588a1b-a3c7-4869-8574-93118f355444"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=Add OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Globalization Type=CultureInfo),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=culture"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5249fe50-27ae-4252-825b-c4ee67017976"
+                      LastKnownName="CultureInfo"
+                      LastKnownLocation="Package2_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15115a45-e712-44ee-9e28-fec3927f68fb"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1983c3de-083f-4b1c-be49-072bbdfc5982"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=Add OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Globalization Type=CultureInfo),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=value"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7a1aadd8-3cca-4461-8e94-9caed4222ccf"
+            name="ToString"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8488d5b5-da02-427f-8f83-b5afd2705d46"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=ToString"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cf7a5479-d080-4bf0-9854-680ca956c1a6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f911ae5f-a6d8-4e69-95e6-3f9676090b32">
+                    <propertyInstance
+                      Id="738bb322-66e1-4d4a-a380-a1f00d47da36"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f8e1f76-82ac-412e-99ad-09df92c71e6b">
+                    <propertyInstance
+                      Id="a7f2e1ee-035c-4b89-b3b8-c52c61bcd8f9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69c27e17-ce06-4da1-b350-d43a46fe0ca0">
+                    <propertyInstance
+                      Id="233cef5a-19c1-46dc-8acf-1422b5d84c97"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f3b91ab-fbd0-4141-a621-f0e447596522">
+                    <propertyInstance
+                      Id="c40772d5-3df2-4eba-ad71-7720ccf58157"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f6cb7dd-d720-4e52-a781-bd96cbc89d92">
+                    <propertyInstance
+                      Id="9823e5a9-fca3-45f3-b015-6530844ba755"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="98a31af5-16fd-400c-aef4-c0f128bd0c3a"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8cf065d7-ae54-4f23-9833-b9c5ad14241f"
+            name="Equals"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="aa8691a1-aabd-4a64-954d-ebfbff44ab80"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=Equals OverloadingParameters=[(Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b8fb9020-df56-4145-aa03-247cad877141"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32470e2e-c20f-4253-8aae-5e46c3f82619">
+                    <propertyInstance
+                      Id="dee4b14e-7059-4e71-903b-1568416228e7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="daa2331d-bd9e-4f19-aac7-9faf90ab5981">
+                    <propertyInstance
+                      Id="e7d755ba-6f5e-42e1-884d-48c1e65f0dd8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9dae0161-85bb-45bf-a4ab-6206d4ca3027">
+                    <propertyInstance
+                      Id="9de91fea-4075-4ecb-b597-fe92bc0f459a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dfb57735-6be2-4475-aa33-77352f8e924c">
+                    <propertyInstance
+                      Id="e8fe6ac9-13c5-4734-81fb-186cf9f9e5a1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb317e88-8d1c-4673-813e-25e65bb00436">
+                    <propertyInstance
+                      Id="6f53cce3-0026-40a6-89c9-207a4b8d2548"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="070bff9a-921b-4d16-8e42-39c63f4ad885"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d6800194-7161-4476-bfc6-256d6c7e7b85"
+                  name="other"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0aefa3d4-5d11-4d87-a8be-358e4422ea45"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=Equals OverloadingParameters=[(Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString)]) ParameterIdentifier=other"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+                      LastKnownName="LocalizedString"
+                      LastKnownLocation="Package_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fdc63c23-0863-419c-b569-f4a30a22e66f"
+            name="Equals"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="401fcb30-3728-4ea8-8854-11f4856dcccf"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=Equals OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="994f4da7-adba-459b-bd80-7b8d1730b814"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="132402b8-a6cc-4731-9cad-cd9920a93263">
+                    <propertyInstance
+                      Id="2d791364-95f5-47d1-bcad-be1a743d6d5b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0cd5670-cecd-45ff-aa82-aac3e1a7698d">
+                    <propertyInstance
+                      Id="cf3bb07c-1ee2-4562-938d-1ab1a5acf8a9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0d19ea6-733f-41db-8682-b67e6656d24c">
+                    <propertyInstance
+                      Id="eae45339-d7e9-4350-a1fb-29c359b4eeea"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b86fcf7e-9c25-4935-8db3-a0976110bed1">
+                    <propertyInstance
+                      Id="9dd86e7c-fc95-4c41-93c0-4bc60e19134d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="541aa6c1-9d3c-4a4e-8c06-dbcd2c95fa38">
+                    <propertyInstance
+                      Id="d41a7328-e9e0-4568-9519-a3e1eb76352d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d45a4417-349e-44fa-94fd-4fe2f28495fa"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a1c67b2c-4cce-41a3-a4df-6d78fa609d32"
+                  name="other"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d4b919c3-cec1-4044-96b1-7156da7d96ac"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=Equals OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=other"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="25bed182-fbac-43b5-bef1-9b0dd30a55b2"
+            name="Equals"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2b5ac7c5-2f35-4e1a-aee6-9cb1f5f86683"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=Equals OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0afb7e02-7905-450a-921a-d0905954b316"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68cc16f0-60bc-45c4-a8ec-4ff65cf17461">
+                    <propertyInstance
+                      Id="3731ee25-9b78-4a66-b286-32e37617658b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f6e0e68-74d9-4220-86e5-30b1d7f10839">
+                    <propertyInstance
+                      Id="f3715859-1f5f-4685-9c88-21b6e1ed73d6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f55c3b6d-eb4a-45e7-a028-88d4d505fcc6">
+                    <propertyInstance
+                      Id="e2b24218-01af-4a61-9f00-7d4e0514a71b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="445a2cf0-bc5b-4029-8789-1f9988f9f75e">
+                    <propertyInstance
+                      Id="5d9ebe44-d280-4f1e-a728-0098ccf041ad"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5b492d4-2a86-46c4-8421-6f94c38a0aec">
+                    <propertyInstance
+                      Id="4cb5150b-7333-41ff-82de-e2abf02d4c3f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ca60fe73-1405-48f4-91a8-0bb2733d74e9"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f58147f5-5fe5-4ae3-afb5-560c6e428f68"
+                  name="obj"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f93c2e61-5a9b-474f-8080-7d7ed77b82ef"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=(Name=Equals OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Object)]) ParameterIdentifier=obj"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="549db635-fcd7-4e1c-8d42-00cfdc7ea339"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="67879b76-4ec8-40d4-87ed-e61d5ecdbd8c"
+            name="GetHashCode"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6fce3805-d556-45e7-9f36-711be6eb22bf"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=GetHashCode"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0db368d3-7b16-4362-a9b1-f5ce2b65e3eb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e607ec07-fadb-4656-a00c-9f116415583e">
+                    <propertyInstance
+                      Id="7562b003-484e-4430-bca2-507434c30e1f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d507d8bc-54a5-48c6-8f65-69f58070ac1e">
+                    <propertyInstance
+                      Id="5797620c-6a5b-43e2-93b8-7b824b1ccfe8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd1bf098-6f76-40a3-bfe4-e5e01491130d">
+                    <propertyInstance
+                      Id="eae82bb8-4359-4a68-8a53-70d6f700b317"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47c5584e-816d-417f-8bb3-b59bab5e9a84">
+                    <propertyInstance
+                      Id="b2abbe8e-d517-4e08-8371-b1da2bcbf332"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e2f53ed-8bff-48f3-ac44-9ee6c65d56a9">
+                    <propertyInstance
+                      Id="51c08307-3bbc-47f3-bdd4-461ccbe298a2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ec3ea1be-e1d5-4492-b33a-be6db861e38b"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="994516fe-9dcb-407c-93b6-ed58ea92e1be"
+            name="operator implicit"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c0a4967b-411b-4501-9a4c-146e231be8b2"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator implicit&quot;"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d8c0939c-906e-47ae-9395-988ff2fc7aad"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b766a3a5-7082-44dd-afbc-f8c12c9ceecd">
+                    <propertyInstance
+                      Id="b607a352-13a4-47fa-8ef6-bcd8fd1db00f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d733d6aa-8a29-4932-aa33-6f11d03b36fe">
+                    <propertyInstance
+                      Id="93c1abf1-3059-4173-84a2-cc74f3224379"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f27eb78-ac05-4be9-939a-0389c0ad4bab">
+                    <propertyInstance
+                      Id="99dd0cba-5143-4c47-bb4e-a1f5cda8eae1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40c36638-7874-4ba3-960c-23da3d6b4e52">
+                    <propertyInstance
+                      Id="6957d143-055a-4e55-971b-7b3555ad684a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9ede470-86e3-418b-b13e-6ade1deb740e">
+                    <propertyInstance
+                      Id="61998831-8425-4659-be44-a368c588d83b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="68877aa2-d392-4a9b-acda-2ffe8413f5cb"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+                      LastKnownName="LocalizedString"
+                      LastKnownLocation="Package_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a443a832-cd49-478d-9a94-6270420962a4"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="53445a57-1ef5-4b64-975b-66558322ff02"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator implicit&quot; ParameterIdentifier=value"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="db121bbe-aea7-4f5a-bbd6-28a8a26577cb"
+            name="operator =="
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="56251dda-4a96-4089-969a-a633146fd96f"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator ==&quot;"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="21830d7a-f130-4ea2-85bd-72b302411ddd"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f20c6a8d-c298-4018-b631-3bd0aeb3ae58">
+                    <propertyInstance
+                      Id="d760cde1-4d1d-4901-a29d-2735e262184f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eab65bed-b859-4234-a624-62c9541a5e01">
+                    <propertyInstance
+                      Id="7c7daabc-cf8b-413f-849b-04272a4a3c17"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2e88c26-5d96-4ac7-9609-8aa143029051">
+                    <propertyInstance
+                      Id="c13434b3-0653-4417-ae45-e99d5a8e1031"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3aec6c44-0726-45a5-bb10-718e3b6f8cae">
+                    <propertyInstance
+                      Id="5e52fbd2-5b76-4ace-9ff5-507b963d31c0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95ed80db-01f3-4512-a3d2-001ecc4472df">
+                    <propertyInstance
+                      Id="1b06e76b-e0aa-44b0-9c43-9a21790e12b8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7fa5abcf-c8a8-46c7-8fe8-08c0423da778"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4d851ab0-96f8-4cb8-96a0-f906e25686b9"
+                  name="left"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f9c7c69b-d9cd-438e-9cca-c1534dca4c41"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator ==&quot; ParameterIdentifier=left"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+                      LastKnownName="LocalizedString"
+                      LastKnownLocation="Package_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="05290c8d-6e21-4551-b1b7-c5301f953eef"
+                  name="right"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="dfaae313-1919-46e3-b98f-ca03222e8972"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator ==&quot; ParameterIdentifier=right"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+                      LastKnownName="LocalizedString"
+                      LastKnownLocation="Package_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a74e4fa1-c66c-4e90-aa7b-78a743d3fe03"
+            name="operator !="
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a01f866b-8f63-4ab4-90cb-f4ddc07c3d61"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator !=&quot;"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8af2df05-6be1-428f-9344-c2c78bf0792e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0512be81-8e19-4d43-88dd-b74ceb71c504">
+                    <propertyInstance
+                      Id="05faab06-d973-4f52-ad41-a9d1cb08ea5c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7642343b-445a-4319-a90e-27b720299e7c">
+                    <propertyInstance
+                      Id="9afd10ab-8256-4ac7-a1ec-e73cf3edef74"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b49cb93d-7998-4997-8b2b-273b8db0650b">
+                    <propertyInstance
+                      Id="656b1617-29a8-4f14-8019-6055a8fad485"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3383251c-cca0-4b03-8256-3da069571561">
+                    <propertyInstance
+                      Id="090b4d84-f484-4085-be06-3985bfbceec6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e231e6c4-85fa-4da6-a1f8-b208fe122c60">
+                    <propertyInstance
+                      Id="9f166cac-f612-45cb-b807-86e91ef6fdd2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0da706ac-0c4d-492b-9028-d01d717c24e7"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7f6ba2ba-1c10-4833-9908-6f08604f110d"
+                  name="left"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4a6e3d0c-5e6d-4e36-b74a-74e32a8d1a0e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator !=&quot; ParameterIdentifier=left"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+                      LastKnownName="LocalizedString"
+                      LastKnownLocation="Package_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9046ab46-8eba-4834-92e9-89a2b43eb5dd"
+                  name="right"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6a970297-71a0-49a7-8439-a4d399e3d424"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator !=&quot; ParameterIdentifier=right"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+                      LastKnownName="LocalizedString"
+                      LastKnownLocation="Package_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="098018cc-1862-420f-9924-80e532cdac8e"
+            name="operator +"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c91c578b-a486-452a-a629-8fa12297ec25"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator +&quot;"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="57715bc6-ec88-4665-a666-3d13a75ac9bb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a4b65fb-c954-4ee7-8a13-0c26e1463479">
+                    <propertyInstance
+                      Id="cca9a51e-20d5-477c-aa5b-167db8c27ef1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62a9fc37-8ae3-4227-87e0-8ad1a1e2fce9">
+                    <propertyInstance
+                      Id="05e392a9-08e9-49a1-a810-a19999f14f6a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="899d7d4e-aaeb-4c1e-a1a6-dafc265a6818">
+                    <propertyInstance
+                      Id="47cb5a15-f91a-4e40-8505-5b268c1bf90e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1831242e-fa44-4a7f-86ca-016be262f9d3">
+                    <propertyInstance
+                      Id="28b33e24-0dbb-4431-8caa-2d2a850f326c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa06c942-4698-4b0d-941c-16abcd982ea0">
+                    <propertyInstance
+                      Id="b61cf987-0289-4dcd-badd-3258f7c65d0a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="790ad9d4-07fa-4cce-8927-66435dbab273"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7bfcf6f-77e9-448f-9701-a74677bf9806"
+                  name="left"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f3da38e7-4fde-495a-9fec-39825d1a2a15"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator +&quot; ParameterIdentifier=left"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+                      LastKnownName="LocalizedString"
+                      LastKnownLocation="Package_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b570906d-eed1-4335-b237-6763c3a44cf7"
+                  name="right"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="773e246e-27d4-4c26-85c0-278643e6e776"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=LocalizedString Member=&quot;operator +&quot; ParameterIdentifier=right"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+                      LastKnownName="LocalizedString"
+                      LastKnownLocation="Package_2038.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ecc5c1ff-1c25-4628-bc68-66b5efd35c5e"
+        name="IProviderManifest"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="68cbe207-ffc8-47c3-9322-2efd4f84b38c"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=IProviderManifest"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="768239db-bbeb-4d82-86f3-5e1f1ffa044a"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9923423b-6d1d-4f3e-aabb-0e6c165697e0">
+                <propertyInstance
+                  Id="1e1a5947-8382-43b5-af08-2b1937b982fc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="63650f5a-3910-4089-be98-ae5cdd02880d">
+                <propertyInstance
+                  Id="5e9592f9-c286-43e1-b1a6-88fb7440db69"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="37be5c4c-081a-4e54-acd1-12bdaeeb2863">
+                <propertyInstance
+                  Id="fbe7b3af-6de9-4162-9935-a4083542b6ff"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f13440b9-95db-4e4f-a86c-bf19425d8ab2">
+                <propertyInstance
+                  Id="aca6c7f9-31a7-40c0-b9e4-1c63c9f48a54"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="7e70d023-44a5-469d-87ae-41e8284e7432"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="4c20282e-5548-472f-9739-f59478270a68"
+              LastKnownName="IReferenceByAlias"
+              LastKnownLocation="Package_2038.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributes>
+          <property
+            Id="dc4b0df4-3cd9-4e43-868b-846332e2cc39"
+            name="AssemblyName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6f7f7308-0e9c-437e-a038-2628df1f7b8b"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=IProviderManifest Member=AssemblyName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="32a011f2-0184-4d9b-97d2-e107be39ee50"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01378d4f-0d29-486c-aae3-13e20b1d643f">
+                    <propertyInstance
+                      Id="92978c0e-d864-4c9e-a98f-c2504ceafb21"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="494db688-f73f-45a3-ac98-23c201520339">
+                    <propertyInstance
+                      Id="bb9c3890-ed77-4f29-ac70-a4dc40e773d1"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbb85527-adb6-4b83-88d7-fcb16e18ac74">
+                    <propertyInstance
+                      Id="d6796721-7979-460f-afe4-6c5ab176029e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a01f0d69-3b84-42a1-8815-88674c46611e">
+                    <propertyInstance
+                      Id="c0e181f1-46e6-4672-afc7-3318e13cfb09"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d18b197b-0d48-4c3c-ac4e-036889f807b0">
+                    <propertyInstance
+                      Id="4ebe9146-aa79-4b2b-9564-d1b069b79d8c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c20ff582-01ae-4e44-987e-7cfe5f08edc2">
+                    <propertyInstance
+                      Id="5197d252-002a-47f9-bbcc-20c9d262896e"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f7346cf2-7b3f-44aa-97dc-537b0f06f8b9"
+            name="TypeName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d5861361-9ec5-4a8d-98e3-577fc89c9461"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=IProviderManifest Member=TypeName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="66274c56-225f-4a3d-9d6e-4df703fb114b"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a127e450-3df3-4c43-ba37-891180e611e9">
+                    <propertyInstance
+                      Id="84662466-0be8-445b-8284-4abeacaf2e71"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34b91318-56dd-46c8-9c64-1dc1694f4476">
+                    <propertyInstance
+                      Id="22e0dcb6-2758-4946-a3c4-c0fb5cc930f3"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3ad6a80-7af2-4352-a1bb-16db7c768034">
+                    <propertyInstance
+                      Id="f2584fb9-adad-429a-b7ab-66660cf295c6"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bb12f59-7ca9-43b8-b80e-47ce570e2a2d">
+                    <propertyInstance
+                      Id="f34e96c4-dc1a-432f-bf38-92653eb09f40"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62ef5a71-bd71-49f9-beff-508cea4bc4dc">
+                    <propertyInstance
+                      Id="230703f8-db7f-4015-99e7-da786d23a600"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12046de2-0746-4a94-8a1c-a19ee3e7ab0e">
+                    <propertyInstance
+                      Id="1dbb76e6-d8ed-48da-a633-7e3fcc2b09db"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="31bb639a-5c5c-462f-bd86-eaad95152272"
+            name="MappingAlias"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="98c062b3-ab0a-49d5-b453-e6c48e409ad2"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=IProviderManifest Member=MappingAlias"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e53eb119-3007-47c3-bfbe-40b21eeb3620"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="405c8abf-dfc7-43ae-8ce3-5adb05585615">
+                    <propertyInstance
+                      Id="e221cf59-575d-4671-9118-f9561879a618"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66ac2198-ac65-4e72-96b1-c0e068862c1b">
+                    <propertyInstance
+                      Id="0116f7b9-4e9c-425d-ac7c-fef08ed5cb72"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cbf90a8-4e81-450a-a2ce-be0ea3868ae4">
+                    <propertyInstance
+                      Id="4af4bedb-d721-4627-9031-c8a7f6b8b036"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0271ff5-0c1c-4237-87b6-8d84aa237a63">
+                    <propertyInstance
+                      Id="f54b6cd3-2cd4-472c-8fa8-e7a8ede1f78b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29aaaf01-a90d-47d5-a021-5887c9793476">
+                    <propertyInstance
+                      Id="16c47e3c-c3b7-4cf5-8a0f-c01f75e7703e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1aef5728-cf74-4fbc-8a3f-416e3ee8fb47">
+                    <propertyInstance
+                      Id="12352890-e798-45a4-8561-5611d9563bda"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4c20282e-5548-472f-9739-f59478270a68"
+        name="IReferenceByAlias"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="b9b2b3ba-a017-4d0e-90f4-a5a9adedfc8a"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=IReferenceByAlias"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b1cdec76-dde5-431f-a2db-a873ca7154c2"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a069c27b-7dd6-4fda-ae33-3147b5eb2a67">
+                <propertyInstance
+                  Id="b9aaa669-e746-4517-8735-98f5aeb63e88"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0cb25279-9c93-4cfa-b5c7-0ff32d668f24">
+                <propertyInstance
+                  Id="40793437-df60-40e5-92c1-1bb901afd116"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c8b2d267-fcd1-4b9c-93e4-36c3188caac2">
+                <propertyInstance
+                  Id="d46f56f7-041e-4d2e-b80e-4b5340263139"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fbf61c1b-02a4-4c89-97de-fc9773d06f61">
+                <propertyInstance
+                  Id="f92d63c4-db84-4fad-92d4-cc07368f6a2c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="a8418585-3c07-42fd-96a4-150544acfe16"
+            isDerived="false"
+            sourceEndRoleName="IReferenceByAlias"
+            targetEndRoleName="Name"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+              LastKnownName="LocalizedString"
+              LastKnownLocation="Package_2038.uml" />
+            <description>Property Name references type LocalizedString.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e789e76-b258-4e47-9aef-d73ace960ea9"
+                  name="IReferenceByAlias"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b7268d04-fea0-46a1-bb68-4f9a14c51e03"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5b96788d-204f-46e5-b8fe-0f86083121c6"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b940bba-11b6-4367-9015-f1e09651361f"
+                  name="Name"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a4946d0b-d86e-4f95-9edc-ce6a1a3771b9"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b912f591-fa76-4dae-9f99-9e925665248b"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property
+            Id="97553923-8ca3-4818-90e0-fbc677c35564"
+            name="Alias"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="72d7f51a-9c6e-4e2a-8822-c9c767998288"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=IReferenceByAlias Member=Alias"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b3132ad4-c4c5-4fcc-8441-e5d9f0a7d1e1"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ae6e1a8-2077-40ca-83b2-aff624cbeaf6">
+                    <propertyInstance
+                      Id="eb4929f7-292d-4d98-93a1-b03e2ba6c5f4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cbb3b34-5ea5-4524-9102-f7214cbc66b9">
+                    <propertyInstance
+                      Id="5a7a0e24-7e7e-44bc-aef4-ffb384c856a4"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f1657a3-f5a6-49c4-a65a-68966b524853">
+                    <propertyInstance
+                      Id="c49b34c4-7b5f-4ee5-a5d6-6866532fe0a8"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64c1b615-71ed-4e81-9283-79dc488b6674">
+                    <propertyInstance
+                      Id="5e8946e3-06e6-4d21-87bd-244bee9dd358"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a13e8e6d-5824-4ba6-9983-b7835f43188d">
+                    <propertyInstance
+                      Id="53fc9a17-0294-4b4c-9eb5-3ffc1b76ce68"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04d2adc6-aa81-4d2b-9e35-d6dd12ee0ac0">
+                    <propertyInstance
+                      Id="3f135450-15ea-44aa-8315-1665e5a5e194"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Umbraco.Sdk.Modelling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="996699dd-5822-438b-a0f7-9e797fac9f0b"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f4d6b56a-c62c-477a-9021-3e2d15f6dd23"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=IReferenceByAlias Member=Name"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="532ffa2c-08ad-414a-b42a-5c0b68aa2166"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dfdbe3b-4de2-45c5-84c1-9bf1879b981b">
+                    <propertyInstance
+                      Id="2c0ae417-35d2-4946-af73-28c790caef8f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a376eecf-dbfc-4618-ae54-d8a267fc284e">
+                    <propertyInstance
+                      Id="bbc57231-56fd-4a78-a7aa-7b1924cac18d"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0beaa30e-c841-4dc9-8825-06c03558e608">
+                    <propertyInstance
+                      Id="60e04478-749c-4aed-bdae-547348f9a5b9"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="675b488a-0075-4798-889a-4d9bad9f0a0f">
+                    <propertyInstance
+                      Id="e834e45f-a8f3-4ef7-9045-3080f987fb1b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f530e6d8-0ff1-4a4f-8cef-155c91b3e11f">
+                    <propertyInstance
+                      Id="ac0e21fd-8198-4ed2-be87-16565f31a617"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9795d8ba-d90f-4f6e-9e06-a8e1b040766f">
+                    <propertyInstance
+                      Id="a2f954e0-acd8-4016-a746-82dd67255276"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="1f176692-7e08-4c6c-baef-b6fe8c44e760"
+                LastKnownName="LocalizedString"
+                LastKnownLocation="Package_2038.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e6bd59e7-3dec-47b7-97ea-37b47495fb76"
+        name="IManifold"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="a5153a24-7219-4f0e-86f2-6d392cb7194a"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework/bin/Debug/UmbracoFramework.dll Namespace=UmbracoFramework Type=IManifold"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9245b22c-e5a4-4444-9808-73116f6d0970"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d45cd7f3-a27d-47b9-8b3a-b737b633759b">
+                <propertyInstance
+                  Id="d186e5f4-f2f8-424f-98b4-e000aaa57489"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4c99afe1-e618-4a1a-abfb-4b017cced2d5">
+                <propertyInstance
+                  Id="5dcbf585-cb79-46e7-b9e5-cc4e75dbec0f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="08b976b7-1893-4c4e-afba-3294e1c11b90">
+                <propertyInstance
+                  Id="370b3d49-d91c-458a-9c28-e924923e4c88"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4ccb82db-894b-4d40-a819-0b6a0b863032">
+                <propertyInstance
+                  Id="722c435f-3457-4a22-bb24-a4e13347b457"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b26d5183-0185-4997-aefa-e09c1d168178"
+        LastKnownName="EntityGraph"
+        LastKnownLocation="Package_2039.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

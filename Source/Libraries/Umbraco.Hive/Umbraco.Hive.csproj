@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E44FCAB-2597-48F9-8F88-984DD47787C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Hive</RootNamespace>
+    <AssemblyName>Umbraco.Hive</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugForcex86|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugForcex86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugForcex86|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugForcex86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugForcex86|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugForcex86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Remotion.Linq, Version=1.13.122.1, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Resources\References\Relinq\1.13.122\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AbstractProviderBootstrapper.cs" />
+    <Compile Include="AbstractProviderDependencyBuilder.cs" />
+    <Compile Include="AbstractProviderSetup.cs" />
+    <Compile Include="Caching\HiveRelationCacheKey.cs" />
+    <Compile Include="InMemoryProvider\CacheHelper.cs" />
+    <Compile Include="InMemoryProvider\CacheDemandBuilder.cs" />
+    <Compile Include="InMemoryProvider\DependencyHelper.cs" />
+    <Compile Include="InMemoryProvider\EntityRevisionRepositoryFactory.cs" />
+    <Compile Include="InMemoryProvider\EntityRepository.cs" />
+    <Compile Include="InMemoryProvider\EntityRepositoryFactory.cs" />
+    <Compile Include="InMemoryProvider\EntityRevisionRepository.cs" />
+    <Compile Include="InMemoryProvider\SchemaRepository.cs" />
+    <Compile Include="InMemoryProvider\SchemaRepositoryFactory.cs" />
+    <Compile Include="Configuration\AbstractTypeReferenceElementCollection.cs" />
+    <Compile Include="Configuration\AvailableProvidersElement.cs" />
+    <Compile Include="Configuration\HiveConfigSection.cs" />
+    <Compile Include="Configuration\MappedProvidersElement.cs" />
+    <Compile Include="Configuration\PersistenceTypeLoaderElement.cs" />
+    <Compile Include="Configuration\ProviderGroupMatchResult.cs" />
+    <Compile Include="Configuration\ProviderMapElement.cs" />
+    <Compile Include="Configuration\ProviderMappingElementCollection.cs" />
+    <Compile Include="Configuration\ProviderUriMatchResult.cs" />
+    <Compile Include="Configuration\ReaderTypeReferenceElement.cs" />
+    <Compile Include="Configuration\ReaderTypeReferenceElementCollection.cs" />
+    <Compile Include="Configuration\ReadWriterTypeReferenceElement.cs" />
+    <Compile Include="Configuration\ReadWriterTypeReferenceElementCollection.cs" />
+    <Compile Include="Configuration\RevisionTypeLoaderElement.cs" />
+    <Compile Include="Configuration\SchemaTypeLoaderElement.cs" />
+    <Compile Include="Configuration\TypeLoaderElement.cs" />
+    <Compile Include="Configuration\TypeLoaderElementCollection.cs" />
+    <Compile Include="Configuration\UriMatchElement.cs" />
+    <Compile Include="Configuration\UriMatchElementCollection.cs" />
+    <Compile Include="Configuration\UriMatchRegex.cs" />
+    <Compile Include="Configuration\WildcardUriMatch.cs" />
+    <Compile Include="DemandBuilders\HiveDemandBuilder.cs" />
+    <Compile Include="DemandBuilders\LoadFromPersistenceConfig.cs" />
+    <Compile Include="DependencyManagement\ProviderDemandRunner.cs" />
+    <Compile Include="Diagnostics\HiveCounterManager.cs" />
+    <Compile Include="Diagnostics\HivePreDefinedCounters.cs" />
+    <Compile Include="EntityExtensions.cs" />
+    <Compile Include="FactoryExtensions.cs" />
+    <Compile Include="HiveEntityPostActionEventArgs.cs" />
+    <Compile Include="HiveEntityPreActionEventArgs.cs" />
+    <Compile Include="IHiveManager.cs" />
+    <Compile Include="Linq\Structure\RevisionFilterExpressionNode.cs" />
+    <Compile Include="Linq\Structure\RevisionFilterResultOperator.cs" />
+    <Compile Include="ModelApiExtensions.cs" />
+    <Compile Include="ProviderGrouping\IReadonlyGroupUnit.cs" />
+    <Compile Include="ProviderGrouping\IReadonlySchemaRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\IRevisionRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\IGroupUnit.cs" />
+    <Compile Include="ProviderGrouping\IReadonlyRevisionRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\ISchemaRepositoryGroup.cs" />
+    <Compile Include="ProviderSupport\IProviderRevisionRepository.cs" />
+    <Compile Include="ProviderSupport\IReadonlyProviderRevisionRepository.cs" />
+    <Compile Include="LazyRelation.cs" />
+    <Compile Include="Linq\QueryableDataSourceWrapper.cs" />
+    <Compile Include="Linq\QueryContextWrapper.cs" />
+    <Compile Include="NoopProviderBootstrapper.cs" />
+    <Compile Include="ProviderGrouping\AbstractRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\GroupedProviderMetadata.cs" />
+    <Compile Include="ProviderGrouping\EntityRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\ReadonlyEntityRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\ReadonlyRevisionRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\ReadonlySchemaRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\RevisionRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\SchemaRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\GroupSessionHelper.cs" />
+    <Compile Include="ProviderGrouping\GroupUnit.cs" />
+    <Compile Include="ProviderGrouping\GroupUnitFactory.cs" />
+    <Compile Include="ProviderGrouping\IReadonlyEntityRepositoryGroup.cs" />
+    <Compile Include="ProviderGrouping\IEntityRepositoryGroup.cs" />
+    <Compile Include="ProviderSupport\IProviderEntityRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\IReadonlyEntityRepository.cs" />
+    <Compile Include="ProviderSupport\IProviderReadonlyEntityRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\IProviderRepository.cs" />
+    <Compile Include="ProviderSupport\IReadonlyProviderRepository.cs" />
+    <Compile Include="ProviderSupport\NullProviderDependencyHelper.cs" />
+    <Compile Include="ProviderSupport\ProviderDependencyHelper.cs" />
+    <Compile Include="ProviderSupport\ProviderRepositoryHelper.cs" />
+    <Compile Include="ProviderSupport\RepositoryContext.cs" />
+    <Compile Include="ProviderSupport\TransactionCompletedException.cs" />
+    <Compile Include="ProviderSupport\WorkEventArgs.cs" />
+    <Compile Include="QueryExtensions.cs" />
+    <Compile Include="RepositoryTypes\IDictionaryStore.cs" />
+    <Compile Include="RepositoryTypes\IMediaStore.cs" />
+    <Compile Include="RepositoryTypes\IProviderTypeFilter.cs" />
+    <Compile Include="ICoreReadonlyRelationsRepository.cs" />
+    <Compile Include="ICoreReadonlyRepository.cs" />
+    <Compile Include="ICoreReadonlyRevisionRepository.cs" />
+    <Compile Include="ICoreRelationsRepository.cs" />
+    <Compile Include="ICoreRepository.cs" />
+    <Compile Include="ICoreRevisionRepository.cs" />
+    <Compile Include="IUnit.cs" />
+    <Compile Include="ProviderGrouping\ReadonlyGroupUnit.cs" />
+    <Compile Include="ProviderGrouping\ReadonlyGroupUnitFactory.cs" />
+    <Compile Include="ProviderSetup.cs" />
+    <Compile Include="ProviderSupport\IProviderTransaction.cs" />
+    <Compile Include="Configuration\ProviderMappingGroup.cs" />
+    <Compile Include="Configuration\ProviderRouteMatch.cs" />
+    <Compile Include="HiveManager.cs" />
+    <Compile Include="HiveManagerExtensions.cs" />
+    <Compile Include="ProviderSupport\AbstractProviderRepository.cs" />
+    <Compile Include="ProviderSupport\AbstractProviderTransaction.cs" />
+    <Compile Include="ProviderSupport\IProviderReadonlyRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\IProviderRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\IProviderUnit.cs" />
+    <Compile Include="ProviderSupport\IReadonlyProviderUnit.cs" />
+    <Compile Include="ProviderSupport\NullProviderRevisionRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\NullProviderSchemaRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\NullProviderTransaction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderSupport\AbstractEntityRepository.cs" />
+    <Compile Include="ProviderSupport\AbstractEntityRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\AbstractReadonlyEntityRepository.cs" />
+    <Compile Include="ProviderSupport\AbstractReadonlyEntityRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\AbstractReadonlyRevisionRepository.cs" />
+    <Compile Include="ProviderSupport\AbstractReadonlyRevisionRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\AbstractReadonlySchemaRepository.cs" />
+    <Compile Include="ProviderSupport\AbstractReadonlySchemaRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\AbstractReadonlyRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\AbstractRevisionRepository.cs" />
+    <Compile Include="ProviderSupport\AbstractRevisionRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\AbstractSchemaRepository.cs" />
+    <Compile Include="ProviderSupport\AbstractSchemaRepositoryFactory.cs" />
+    <Compile Include="ProviderSupport\ProviderUnit.cs" />
+    <Compile Include="ProviderSupport\ProviderUnitFactory.cs" />
+    <Compile Include="ProviderSupport\ReadonlyProviderUnit.cs" />
+    <Compile Include="ReadonlyProviderSetup.cs" />
+    <Compile Include="RepositoryTypes\ISecurityStore.cs" />
+    <Compile Include="RepositoryExtensions.cs" />
+    <Compile Include="Tasks\CacheWatcherTask.cs" />
+    <Compile Include="Tasks\HiveProviderInstallTask.cs" />
+    <Compile Include="WriterResult.cs" />
+    <Compile Include="ProviderGrouping\RepositoryTypeAttribute.cs" />
+    <Compile Include="ProviderGrouping\RepositoryGroupExtensions.cs" />
+    <Compile Include="ProviderSupport\ReadonlyProviderUnitFactory.cs" />
+    <Compile Include="ProviderSupport\NullProviderRevisionRepository.cs" />
+    <Compile Include="ProviderSupport\NullProviderSchemaRepository.cs" />
+    <Compile Include="RepositoryTypes\IContentStore.cs" />
+    <Compile Include="RepositoryTypes\IFileStore.cs" />
+    <Compile Include="RepositoryTypes\ISystemStore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Framework.Persistence\Umbraco.Framework.Persistence.csproj">
+      <Project>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</Project>
+      <Name>Umbraco.Framework.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProviderTypeFilters\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

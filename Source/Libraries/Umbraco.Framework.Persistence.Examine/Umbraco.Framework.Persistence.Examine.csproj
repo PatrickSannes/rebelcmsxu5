@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B3CD7F2C-D4BE-4731-8D0E-607E571649AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Framework.Persistence.Examine</RootNamespace>
+    <AssemblyName>Umbraco.Framework.Persistence.Examine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Examine, Version=2.10.0.292, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Resources\References\Examine\Examine.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.9.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Resources\References\Examine\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Config\ProviderConfigurationSection.cs" />
+    <Compile Include="FixedAttributeIndexFields.cs" />
+    <Compile Include="FixedRelationIndexFields.cs" />
+    <Compile Include="FixedRevisionIndexFields.cs" />
+    <Compile Include="Linq\ExamineQueryVisitor.cs" />
+    <Compile Include="Mapping\RelatableEntityExtensions.cs" />
+    <Compile Include="Mapping\SearchResultToRevisionData.cs" />
+    <Compile Include="Mapping\TypedEntityToIndexOperation.cs" />
+    <Compile Include="RelationExtensions.cs" />
+    <Compile Include="Hive\DependencyHelper.cs" />
+    <Compile Include="Hive\EntityRepository.cs" />
+    <Compile Include="Hive\EntityRepositoryFactory.cs" />
+    <Compile Include="ExamineHelper.cs" />
+    <Compile Include="Hive\ProviderBootstrapper.cs" />
+    <Compile Include="Hive\ExamineTransaction.cs" />
+    <Compile Include="Hive\RevisionRepository.cs" />
+    <Compile Include="Hive\RevisionRepositoryFactory.cs" />
+    <Compile Include="Hive\SchemaRepository.cs" />
+    <Compile Include="Hive\SchemaRepositoryFactory.cs" />
+    <Compile Include="IndexOperationExtensions.cs" />
+    <Compile Include="Mapping\AttributeDefinitionToIndexFields.cs" />
+    <Compile Include="Mapping\AttributeGroupToIndexFields.cs" />
+    <Compile Include="Mapping\AttributeTypeToIndexFields.cs" />
+    <Compile Include="Mapping\EntitySchemaToIndexFields.cs" />
+    <Compile Include="Mapping\RelationToIndexFields.cs" />
+    <Compile Include="Mapping\TypedEntityToIndexFields.cs" />
+    <Compile Include="NestedHiveIndexOperation.cs" />
+    <Compile Include="Mapping\ExamineModelMapper.cs" />
+    <Compile Include="FixedIndexedFields.cs" />
+    <Compile Include="QueryExtensions.cs" />
+    <Compile Include="UmbracoExamineIndexer.cs" />
+    <Compile Include="ExamineDemandBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mapping\SearchResultToTypedEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Framework.Persistence\Umbraco.Framework.Persistence.csproj">
+      <Project>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</Project>
+      <Name>Umbraco.Framework.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Hive\Umbraco.Hive.csproj">
+      <Project>{8E44FCAB-2597-48F9-8F88-984DD47787C5}</Project>
+      <Name>Umbraco.Hive</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>robocopy "$(TargetDir) " "$(SolutionDir)Web Apps\Umbraco.CMS.Web.UI\App_Plugins\Packages\Examine\lib " "*.Examine.dll" "Lucene.Net.dll" "Examine.dll" /NP /NJS
+robocopy "$(ProjectDir) " "$(SolutionDir)Web Apps\Umbraco.CMS.Web.UI\App_Plugins\Packages\Examine " "Web.config" /NP /NJS
+if errorlevel 4 goto BuildEventFailed 
+if errorlevel 0 goto end 
+:BuildEventFailed echo FILECOPY for $(ProjectName) FAILED 
+exit 1 
+:end echo FILECOPY for $(ProjectName) COMPLETED OK 
+exit 0</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

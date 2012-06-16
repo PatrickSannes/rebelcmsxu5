@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <providers>
+    <provider key="content">
+      <!-- Do we need to separate repo type from persisence type? Who is responsible for loading persistence provider? -->
+      <manifest type="Sandbox.Hive.Repositories.Content" />
+    </provider>
+    <provider key="media">
+      <manifest type="Sandbox.Hive.Repositories.Media" />
+    </provider>
+    <provider key="security">
+      <manifest type="Sandbox.Hive.Repositories.Security" />
+    </provider>
+    <provider key="permissions">
+      <manifest type="Sandbox.Hive.Repositories.Permissions" />
+    </provider>
+  </providers>
+  <graph>
+    <vertex type="provider-branch">
+      <point provider="content" key="F01">
+        <!-- It's tempting to put path here but really Hive can't store path as the path may change - only ID should be stored -->
+        <point provider="media" key="MF01" />
+      </point>
+    </vertex>
+    <vertex type="permission">
+      <point provider="security" key="G01">
+        <point provider="permissions" key="S01">
+          <modifiers>
+            <add type="inherit">True</add>
+          </modifiers>
+          <!-- Absence of key means it applies to the whole provider (e.g. root) -->
+          <point provider="content" />
+        </point>
+      </point>
+    </vertex>
+    <vertex type="permission">
+      <point provider="security" key="G01">
+        <point provider="permissions" key="S01">
+          <modifiers>
+            <add type="inherit">True</add>
+          </modifiers>
+          <!-- Check validity of having multiple destination points in graph theory
+          as it would be an efficient way of representing multiple associations -->
+          <point provider="content" key="A01" />
+          <point provider="content" key="A02" />
+        </point>
+      </point>
+    </vertex>
+    <vertex type="association">
+      <point provider="content" key="A01">
+        <point provider="content" key="A02" />
+      </point>
+    </vertex>
+  </graph>
+</root>
+
+<!--
+Because the "tree" hierarchy is a type of relation, you could pivot on another relation
+type so you could pivot on the data e.g. view the tree by relation type (e.g. view the tree by types of permissions rather
+than parent/child content)
+
+So you could also save the axis and start node as a "favourite" in the UX
+-->

@@ -1,0 +1,9 @@
+﻿.color-item-preview
+{
+    width:22px;
+    height:22px;
+    float:left;
+    margin-right:5px;
+    border: 1px solid #cccccc;
+    cursor:move;
+}

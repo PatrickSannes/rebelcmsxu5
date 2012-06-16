@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <GenerateResourceNeverLockTypeAssemblies>true</GenerateResourceNeverLockTypeAssemblies>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{340DCA60-FC0D-40E6-AE88-4788D62A0F01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Cms.Web.Editors</RootNamespace>
+    <AssemblyName>Umbraco.Cms.Web.Editors</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsContainerAnalysis>False</CodeContractsContainerAnalysis>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlDiff">
+      <HintPath>..\..\..\Resources\References\HtmlDiff\HtmlDiff.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=1.5.20902.9026, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NuGet.Core.1.5.20902.9026\lib\net40-Client\NuGet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AbstractContentEditorController.cs" />
+    <Compile Include="AbstractSchemaEditorController.cs" />
+    <Compile Include="ContentEditorController.cs" />
+    <Compile Include="Dialogs\InsertPartialEditorController.cs" />
+    <Compile Include="Extenders\LanguageController.cs" />
+    <Compile Include="MacroPartialsEditorController.cs" />
+    <Compile Include="Dialogs\InsertMacroEditorController.cs" />
+    <Compile Include="Dialogs\ImplementSectionEditorController.cs" />
+    <Compile Include="Dialogs\DefineSectionEditorController.cs" />
+    <Compile Include="Dialogs\InsertFieldEditorController.cs" />
+    <Compile Include="DictionaryEditorController.cs" />
+    <Compile Include="MemberEditorController.cs" />
+    <Compile Include="PartialsEditorController.cs" />
+    <Compile Include="AbstractRevisionalContentEditorController.cs" />
+    <Compile Include="AbstractFileEditorController.cs" />
+    <Compile Include="Extenders\ContentControllerExtenderBase.cs" />
+    <Compile Include="Extenders\RollbackController.cs" />
+    <Compile Include="Extenders\HostnameController.cs" />
+    <Compile Include="Extenders\MoveCopyController.cs" />
+    <Compile Include="Extenders\PermissionsController.cs" />
+    <Compile Include="Extenders\PublishController.cs" />
+    <Compile Include="Extenders\SortController.cs" />
+    <Compile Include="LanguageEditorController.cs" />
+    <Compile Include="MacroEditorController.cs" />
+    <Compile Include="MediaEditorController.cs" />
+    <Compile Include="DocumentTypeEditorController.cs" />
+    <Compile Include="DataTypeEditorController.cs" />
+    <Compile Include="MediaTypeEditorController.cs" />
+    <Compile Include="PackagingEditorController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptEditorController.cs" />
+    <Compile Include="StylesheetEditorController.cs" />
+    <Compile Include="TemplateEditorController.cs" />
+    <Compile Include="UserEditorController.cs" />
+    <Compile Include="UserGroupEditorController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.CMS.Web.EmbeddedViewEngine\Umbraco.Cms.Web.EmbeddedViewEngine.csproj">
+      <Project>{8F9C0D9E-CD6A-4CA6-84FC-CEE7474988FF}</Project>
+      <Name>Umbraco.Cms.Web.EmbeddedViewEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.CMS.Web\Umbraco.Cms.Web.csproj">
+      <Project>{8F320595-7764-4E31-AEC5-94F1B128EDFE}</Project>
+      <Name>Umbraco.Cms.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework.Security\Umbraco.Framework.Security.csproj">
+      <Project>{72EBBDF6-24FE-4B6D-B1B5-001D8A96AACE}</Project>
+      <Name>Umbraco.Framework.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework.Persistence\Umbraco.Framework.Persistence.csproj">
+      <Project>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</Project>
+      <Name>Umbraco.Framework.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Hive\Umbraco.Hive.csproj">
+      <Project>{8E44FCAB-2597-48F9-8F88-984DD47787C5}</Project>
+      <Name>Umbraco.Hive</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>robocopy "$(TargetDir) " "$(SolutionDir)Web Apps\Umbraco.CMS.Web.UI\App_Plugins\Core\lib\ " "*.Editors.dll" /NP /NJS
+if errorlevel 4 goto BuildEventFailed 
+if errorlevel 0 goto end 
+:BuildEventFailed echo FILECOPY for $(ProjectName) FAILED 
+exit 1 
+:end echo FILECOPY for $(ProjectName) COMPLETED OK 
+exit 0</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <!--<Target Name="AfterBuild">
+	<Message Text="Running AfterBuild at target $(TargetPath)" Importance="high" />
+	<CreateItem Include="$(TargetPath)**\*.*">
+		<Output TaskParameter="Include" ItemName="TargetFiles" />
+	</CreateItem>
+	<MakeDir Directories="$(SolutionDir)Web Apps\Umbraco.CMS.Web.UI\Plugins\Core\Editors" />
+	<Copy SourceFiles="@(TargetFiles)" DestinationFolder="$(SolutionDir)Web Apps\Umbraco.CMS.Web.UI\Plugins\Core\Editors" Retries="5" OverwriteReadOnlyFiles="True" SkipUnchangedFiles="True" />
+	<Message Text="Finished running AfterBuild at target $(TargetPath)" Importance="high" />
+  </Target>-->
+</Project>

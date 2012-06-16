@@ -1,0 +1,25 @@
+﻿@inherits System.Web.Mvc.WebViewPage<Umbraco.Cms.Web.PropertyEditors.UmbracoSystemEditors.DictionaryItemTranslations.DictionaryItemTranslationsEditorModel>
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.TextBox;
+
+<p class="notice" style="margin: 0 0 20px;">Edit the different translations for this dictionary item below. You can add additional languages via the 'languages' tree on the left.</p>
+@foreach (var language in Model.Languages)
+{
+    <div class="property-editor clearfix">
+        <div class="property-editor-label">@language.Value</div>
+        <div class="property-editor-control">
+            <textarea name="translation_@(language.Key)">@if(Model.Translations.ContainsKey(language.Key)) { @Model.Translations[language.Key] }</textarea>
+        </div>
+    </div>
+}

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Localizations Language="*">
+  <!-- Single file per language approach. Match all languages (*) as theses are the default text if no localizations exist -->
+
+  <!-- Applications -->
+  <Text Key="content">Content</Text>
+  <Text Key="media">Media</Text>
+  <Text Key="settings">Settings</Text>
+  <Text Key="developer">Developer</Text>
+  <Text Key="users">Users</Text>
+  
+  <!-- These are used regardless of class, assembly and namespace -->
+  <Text Key="Name">Name</Text>
+  <Text Key="CreatedBy">Created by</Text>
+  <Text Key="UtcCreated">Date created</Text>
+  <Text Key="UtcModified">Date updated</Text>
+  <Text Key="NodeName">Node Name</Text>
+  <Text Key="UpdatedBy">Updated by</Text>
+  <Text Key="ShowLabel">Show label</Text>
+
+  <!-- Messages -->
+  <Text Key="Login.Invalid">Invalid username or password</Text>
+  <Text Key="Delete.Successful">Item successfully deleted</Text>
+  <Text Key="Validation.Errors">Some validation errors occurred</Text>
+  
+  <Text Key="Save.ErrorsOccurred.Message">#Plural(ErrorCount){A validation error occurred | Validation errors occurred}</Text>
+  <Text Key="Save.ErrorsOccurred.Title">Validation errors</Text>
+
+  <Text Key="Content.Save.Title">Content saved</Text>
+  <Text Key="Content.Save.Message">Remember to publish to make changes visible</Text>
+  <Text Key="Content.SaveUnathorized.Title">Content not saved</Text>
+  <Text Key="Content.SaveUnathorized.Message">Content was not saved due to insufficient permissions</Text>
+  <Text Key="Content.UnSaved.Message">This content is currently un-saved. Remember to save this content if you would like to be able to come back and edit it later.</Text>
+  <Text Key="Content.NoTemplates.Message">There are currently no templates available for this content.</Text>
+  <Text Key="Content.UrlResolutionFailedHostname.Message">A URL could not be generated for this node because the branch it is contained in requires that a hostname is assigned.</Text>
+  <Text Key="Content.NoChildTypesAllowed.Message">This content type does not have any allowed child content types assigned</Text>
+
+  <Text Key="User.Save.Title">User saved</Text>
+  <Text Key="User.Save.Message">The user information has been successfully saved</Text>
+  <Text Key="User.UnSaved.Message">This user is currently un-saved. Remember to save this user if you would like to be able to come back and edit it later.</Text>
+
+  <Text Key="UserGroup.Save.Title">User group saved</Text>
+  <Text Key="UserGroup.Save.Message">The user group information has been successfully saved</Text>
+  <Text Key="UserGroup.UnSaved.Message">This user group is currently un-saved. Remember to save this user group if you would like to be able to come back and edit it later.</Text>
+  <Text Key="UserGroup.Inherit.Message">Please note, permissions set to inherit will default to deny if no explicit allow permission can be inherited.</Text>
+
+  <Text Key="DataType.Save.Title">Data type saved</Text>
+  <Text Key="DataType.Save.Message">Data type has been saved</Text>
+  <Text Key="DataType.UnSaved.Message">This data type is currently un-saved. Remember to save this data type if you would like to be able to come back and edit it later.</Text>
+
+  <Text Key="DocumentType.Save.Title">Document type saved</Text>
+  <Text Key="DocumentType.Save.Message">Document type has been successfully saved</Text>
+  <Text Key="DocumentType.UnSaved.Message">This document type is currently un-saved. Remember to save this document type if you would like to be able to come back and edit it later.</Text>
+  <Text Key="DocumentType.PropertyDeleted.Title">Property deleted</Text>
+  <Text Key="DocumentType.PropertyDeleted.Message">Document type property has been deleted</Text>
+  <Text Key="DocumentType.TabDeleted.Title">Tab deleted</Text>
+  <Text Key="DocumentType.TabDeleted.Message">Document type tab has been deleted</Text>
+  <Text Key="DocumentType.TabAdded.Title">Tab added</Text>
+  <Text Key="DocumentType.TabAdded.Message">Document type tab has been added</Text>
+  <Text Key="DocumentType.Validation.DuplicateTab">The tab name entered already exists</Text>
+  <Text Key="DocumentType.Validation.RequiredTabName">A tab name must be specified</Text>
+  
+  <Text Key="Permissions.Title">Permissions updated</Text>
+  <Text Key="Permissions.Success.Message">Permissions successfully saved on node {Name}</Text>
+  <Text Key="Permissions.NoUserGroups.Message">No non-admin user groups found, please add a new user group before attempting to set permissions</Text>
+  <Text Key="Hostname.Title">Hostnames updated</Text>
+  <Text Key="Hostname.Success.Message">{Count} hostnames successfully saved on node {Name}</Text>
+  <Text Key="Language.Title">Language updated</Text>
+  <Text Key="Language.Success.Message">Language successfully saved for node {Name}</Text>
+  <Text Key="Sort.Title">Content sorting</Text>
+  <Text Key="Rollback.Title">Content rolling back</Text>
+  <Text Key="Sort.Success.Message">Content sorted successfully</Text>
+  <Text Key="Move.Success.Message">'{FromName}' has been moved to '{ToName}'</Text>
+  <Text Key="Copy.Success.Message">'{FromName}' has been copied to '{ToName}'</Text>
+  <Text Key="Rollback.Success.Message">Content rolled back successfully</Text>
+  <Text Key="Publish.Title">Content publishing</Text>
+  <Text Key="Publish.SingleSuccess.Message">'{Name}' has been published</Text>
+  <Text Key="Publish.SingleUnathorized.Message">'{Name}' was not published due to insufficient permissions</Text>
+  <Text Key="Publish.ChildrenSuccess.Message">'{Name}' and subpages have been published</Text>
+  <Text Key="Publish.IncludeChildren.Label">Publish '{Name}' and all its subpages</Text>
+  <Text Key="Publish.IncludeUnpublishedChildren.Label">Include unpublished child pages</Text>
+  <Text Key="Unpublish.Title">Content unpublishing</Text>
+  <Text Key="Unpublish.SingleSuccess.Message">'{Name}' has been unpublished</Text>
+  <Text Key="Unpublish.SingleUnathorized.Message">'{Name}' was not unpublished due to insufficient permissions</Text>
+
+  <Text Key="Language.Save.Title">Language saved</Text>
+  <Text Key="Language.Save.Message">The language has been successfully saved</Text>
+  <Text Key="Language.UnSaved.Message">This language is currently un-saved. Remember to save this language if you would like to be able to come back and edit it later.</Text>
+  
+  <Text Key="Macro.Save.Title">Macro saved</Text>
+  <Text Key="Macro.Save.Message">Macro has been successfully saved</Text>
+  <Text Key="Macro.UnSaved.Message">This macro is currently un-saved. Remember to save this macro if you would like to be able to come back and edit it later.</Text>
+  <Text Key="Macro.ParamsPopulated.Title">Macro Parameters</Text>
+  <Text Key="Macro.ParamsPopulatedSuccess.Message">Macro parameters successfully retreived</Text>
+  <Text Key="Macro.ParamsFailedSurfaceAction.Message">Could not determine parameters for child action a they contain one or more: out, return value or LCID parameters</Text>
+  <Text Key="Macro.ParamsFailedPartialView.Message">Could not find the partial view referenced</Text>
+  <Text Key="Macro.RenderingFailed.Message">An error occurred rendering the macro '{MacroName}'. ERROR: '{Error}'. See Umbraco log for full details.</Text>
+  <Text Key="Macro.RenderingFailed.Title">Macro error</Text>
+  
+  <Text Key="Template.Save.Title">Template saved</Text>
+  <Text Key="Template.Save.Message">Template has been successfully saved</Text>
+  
+  <Text Key="Partials.Save.Title">Template saved</Text>
+  <Text Key="Partials.Save.Message">Template has been successfully saved</Text>
+  
+  <Text Key="Script.Save.Title">Script saved</Text>
+  <Text Key="Script.Save.Message">Script has been successfully saved</Text>
+  
+  <Text Key="Stylesheet.Save.Title">Stylesheet saved</Text>
+  <Text Key="Stylesheet.Save.Message">Stylesheet has been successfully saved</Text>
+
+  <Text Key="StylesheetRule.UnSaved.Message">This rule is currently un-saved. Remember to save this rule if you would like to be able to come back and edit it later.</Text>
+  
+  <Text Key="Folder.Save.Title">Folder created</Text>
+  <Text Key="Folder.Save.Message">Folder has been created successfully</Text>
+
+  <Text Key="File.UnSaved.Message">This file is currently un-saved. Remember to save this file if you would like to be able to come back and edit it later.</Text>
+  
+  <Namespace Name="Umbraco.Cms.Web">
+    
+    <Text Key="CoreEntityModel.PropertyEditorId">Choose property editor</Text>
+    <Text Key="CoreEntityModel.UtcPublished">Pulication status</Text>
+    
+    <Text Key="ContentEditorModel.DocumentTypeName">Document type</Text>
+    <Text Key="ContentEditorModel.SelectedTemplateId">Template</Text>
+    <Text Key="ContentEditorModel.UtcPublishedDate">Publication status</Text>
+    <Text Key="ContentEditorModel.UtcPublishScheduled">Publish at</Text>
+    <Text Key="ContentEditorModel.UtcUnpublishScheduled">Remove at</Text>
+    <Text Key="ContentEditorModel.DocumentLinks">Links to document</Text>
+    <Text Key="CreateContentModel.SelectedDocumentTypeId">Choose document type</Text>    
+
+    <Text Key="DocumentTypeProperty.DataTypeId">Data Type</Text>
+    <Text Key="DocumentTypeProperty.TabId">Tab</Text>
+
+    <Text Key="MemberEditorModel.ConfirmPassword">Confirm password</Text>
+    <Text Key="MemberEditorModel.OldPassword">Old password</Text>
+    <Text Key="MemberEditorModel.IsApproved">Login enabled?</Text>
+    <Text Key="MemberEditorModel.LastLoginDate">Last login date</Text>
+    <Text Key="MemberEditorModel.LastActivityDate">Last activity date</Text>
+    <Text Key="MemberEditorModel.LastPasswordChangeDate">Last password change date</Text>
+
+    <Text Key="UserEditorModel.ConfirmPassword">Confirm password</Text>
+    <Text Key="UserEditorModel.OldPassword">Old password</Text>
+    <Text Key="UserEditorModel.IsApproved">Login enabled?</Text>
+    <Text Key="UserEditorModel.SessionTimeout">Session timeout (mins)</Text>
+    <Text Key="UserEditorModel.LastLoginDate">Last login date</Text>
+    <Text Key="UserEditorModel.LastActivityDate">Last activity date</Text>
+    <Text Key="UserEditorModel.LastPasswordChangeDate">Last password change date</Text>
+    <Text Key="UserEditorModel.StartContentHiveId">Start node for Content</Text>
+    <Text Key="UserEditorModel.StartMediaHiveId">Start node for Media</Text>
+    <Text Key="UserEditorModel.Applications">Sections</Text>
+    
+    <Text Key="CreateDocumentTypeModel.CreateTemplate">Create matching template</Text>
+    <Text Key="CreateDocumentTypeModel.SelectedDocumentTypeId">Master document type</Text>
+
+    <Text Key="CreateMacroModel.MacroType">Macro Type</Text>
+
+    <Text Key="MacroEditorModel.MacroType">Macro Type</Text>
+    <Text Key="MacroEditorModel.UseInEditor">Use in editor</Text>
+    <Text Key="MacroEditorModel.RenderContentInEditor">Render content in editor</Text>
+    <Text Key="MacroEditorModel.CachePeriodSeconds">Cache period in seconds</Text>
+    <Text Key="MacroEditorModel.CacheByPage">Cache by page</Text>
+    <Text Key="MacroEditorModel.CachePersonalized">Cache personalized</Text>
+
+    <Text Key="HostnamesModel.NewHostname">Add hostname</Text>
+    <Text Key="HostnamesModel.AssignedHostnames">Assigned hostnames</Text>
+
+    <Text Key="AbstractSchemaEditorModel.Name">Name</Text>
+    <Text Key="AbstractSchemaEditorModel.Alias">Alias</Text>
+    <Text Key="AbstractSchemaEditorModel.Icon">Icon</Text>
+    <Text Key="AbstractSchemaEditorModel.Icon.Description">The icon to display in the content tree.</Text>
+    <Text Key="AbstractSchemaEditorModel.Thumbnail">Thumbnail</Text>
+    <Text Key="AbstractSchemaEditorModel.Thumbnail.Description">The thumbnail to display on the 'Create' screen.</Text>
+    <Text Key="AbstractSchemaEditorModel.Description">Description</Text>
+    <Text Key="AbstractSchemaEditorModel.Description.Description">A description to display on the 'Create' screen.</Text>
+    <Text Key="AbstractSchemaEditorModel.InheritFrom">Inherit From</Text>
+    <Text Key="AbstractSchemaEditorModel.InheritFrom.Description">The parent types this type should inherit tabs/properties from.</Text>
+    <Text Key="AbstractSchemaEditorModel.AllowedChildren">Allowed Children</Text>
+    <Text Key="AbstractSchemaEditorModel.AllowedChildren.Description">The types that are allowed to be created beneath this type.</Text>
+    
+    <Text Key="DocumentTypeEditorModel.AllowedTemplates">Allowed Templates</Text>
+    <Text Key="DocumentTypeEditorModel.AllowedTemplates.Description">The templates that can be used by this type.</Text>
+    <Text Key="DocumentTypeEditorModel.DefaultTemplateId">Default Template</Text>
+    <Text Key="DocumentTypeEditorModel.DefaultTemplateId.Description">The default template to use when creating content of this type.</Text>
+    
+  </Namespace>
+
+  <Namespace Name="Umbraco.Cms.Web.PropertyEditors">
+    <Text Key="IsRequired">Required</Text>
+    <Text Key="RichTextPreValueModel.ShowContextMenu">Show context menu</Text>
+    <Text Key="RichTextPreValueModel.EditorSize">Editor size</Text>
+    <Text Key="RichTextPreValueModel.TinyMceItems">Rich text elements</Text>
+
+    <Text Key="TextBoxPreValueModel.RegexValidationStatement">Regular expression validation statement</Text>
+   
+    <Text Key="ColorSwatchPickerPreValueModel.Colors">Colors</Text>
+    
+    <Text Key="DateTimePickerPreValueModel.ShowTime">Also show time selection</Text>
+
+    <Text Key="NodeNameEditorModel.UrlName">Url name</Text>
+    <Text Key="NodeNameEditorModel.UrlAliases">Url aliases</Text>
+  </Namespace>
+  
+</Localizations>
+

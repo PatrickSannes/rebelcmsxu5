@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<features>
+  <!--<feature name="Highlight" alias="backcolor" />-->
+  <feature name="Bold" alias="bold" />
+  <feature name="Bulleted List" alias="bullist" />
+  <feature name="Numbered List" alias="numlist" />
+  <feature name="Symbols" alias="umbracocharmap" />
+  <feature name="Cleanup" alias="cleanup" />
+  <feature name="Html" alias="code" />
+  <feature name="Copy" alias="copy" />
+  <feature name="Cut" alias="cut" />
+  <feature name="Help" alias="help" />
+  <feature name="Horizontal rule" alias="hr" />
+  <feature name="Media" alias="umbracomedia"/>
+  <feature name="Indent" alias="indent" />
+  <feature name="Outdent" alias="outdent" />
+  <feature name="Italic" alias="italic" />
+  <feature name="Underline" alias="underline" />
+  <feature name="Center" alias="justifycenter" />
+  <feature name="Justify" alias="justifyfull" />
+  <feature name="Align left" alias="justifyleft" />
+  <feature name="Align right" alias="justifyright" />
+  <feature name="Link" alias="umbracolink" />
+  <feature name="Redo" alias="redo" />
+  <!--<feature name="Erase" icon="erase" alias="" />-->
+  <feature name="Strikeout" alias="strikethrough" />
+  <feature name="Sub script"  alias="sub" />
+  <feature name="Super script"  alias="sup" />
+  <!--<feature name="Paint" icon="paint" alias="sup" />-->
+  <feature name="Undo"  alias="undo" />
+  <feature name="Unlink"  alias="unlink" />
+  <feature name="Table"  alias="table" />
+  <feature name="Bar"  alias="hr" />
+  <!--<feature name="Paragraph start" icon="paragraph-start" alias="sup" />-->
+  <!--<feature name="Paragraph end" icon="paragraph-end" alias="sup" />-->
+  <!--<feature name="Smiley" icon="smiley" alias="sup" />-->
+  <feature name="Flash"  alias="media" />
+  <!--<feature name="Zoom" icon="zoom" alias="sup" />-->
+  <!--<feature name="Full screen"  alias="fullscreen" />-->
+  <feature name="Spell check"  alias="iespell" />
+  <feature name="Calendar"  alias="insertdate" />
+  <feature name="Time"  alias="inserttime" />
+  <feature name="Text format"  alias="formatselect" />
+  <!--<feature name="Text art" icon="text-art" alias="sup" />-->
+  <!--<feature name="Preview"  alias="preview" />-->
+  <!--<feature name="Print"  alias="print" />-->
+  <!--<feature name="Transform" icon="transform" alias="sup" />-->
+  <feature name="Search"  alias="searchreplace" />
+  <feature name="Table edit"  alias="table" />
+  <feature name="Anchor"  alias="umbracoanchor" />
+  <feature name="Styles"  alias="umbracostyles" />
+  <feature name="Macros"  alias="umbracomacro" />
+
+  <!-- TODO: Finish filling this in! -->
+
+
+</features>

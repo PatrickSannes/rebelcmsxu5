@@ -1,0 +1,49 @@
+﻿@inherits WebViewPage<SetParametersModel>
+              
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Trees;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+@using Umbraco.Cms.Web.Model.BackOffice.TinyMCE.InsertMacro;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Controllers;
+
+@{
+    ViewBag.Title = "Insert/edit macro";
+    Layout = "~/Areas/Umbraco/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    @{
+        Html
+            .RequiresJs("../Modules/TinyMCE/tiny_mce_popup.js", "Scripts", 100);
+    }
+}
+
+@using (Html.BeginForm("SetParameters", "InsertMacro", FormMethod.Post))
+{
+    @Html.HiddenFor(x => Model.IsNew)
+    @Html.HiddenFor(x => Model.ContentId)
+    @Html.HiddenFor(x => Model.MacroAlias)
+    @Html.HiddenFor(x => Model.InlineMacroId)
+
+	<h2>Set Parameters</h2>
+
+    foreach (var parameter in Model.MacroParameters)
+    {
+        @Html.EditorFor(editor => parameter, "MacroParameter", parameter.Alias)  
+    }
+
+    <div class="button-bar">
+        <input type="submit" id="next" name="next" value="OK" /> or <a href="#" onclick="tinyMCEPopup.close();">Cancel</a>
+    </div>
+}

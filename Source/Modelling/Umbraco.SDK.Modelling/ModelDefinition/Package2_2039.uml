@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1c3e68d2-86a4-46bf-967c-f38fb1087732"
+  name="Abstracts"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="80afeeea-fd64-4818-94f6-1d845cdc38c4"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=UmbracoFramework.EntityGraph.Domain.Abstracts"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="2f4fe158-cd6c-4155-bfe7-567e5bf6b1c4"
+        name="TypedAttributeListBase"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b7d37b2c-13c0-409b-bac4-bf3fae05bd5c"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework.EntityGraph.Domain/bin/Debug/UmbracoFramework.EntityGraph.Domain.dll Namespace=UmbracoFramework.EntityGraph.Domain.Abstracts Type=TypedAttributeListBase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="30ce46c2-139a-4b85-a9ba-674e56c031ab"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="57a94913-d710-4b3e-9101-36d4e6a4f043">
+                <propertyInstance
+                  Id="704a5025-a979-4bb2-9b3d-e42dabf7ef15"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d177c0a-e7f4-4e5d-9cec-56293b2fcf09">
+                <propertyInstance
+                  Id="6fd4aecb-b874-48fb-91e4-59e55c5cf631"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="347d788e-1a3a-4e48-be16-787022118ca5">
+                <propertyInstance
+                  Id="487eb732-0faf-466a-b3c0-41db2ed684ed"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="892f660f-c24e-40c4-a842-853d4f700530">
+                <propertyInstance
+                  Id="0f7f01d6-7fc5-4043-a1d1-970d9cb1daa3"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="33a4f61e-c765-4bde-957e-32fd2f73f3b5">
+                <propertyInstance
+                  Id="d5b2ee2b-d4dd-4449-bfca-a537e29e7fbe"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="8c12aae1-5ba0-4b9d-b66a-94eecfba60a6">
+            <interfaceMoniker
+              Id="fc6f362b-7a10-4e92-bc8d-bde6017ef0ac"
+              LastKnownName="ITypedAttributeList"
+              LastKnownLocation="Package1_2039.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9e71a725-eace-4639-a372-58896cfe099f"
+            name="Get"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a288241e-6216-44ae-b292-8ed4bcce6ed6"
+                  name="attributeName"
+                  direction="In">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="de01f5f0-11ba-4081-a983-ab4cb280d70b"
+                      LastKnownName="ITypedAttributeName"
+                      LastKnownLocation="Package1_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c1c64269-5329-490d-9c19-83f6ba853970"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="816c63b6-158e-41d8-8e3a-b404cc8c50aa"
+                      LastKnownName="ITypedAttribute"
+                      LastKnownLocation="Package1_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="831ea6c8-713d-4cd0-945b-b140854bcb04"
+            name="Get"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dbe56aa8-e684-45af-b724-f82d75a4a054"
+                  name="attributeName"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Umbraco.SDK.Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6347920f-71ef-4789-b935-f2e64513a03d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="816c63b6-158e-41d8-8e3a-b404cc8c50aa"
+                      LastKnownName="ITypedAttribute"
+                      LastKnownLocation="Package1_2039.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="03be1d18-53f0-4376-9245-98cef96c5c39"
+        name="EntityAssociationListBase"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="eb3b4db5-91c2-450a-8a58-f596711cfdcd"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Development/BitBucket/funkydonut/Libraries/UmbracoFramework.EntityGraph.Domain/bin/Debug/UmbracoFramework.EntityGraph.Domain.dll Namespace=UmbracoFramework.EntityGraph.Domain.Abstracts Type=EntityAssociationListBase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="65b36f8d-45f7-4422-8f03-4552bdfc9b0a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eae35aea-8187-41a1-9ea3-bd54552ae92d">
+                <propertyInstance
+                  Id="e5bb6fb8-e34a-4c8a-a6b3-f9e2c6b2b909"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ec904bc5-4dfe-4140-aa44-04d62315a7c6">
+                <propertyInstance
+                  Id="c22498f9-ea5e-4395-b379-5338f3df07ac"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6151fac3-9275-441e-89ba-c5f6ef22d53a">
+                <propertyInstance
+                  Id="1fb03763-eb30-43db-b729-cbc670dd2a0a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8a1dc443-e81d-431a-b443-f642ca0b1561">
+                <propertyInstance
+                  Id="531f5d04-e6c2-451c-92d7-ad89e304fa3a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="21a33bc2-d68f-4927-82d9-290796a8e71e">
+                <propertyInstance
+                  Id="df796b48-3541-4bd6-bc1e-a824204dd39a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="eb349e41-7b65-45ee-829d-603e7934386d">
+            <interfaceMoniker
+              Id="412e9c33-c15c-4ff8-9683-7a98725d265b"
+              LastKnownName="IEntityAssociationList"
+              LastKnownLocation="Package1_2039.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

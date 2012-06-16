@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <groups>
+    <group id="G01" name="administrators">
+      <member path="/users/user[@id='U01']" />
+    </group>
+    <group id="G02" name="editors">
+      <member path="/groups/group[@id='G01']" />
+      <member path="/users/user[@id='U02']" />
+    </group>
+  </groups>
+  <users>
+    <user id="U01" name="alex" />
+    <user id="U02" name="fed" />
+  </users>
+</root>

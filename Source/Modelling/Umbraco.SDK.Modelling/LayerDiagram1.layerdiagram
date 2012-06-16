@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d1650122-015c-4196-afa1-5c8ba2396090" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="cd3cfd81-45f2-45af-b475-710eb0ae8390" name="IEntityRepository">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d8e3c7df-fc82-4cbf-8093-c9e0df4d9f8b" direction="Bidirectional">
+          <layerMoniker Id="e7840700-0e52-442d-bdd3-bc3a6e4f6bfe" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="559ca868-5c8b-4c9c-8a43-36e75502741e" name="InMemoryTestRepository">
+          <references>
+            <reference Id="dc5e1846-43b0-419f-8fd6-a8f9908db21d" name="InMemoryTestRepository.cs">
+              <ArtifactNode Label="InMemoryTestRepository.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.DataPersistence.EntityHub.SimpleTestRepository/InMemoryTestRepository.cs)">
+                <Category Ref="CodeSchema_ProjectItem" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.DataPersistence.EntityHub.SimpleTestRepository Namespace=UmbracoFramework.DataPersistence.EntityHub.SimpleTestRepository Type=InMemoryTestRepository)" Label="InMemoryTestRepository" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="5fb99ccb-881f-4898-8c78-63d6ec4955b2" name="SqlEntityRepository">
+          <references>
+            <reference Id="b6689175-1ddf-4006-98bd-326ed11f6d33" name="InMemoryTestRepository.cs">
+              <ArtifactNode Label="InMemoryTestRepository.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.DataPersistence.EntityHub.SimpleTestRepository/InMemoryTestRepository.cs)" />
+              <ExpandedNode Id="(Assembly=UmbracoFramework.DataPersistence.EntityHub.SimpleTestRepository Namespace=UmbracoFramework.DataPersistence.EntityHub.SimpleTestRepository Type=InMemoryTestRepository)" Label="InMemoryTestRepository" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="a6c06e20-c2b0-4223-a19b-8233e1258fc4" name="IEntityRepository">
+          <ArtifactNode Label="IEntityRepository" Category="CodeSchema_Interface" Id="(Assembly=../../Libraries/UmbracoFramework.DataPersistence.EntityHub/bin/Debug/UmbracoFramework.DataPersistence.EntityHub.dll Namespace=UmbracoFramework.DataPersistence.EntityHub Type=IEntityRepository)" />
+          <ExpandedNode Id="(Assembly=UmbracoFramework.DataPersistence.EntityHub Namespace=UmbracoFramework.DataPersistence.EntityHub Type=IEntityRepository)" Label="IEntityRepository" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="5c6dfe90-828e-4843-92ea-c987d2ddbc20" name="UmbracoFramework.Models.EntityHub">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="bcc6dffb-f04d-4980-911a-8f8550db5dd1" direction="Forward">
+          <layerMoniker Id="e5eba6ad-7876-46d0-a862-c2c887f420a0" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="cbc99338-6aa4-4020-9b24-c712d1267d96" name="IEntity.cs">
+          <childLayers>
+            <layer Id="f91d7497-5e9a-4798-8578-9c1e4c0441bc" name="Entity Domain DTO">
+              <references>
+                <reference Id="95b317ce-1bca-4e31-b998-921251a00114" name="Entity.cs">
+                  <ArtifactNode Label="Entity.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.DataPersistence.EntityHub/Dto/Entity.cs)">
+                    <Category Ref="CodeSchema_ProjectItem" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=UmbracoFramework.DataPersistence.EntityHub Namespace=UmbracoFramework.Models.EntityHub Type=Entity)" Label="Entity" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="7619da3e-f187-481b-bb60-399f4f6a2a3b" name="IEntity.cs">
+              <ArtifactNode Label="IEntity.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.Models.EntityHub/IEntity.cs)">
+                <Category Ref="CodeSchema_ProjectItem" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.Models.EntityHub Namespace=UmbracoFramework.Models.EntityHub Type=IEntity)" Label="IEntity" Category="CodeSchema_Interface">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="229cc3d8-54f2-4c14-9766-88fc826d24d1" name="Entity.cs">
+              <ArtifactNode Label="Entity.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.DataPersistence.EntityHub/Dto/Entity.cs)">
+                <Category Ref="CodeSchema_ProjectItem" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.DataPersistence.EntityHub Namespace=UmbracoFramework.Models.EntityHub Type=Entity)" Label="Entity" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="751f2c59-fe45-4da4-a263-4cf3c886fcfc" name="UmbracoFramework.Models.EntityHub">
+          <ArtifactNode Label="UmbracoFramework.Models.EntityHub" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoFramework.Models.EntityHub/UmbracoFramework.Models.EntityHub.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=UmbracoFramework.Models.EntityHub)" Label="UmbracoFramework.Models.EntityHub.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="a7d57d3c-f826-4123-b58e-7fefd335815e" name="IComplexEntity.cs">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="0eadd981-1619-45c7-9d94-44ff4cbafa17" direction="Forward">
+          <layerMoniker Id="fc1bc02d-a33a-4050-ba5d-045d49a5f764" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="fbad93b4-1052-47e6-bff0-77b64da2f7a6" name="Document DTO">
+          <references>
+            <reference Id="bef97ed9-4154-4e64-a81b-60ca03d163e7" name="Document.cs">
+              <ArtifactNode Label="Document.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.Concepts.EntityHub/Document.cs)">
+                <Category Ref="CodeSchema_ProjectItem" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.Concepts.EntityHub Namespace=UmbracoFramework.Concepts Type=Document)" Label="Document" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="82ff06ba-2156-4b9d-99ad-2aae73b261d5" name="SecurityGroup DTO">
+          <references>
+            <reference Id="e2a7c57f-2af3-4a70-ba54-58db0d5d0d45" name="SecurityGroup.cs">
+              <ArtifactNode Label="SecurityGroup.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.Concepts.EntityHub/SecurityGroup.cs)">
+                <Category Ref="CodeSchema_ProjectItem" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.Concepts.EntityHub Namespace=UmbracoFramework.Concepts Type=SecurityGroup)" Label="SecurityGroup" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="f9773143-420c-4343-ad33-0aff874e41a1" name="IComplexEntity.cs">
+          <ArtifactNode Label="IComplexEntity.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.Models.EntityHub/IComplexEntity.cs)">
+            <Category Ref="CodeSchema_ProjectItem" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=UmbracoFramework.Models.EntityHub Namespace=UmbracoFramework.Models.EntityHub Type=IComplexEntity)" Label="IComplexEntity" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="e5eba6ad-7876-46d0-a862-c2c887f420a0" name="IEntityResolver.cs">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="03150090-680e-407a-aab7-fccef86825ac" direction="Forward">
+          <layerMoniker Id="4de10c83-dd16-4f9c-87df-c9a88b1492ea" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="091feb58-c0f8-4428-b7c7-42719db16896" name="IDocumentResolver.cs">
+          <childLayers>
+            <layer Id="7e4e66f6-297f-4832-8df9-aa10c11a8e7e" name="DocumentResolver">
+              <references>
+                <reference Id="94c81b57-7951-466a-9bce-2b490940ba52" name="DocumentResolver">
+                  <ArtifactNode Label="DocumentResolver" Category="CodeSchema_Class" Id="(Assembly=../../Libraries/Umbraco/bin/Debug/Umbraco.dll Namespace=Umbraco.Defaults Type=DocumentResolver)" />
+                  <ExpandedNode Id="(Assembly=Umbraco Namespace=Umbraco.Defaults Type=DocumentResolver)" Label="DocumentResolver" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="a51a59d2-ee09-444c-8750-aa276002d59f" name="IDocumentResolver.cs">
+              <ArtifactNode Label="IDocumentResolver.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.Concepts.EntityHub/IDocumentResolver.cs)">
+                <Category Ref="CodeSchema_ProjectItem" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.Concepts.EntityHub Namespace=UmbracoFramework.Concepts.EntityHub Type=IDocumentResolver)" Label="IDocumentResolver" Category="CodeSchema_Interface">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="deaa9cfa-c027-4f60-b939-598cb7f16b71" name="DocumentResolver.cs">
+              <ArtifactNode Label="DocumentResolver.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/Umbraco/Defaults/DocumentResolver.cs)">
+                <Category Ref="CodeSchema_ProjectItem" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Umbraco Namespace=Umbraco.Defaults Type=DocumentResolver)" Label="DocumentResolver" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="d4a2ef18-d2a9-4fb5-a428-c59096a4439b" name="DocumentResolver">
+              <ArtifactNode Label="DocumentResolver" Category="CodeSchema_Class" Id="(Assembly=../../Libraries/Umbraco/bin/Debug/Umbraco.dll Namespace=Umbraco.Defaults Type=DocumentResolver)" />
+              <ExpandedNode Id="(Assembly=Umbraco Namespace=Umbraco.Defaults Type=DocumentResolver)" Label="DocumentResolver" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="d2c0d94c-83cf-4446-8683-37d91a9ec1a2" name="ISecurityResolver.cs">
+          <childLayers>
+            <layer Id="85dcfc6a-c7cb-411b-a8ab-ae81e4e44e4b" name="SecurityResolver">
+              <references>
+                <reference Id="e62ae1f4-6508-4b3a-9b68-997f457092fd" name="SecurityResolver">
+                  <ArtifactNode Label="SecurityResolver" Category="CodeSchema_Class" Id="(Assembly=../../Libraries/Umbraco/bin/Debug/Umbraco.dll Namespace=Umbraco.Defaults Type=SecurityResolver)" />
+                  <ExpandedNode Id="(Assembly=Umbraco Namespace=Umbraco.Defaults Type=SecurityResolver)" Label="SecurityResolver" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="00813619-ee53-4378-818f-5a93f6fe05be" name="ISecurityResolver.cs">
+              <ArtifactNode Label="ISecurityResolver.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.Concepts.EntityHub/ISecurityResolver.cs)">
+                <Category Ref="CodeSchema_ProjectItem" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.Concepts.EntityHub Namespace=UmbracoFramework.Concepts.EntityHub Type=ISecurityResolver)" Label="ISecurityResolver" Category="CodeSchema_Interface">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="88f392ed-23f1-4135-ae4e-3c5d48bb6b7f" name="IEntityResolver.cs">
+          <ArtifactNode Label="IEntityResolver.cs" Category="CodeSchema_SourceFile" Id="(Assembly=../../Libraries/UmbracoFramework.Concepts.EntityHub/IEntityResolver.cs)">
+            <Category Ref="CodeSchema_ProjectItem" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=UmbracoFramework.Concepts.EntityHub Namespace=UmbracoFramework.Concepts.EntityHub Type=IEntityResolver)" Label="IEntityResolver" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="fc1bc02d-a33a-4050-ba5d-045d49a5f764" name="ViewEngine (MVC)" />
+    <layer Id="d07846ef-a600-4e14-830d-affae02164d2" name="EntityMap QueryBus (DSL)">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="da6d98ba-12e5-4d51-803d-c7a3478cb70e" direction="Bidirectional">
+          <layerMoniker Id="a7d57d3c-f826-4123-b58e-7fefd335815e" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="db3793f5-d5cd-4452-a599-7cdb789ff585" direction="Bidirectional">
+          <layerMoniker Id="e5eba6ad-7876-46d0-a862-c2c887f420a0" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="e7840700-0e52-442d-bdd3-bc3a6e4f6bfe" name="ORM / LINQ">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="88bb4f3b-a6ae-43f9-b011-70fc9cf56861" direction="Bidirectional">
+          <layerMoniker Id="5c6dfe90-828e-4843-92ea-c987d2ddbc20" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="24c78f60-509c-4c7e-bd60-119b7bd4c982" name="WordPressEntityRepository">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d7fcf1aa-e679-4697-bc48-a85c7ae60bef" direction="Forward">
+          <layerMoniker Id="e7840700-0e52-442d-bdd3-bc3a6e4f6bfe" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="3af98334-8ffa-4cc4-b31c-bedaf086a8ad" name="Umbraco4EntityRepository">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="fc7472f6-a154-4221-a6fe-4dd19bfb8635" direction="Forward">
+          <layerMoniker Id="e7840700-0e52-442d-bdd3-bc3a6e4f6bfe" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="1a6d1390-c04e-4483-81f5-e4216b696421" name="WordPressDocumentResolver">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="05daf027-f9a4-40ca-9bf8-afe96310210e" direction="Forward">
+          <layerMoniker Id="e5eba6ad-7876-46d0-a862-c2c887f420a0" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="9d345829-470e-4373-8322-b191f22a35b0" name="Umbraco4DocumentResolver">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="c5222a15-7127-465e-bb78-8c3052014aeb" direction="Forward">
+          <layerMoniker Id="e5eba6ad-7876-46d0-a862-c2c887f420a0" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="4de10c83-dd16-4f9c-87df-c9a88b1492ea" name="MetaData">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="2bdb1022-e022-4c6f-b1ac-b112fc1af79b" direction="Forward">
+          <layerMoniker Id="5c6dfe90-828e-4843-92ea-c987d2ddbc20" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+  </layers>
+</layerModel>

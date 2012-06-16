@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]C:\Development\CodePlex\Umbraco\Source\Testing\General.nunit</TopNode>
+  <SelectedNode>[0-1352]Umbraco.Tests.CoreAndFramework.ObjectExtensionsTests</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]C:\Development\CodePlex\Umbraco\Source\Testing\General.nunit" Expanded="true" />
+    <Node UniqueName="[0-1360]C:\Development\CodePlex\Umbraco\Source\Testing\Umbraco.Tests.CoreAndFramework\bin\x86\Debug\Umbraco.Tests.CoreAndFramework.dll" Expanded="true" />
+    <Node UniqueName="[0-1361]Umbraco" Expanded="true" />
+    <Node UniqueName="[0-1362]Umbraco.Tests" Expanded="true" />
+    <Node UniqueName="[0-1363]Umbraco.Tests.CoreAndFramework" Expanded="true" />
+    <Node UniqueName="[0-1368]Umbraco.Tests.CoreAndFramework.Cms" Expanded="true" />
+    <Node UniqueName="[0-1355]Umbraco.Tests.CoreAndFramework.Cms.DataInstallTests" Expanded="true" />
+    <Node UniqueName="[0-1268]Umbraco.Tests.CoreAndFramework.EntityExtensionTests" Expanded="true" />
+    <Node UniqueName="[0-1034]Umbraco.Tests.CoreAndFramework.EnumerableExtensionsTests" Expanded="true" />
+    <Node UniqueName="[0-1365]Umbraco.Tests.CoreAndFramework.Hive.DefaultProviders" Expanded="true" />
+    <Node UniqueName="[0-1367]Umbraco.Tests.CoreAndFramework.Hive.DefaultProviders.Examine" Expanded="true" />
+    <Node UniqueName="[0-1304]Umbraco.Tests.CoreAndFramework.Hive.DefaultProviders.FileSystemTests" Expanded="true" />
+    <Node UniqueName="[0-1366]Umbraco.Tests.CoreAndFramework.Hive.DefaultProviders.NHibernate" Expanded="true" />
+    <Node UniqueName="[0-1275]Umbraco.Tests.CoreAndFramework.Hive.DefaultProviders.NHibernate.SessionTests" Expanded="true" />
+    <Node UniqueName="[0-1000]Umbraco.Tests.CoreAndFramework.Hive.GroupActorTests" Expanded="true" />
+    <Node UniqueName="[0-1352]Umbraco.Tests.CoreAndFramework.ObjectExtensionsTests" Expanded="true" />
+    <Node UniqueName="[0-1369]Umbraco.Tests.CoreAndFramework.PartialTrust" Expanded="true" />
+    <Node UniqueName="[0-1357]Umbraco.Tests.CoreAndFramework.PartialTrust.PartialTrustHelperFixture" Expanded="true" />
+  </Nodes>
+</VisualState>

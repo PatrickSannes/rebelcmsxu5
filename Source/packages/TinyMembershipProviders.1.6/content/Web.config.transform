@@ -1,0 +1,45 @@
+﻿<?xml version="1.0"?>
+<configuration>
+    <system.web>
+        <membership>
+            <providers>
+                <add name="XmlMembershipProvider"
+                     type="Artem.Web.Security.XmlMembershipProvider, Artem.Web.Security"
+                     applicationName="Test"
+                     enablePasswordReset="true"
+                     enablePasswordRetrieval="false"
+                     maxInvalidPasswordAttempts="5"
+                     minRequiredNonAlphanumericCharacters="0"
+                     minRequiredPasswordLength="4"
+                     passwordAttemptWindow="10"
+                     passwordFormat="Clear"
+                     passwordStrengthRegularExpression=""
+                     requiresQuestionAndAnswer="false"
+                     requiresUniqueEmail="true"
+                     caseSensitive="false"
+                     useUniversalTime="false"
+                     fileName="Users.xml"
+                     folder="~/App_Data/"/>
+            </providers>
+        </membership>
+        <profile>
+            <providers>
+                <add name="XmlProfileProvider"
+                     type="Artem.Web.Security.XmlProfileProvider, Artem.Web.Security"
+                     applicationName="Test"
+                     fileName="Profiles.xml"
+                     folder="~/App_Data/"/>
+            </providers>
+        </profile>
+        <roleManager>
+            <providers>
+                <add name="XmlRoleProvider"
+                     type="Artem.Web.Security.XmlRoleProvider, Artem.Web.Security"
+                     applicationName="Test"
+                     caseSensitive="false"
+                     fileName="Roles.xml"
+                     folder="~/App_Data/"/>
+            </providers>
+        </roleManager>
+    </system.web>
+</configuration>

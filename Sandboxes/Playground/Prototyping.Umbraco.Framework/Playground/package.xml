@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files />
+  <info>
+    <package>
+      <name>Test</name>
+      <version>0.1</version>
+      <license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
+      <url>http://test</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>AN</name>
+      <website>http://an</website>
+    </author>
+    <readme><![CDATA[]]></readme>
+  </info>
+  <Documents>
+    <DocumentSet importMode="root">
+      <node id="1046" version="e063ec61-9cf5-49c9-9275-cd532ee757c1" parentID="-1" level="1" writerID="0" creatorID="0" nodeType="1042" template="1043" sortOrder="2" createDate="2010-06-24T13:40:23" updateDate="2010-09-04T00:33:56" nodeName="Echothis.net" urlName="echothisnet" writerName="Administrator" creatorName="Administrator" nodeTypeAlias="Homepage" path="-1,1046">
+        <data alias="Column1"><![CDATA[
+<h3>About Umbraco</h3>
+
+<p>Umbraco is one of the most friendly, usable website builders on
+the planet. Despite its simplicity it's running some pretty
+well-known sites too.</p>
+]]></data>
+        <data alias="Column2"><![CDATA[
+<h3>What you need</h3>
+
+<p>An email address, and a penchant for picking a password. Umbraco
+is easy-to-use, so why should Umbraco hosting be any different?
+Keep it as simple or as techie as you want.</p>
+]]></data>
+        <data alias="Column3"><![CDATA[
+<h3>What you get</h3>
+
+<p>We're sending out beta invites soon for a variety of plans,
+targetted at bloggers and Umbraco developers alike.</p>
+]]></data>
+        <node id="1055" version="6586d619-5e87-4061-916c-ffa6a58b9828" parentID="1046" level="2" writerID="1" creatorID="0" nodeType="1053" template="1054" sortOrder="1" createDate="2010-06-24T14:27:44" updateDate="2010-06-30T12:06:52" nodeName="Thank you" urlName="thank-you" writerName="Warren" creatorName="Administrator" nodeTypeAlias="Article" path="-1,1046,1055">
+          <data alias="Text"><![CDATA[
+<h2>Thank you!</h2>
+
+<h3>We'll let you know when we are ready to roll</h3>
+]]></data>
+        </node>
+        <node id="1058" version="89ffe3ae-24f8-49d5-94d0-4f6a74e7853c" parentID="1046" level="2" writerID="1" creatorID="1" nodeType="1053" template="1054" sortOrder="2" createDate="2010-06-30T13:30:31" updateDate="2010-06-30T13:31:12" nodeName="Thanks for Recommending" urlName="thanks-for-recommending" writerName="Warren" creatorName="Warren" nodeTypeAlias="Article" path="-1,1046,1058">
+          <data alias="Text"><![CDATA[
+<div id="article">
+<h2>Thanks for recommending us</h2>
+
+<h3>We've sent your friend an email to check out the Echo
+site.</h3>
+</div>
+]]></data>
+        </node>
+      </node>
+    </DocumentSet>
+  </Documents>
+  <DocumentTypes>
+    <DocumentType>
+      <Info>
+        <Name>Article</Name>
+        <Alias>Article</Alias>
+        <Icon>folder.gif</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>
+        </Description>
+        <AllowedTemplates>
+          <Template>Article</Template>
+        </AllowedTemplates>
+        <DefaultTemplate>Article</DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Text</Name>
+          <Alias>Text</Alias>
+          <Type>5e9b75ae-face-41c8-b47e-5f4b0fd82f83</Type>
+          <Definition>32338b30-0c03-416b-83df-01e94f967b3a</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>True</Mandatory>
+          <Validation>
+          </Validation>
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>7</Id>
+          <Caption>Content</Caption>
+        </Tab>
+      </Tabs>
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Homepage</Name>
+        <Alias>Homepage</Alias>
+        <Icon>folder.gif</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>
+        </Description>
+        <AllowedTemplates>
+          <Template>Homepage</Template>
+        </AllowedTemplates>
+        <DefaultTemplate>Homepage</DefaultTemplate>
+      </Info>
+      <Structure>
+        <DocumentType>Article</DocumentType>
+      </Structure>
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Column 1</Name>
+          <Alias>Column1</Alias>
+          <Type>5e9b75ae-face-41c8-b47e-5f4b0fd82f83</Type>
+          <Definition>32338b30-0c03-416b-83df-01e94f967b3a</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation>
+          </Validation>
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Column 2</Name>
+          <Alias>Column2</Alias>
+          <Type>5e9b75ae-face-41c8-b47e-5f4b0fd82f83</Type>
+          <Definition>32338b30-0c03-416b-83df-01e94f967b3a</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation>
+          </Validation>
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Column 3</Name>
+          <Alias>Column3</Alias>
+          <Type>5e9b75ae-face-41c8-b47e-5f4b0fd82f83</Type>
+          <Definition>32338b30-0c03-416b-83df-01e94f967b3a</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation>
+          </Validation>
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>6</Id>
+          <Caption>Content</Caption>
+        </Tab>
+      </Tabs>
+    </DocumentType>
+  </DocumentTypes>
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes>
+    <DataType Name="Richtext editor" Id="5e9b75ae-face-41c8-b47e-5f4b0fd82f83" Definition="ca90c950-0aff-4e72-b976-a30b1ac57dad">
+      <PreValues>
+        <PreValue Id="3" Value=",code,undo,redo,cut,copy,mcepasteword,stylepicker,bold,italic,bullist,numlist,outdent,indent,mcelink,unlink,mceinsertanchor,mceimage,umbracomacro,mceinserttable,mcecharmap,|1|1,2,3,|0|500,400|1049,|" />
+      </PreValues>
+    </DataType>
+  </DataTypes>
+</umbPackage>

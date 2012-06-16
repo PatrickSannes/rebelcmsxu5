@@ -1,0 +1,7 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto" runtimeFramework="any">
+    <assembly path="Umbraco.Tests.CoreAndFramework\bin\x86\Debug\Umbraco.Tests.CoreAndFramework.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto" />
+</NUnitProject>

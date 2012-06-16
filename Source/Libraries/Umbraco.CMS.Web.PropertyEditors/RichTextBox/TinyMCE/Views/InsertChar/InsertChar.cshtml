@@ -1,0 +1,73 @@
+﻿@inherits WebViewPage
+              
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Cms
+@using Umbraco.Cms.Web.Model.BackOffice
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Controllers
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Trees;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+
+@{
+    ViewBag.Title = "Insert symbol";
+    Layout = "~/Areas/Umbraco/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    @{
+        Html
+            .RequiresJs("../Modules/TinyMCE/tiny_mce_popup.js", "Scripts", 100)
+            .RequiresJs("../Modules/TinyMCE/themes/advanced/js/charmap.js", "Scripts", 101);
+    }
+}
+
+<div id="charmap" style="padding-top: 8px;">
+    <table align="center" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+            <td id="charmapView" rowspan="2" align="left" valign="top">
+			    <!-- Chars will be rendered here -->
+            </td>
+            <td width="100" align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100" style="height:100px; margin-left: 8px;">
+                    <tr>
+                        <td id="codeV">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="codeN">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="bottom" style="vertical-align: bottom;">
+                <table width="100" align="center" border="0" cellpadding="2" cellspacing="0" style="margin-left: 8px; text-align:center;">
+                    <tr>
+                        <td align="center" style="border-left: 1px solid #666699; border-top: 1px solid #666699; border-right: 1px solid #666699;text-align:center;line-height: 18px;">HTML-Code</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 16px; font-weight: bold; border-left: 1px solid #666699; border-bottom: 1px solid #666699; border-right: 1px solid #666699;text-align:center;line-height: 24px;" id="codeA" align="center">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 3px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="border-left: 1px solid #666699; border-top: 1px solid #666699; border-right: 1px solid #666699;text-align:center;line-height: 18px;">NUM-Code</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 16px; font-weight: bold; border-left: 1px solid #666699; border-bottom: 1px solid #666699; border-right: 1px solid #666699;text-align:center;line-height: 24px;" id="codeB" align="center">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

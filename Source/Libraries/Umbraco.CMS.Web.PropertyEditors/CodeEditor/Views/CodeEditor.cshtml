@@ -1,0 +1,14 @@
+﻿@inherits WebViewPage<Umbraco.Cms.Web.PropertyEditors.CodeEditor.CodeEditorModel>
+              
+@using Umbraco.Cms.Web;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+
+@Html.TextBoxFor(x => Model.Value)

@@ -1,0 +1,15 @@
+﻿@inherits WebViewPage<IEnumerable<System.Web.Mvc.SelectListItem>>
+              
+@using Umbraco.Cms.Web;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Umbraco.Cms.Web.Trees;
+@using Umbraco.Framework;
+ 
+@Html.DropDownListFor(x => Model, Model)

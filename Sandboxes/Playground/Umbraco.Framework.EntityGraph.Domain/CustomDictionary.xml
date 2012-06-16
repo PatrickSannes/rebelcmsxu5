@@ -1,0 +1,11 @@
+﻿<Dictionary>
+  <Words>
+    <Recognized>
+      <Word>umbraco</Word>
+      <Word>graphable</Word>
+    </Recognized>
+    <Deprecated>
+      <Term PreferredAlternate="Entity">node</Term>
+    </Deprecated>
+  </Words>
+</Dictionary>

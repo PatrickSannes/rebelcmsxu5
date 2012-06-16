@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="fe54b601-e439-475c-aadb-bf5e95585fdb" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="7bbab251-6483-46c7-88d5-dfccdce91bab" name="Presentation">
+      <childLayers>
+        <layer Id="deece165-2499-4489-b11a-8c6b77bf7eaf" name="Views" />
+        <layer Id="4b816f2e-67f4-4ae1-b6de-13d574a77f25" name="Controllers" />
+      </childLayers>
+    </layer>
+    <layer Id="4ec34a6e-e54d-4a95-bcfe-7d41a8d619f5" name="CMS.Domain">
+      <childLayers>
+        <layer Id="00ecb294-cc3f-4823-bf60-c7546b3fc555" name="UmbracoProjects.CMS.Kernel">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="6034eab1-d1c1-4e1a-8be1-6b5c8282e4cb" direction="Backward">
+              <layerMoniker Id="6ddc23ca-e9d4-4166-a13e-044dd4913b54" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="9a719405-f61b-4d2f-aa7f-ef0741979b0d" name="ContentAdaptor.cs">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="58f3768f-75d9-4b4b-9025-444f67f2f02b" direction="Backward">
+                  <layerMoniker Id="2ce79cbb-2507-415c-a5ed-4555dbbe3975" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="d8094252-a3b7-4aa4-8423-c9658efb3511" name="ContentAdaptor.cs">
+                  <ArtifactNode Label="ContentAdaptor.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../libraries/umbracoprojects.cms.kernel/adaptorrepositories/contentadaptor.cs)">
+                    <Category Ref="CodeSchema_SourceFile" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Kernel Namespace=UmbracoProjects.CMS.Kernel.AdaptorRepositories Type=ContentAdaptor)" Label="ContentAdaptor" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="dbd22763-d6f7-4b59-a9a8-d01bb506aed0" name="UmbracoProjects.CMS.Kernel">
+              <ArtifactNode Label="UmbracoProjects.CMS.Kernel" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.Kernel/UmbracoProjects.CMS.Kernel.csproj)">
+                <Category Ref="CodeSchema_SourceFile" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Kernel)" Label="UmbracoProjects.CMS.Kernel.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="a4819bf0-7ee4-4907-b879-dd79b8e8d8b9" name="UmbracoProjects.CMS.Domain">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="4661159b-fed5-46dd-96bb-aa20b80da12a" direction="Backward">
+              <layerMoniker Id="6ddc23ca-e9d4-4166-a13e-044dd4913b54" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="6ba29537-f9df-4894-b0dd-053fcf9faf18" name="ContentViewData.cs">
+              <references>
+                <reference Id="130fc0a2-9f90-426e-b943-b121b7cb048d" name="ContentViewData.cs">
+                  <ArtifactNode Label="ContentViewData.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.Domain/ContentViewData.cs)">
+                    <Category Ref="CodeSchema_SourceFile" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Domain Namespace=UmbracoProjects.CMS.Domain Type=ContentViewData)" Label="ContentViewData" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="f60718b9-8d58-465c-a9cf-5c47a7171544" name="Content.cs">
+              <references>
+                <reference Id="f88729dd-a202-4dbb-a321-818fc45d03df" name="Content.cs">
+                  <ArtifactNode Label="Content.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.Domain/Content.cs)">
+                    <Category Ref="CodeSchema_SourceFile" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Domain Namespace=UmbracoProjects.CMS.Domain Type=Content)" Label="Content" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="1c146ec1-863a-48f8-bbd0-c99f7cf5af76" name="UmbracoProjects.CMS.Domain">
+              <ArtifactNode Label="UmbracoProjects.CMS.Domain" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.Domain/UmbracoProjects.CMS.Domain.csproj)">
+                <Category Ref="CodeSchema_SourceFile" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Domain)" Label="UmbracoProjects.CMS.Domain.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="79c202b0-616d-42a5-a787-da1bda4afa7c" name="WordPress.Provider">
+          <childLayers>
+            <layer Id="322e6d67-5a0e-4856-bc12-1f7260b6fcc2" name="ContentAdaptor.cs">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="f2ea084b-93d0-42b2-bb16-25af59f96ebf" direction="Backward">
+                  <layerMoniker Id="2ce79cbb-2507-415c-a5ed-4555dbbe3975" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="8e603238-fdb4-4f87-82ba-75c645e6eb42" name="ContentAdaptor.cs">
+                  <ArtifactNode Label="ContentAdaptor.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../libraries/umbracoprojects.cms.kernel/adaptorrepositories/contentadaptor.cs)" />
+                  <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Kernel Namespace=UmbracoProjects.CMS.Kernel.AdaptorRepositories Type=ContentAdaptor)" Label="ContentAdaptor" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="2bd69367-7d39-4245-9834-ce9b985f5876" name="UmbracoProjects.CMS.Kernel">
+              <ArtifactNode Label="UmbracoProjects.CMS.Kernel" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.Kernel/UmbracoProjects.CMS.Kernel.csproj)" />
+              <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Kernel)" Label="UmbracoProjects.CMS.Kernel.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="551b908d-a205-43cd-b76b-61fb2bf95236" name="WordPress.Provider.Domain">
+          <childLayers>
+            <layer Id="28c79155-2146-44bd-aa9a-ab84b47c8591" name="ContentViewData.cs">
+              <references>
+                <reference Id="47d69c5d-9a8c-4c56-81d1-ce6627b461c8" name="ContentViewData.cs">
+                  <ArtifactNode Label="ContentViewData.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.Domain/ContentViewData.cs)" />
+                  <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Domain Namespace=UmbracoProjects.CMS.Domain Type=ContentViewData)" Label="ContentViewData" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="64f4b28a-bc01-4b82-b40b-65c97497b2f9" name="Content.cs">
+              <references>
+                <reference Id="8b23ff9e-8bf1-43cd-b917-6079c5fc7e82" name="Content.cs">
+                  <ArtifactNode Label="Content.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.Domain/Content.cs)" />
+                  <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Domain Namespace=UmbracoProjects.CMS.Domain Type=Content)" Label="Content" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="bd7be719-4f24-44e0-b63e-245dad6baab0" name="UmbracoProjects.CMS.Domain">
+              <ArtifactNode Label="UmbracoProjects.CMS.Domain" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.Domain/UmbracoProjects.CMS.Domain.csproj)" />
+              <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Domain)" Label="UmbracoProjects.CMS.Domain.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="9dbbc535-df40-44ff-9430-a2e13e46eb93" name="UmbracoProjects.CMS.Domain">
+          <ArtifactNode Label="UmbracoProjects.CMS.Domain" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.Domain/UmbracoProjects.CMS.Domain.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.Domain)" Label="UmbracoProjects.CMS.Domain.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="541389c4-1a55-4cea-8bf4-9526ab32eac5" name="Framework Domain">
+      <childLayers>
+        <layer Id="3ab76157-3422-4328-a02a-ce23da7b580a" name="UmbracoFramework.EntityGraph.Domain">
+          <childLayers>
+            <layer Id="1aa22cfe-29c9-4303-982b-88df70e0ee4e" name="ITypedEntityGraph.cs">
+              <references>
+                <reference Id="cc57190e-1b80-4f69-b528-29ee5531d4bf" name="ITypedEntityGraph.cs">
+                  <ArtifactNode Label="ITypedEntityGraph.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.Domain/Entity/Graph/ITypedEntityGraph.cs)">
+                    <Category Ref="CodeSchema_SourceFile" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.Domain Namespace=UmbracoFramework.EntityGraph.Domain.Entity.Graph Type=ITypedEntityGraph)" Label="ITypedEntityGraph" Category="CodeSchema_Interface">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="4a384323-4e2d-4bd7-ba9b-e6d5f6e4111b" name="UmbracoFramework.EntityGraph.Domain">
+              <ArtifactNode Label="UmbracoFramework.EntityGraph.Domain" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.Domain/UmbracoFramework.EntityGraph.Domain.csproj)">
+                <Category Ref="CodeSchema_SourceFile" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.Domain)" Label="UmbracoFramework.EntityGraph.Domain.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="6ddc23ca-e9d4-4166-a13e-044dd4913b54" name="UmbracoFramework.EntityGraph.Domain.EntityAdaptors">
+          <childLayers>
+            <layer Id="82f06a16-b3cb-4fe5-a664-2905271fc32e" name="IContentEntity.cs">
+              <references>
+                <reference Id="ec392a2b-425f-4865-85a4-e0d8b9d44efa" name="IContentEntity.cs">
+                  <ArtifactNode Label="IContentEntity.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.Domain.EntityAdaptors/IContentEntity.cs)">
+                    <Category Ref="CodeSchema_SourceFile" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.Domain.EntityAdaptors Namespace=UmbracoFramework.EntityGraph.Domain.EntityAdaptors Type=IContentEntity)" Label="IContentEntity" Category="CodeSchema_Interface">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="ee6120c7-0d06-40e2-93bb-ff145c265031" name="UmbracoFramework.EntityGraph.Domain.EntityAdaptors">
+              <ArtifactNode Label="UmbracoFramework.EntityGraph.Domain.EntityAdaptors" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.Domain.EntityAdaptors/UmbracoFramework.EntityGraph.Domain.EntityAdaptors.csproj)">
+                <Category Ref="CodeSchema_SourceFile" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.Domain.EntityAdaptors)" Label="UmbracoFramework.EntityGraph.Domain.EntityAdaptors.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="cc1ef4f3-896a-48cb-ba2c-0272dd4fe772" name="Framework Persistence">
+      <childLayers>
+        <layer Id="ded5a586-e1c2-4ff1-b6cb-52ad56b78320" name="IEntityRepositoryReader.cs">
+          <references>
+            <reference Id="4bd5c827-1946-402d-9c44-9bd81546446c" name="IEntityRepositoryReader.cs">
+              <ArtifactNode Label="IEntityRepositoryReader.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.DataPersistence/IEntityRepositoryReader.cs)">
+                <Category Ref="CodeSchema_SourceFile" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.DataPersistence Namespace=UmbracoFramework.EntityGraph.DataPersistence Type=(Name=IEntityRepositoryReader GenericParameterCount=4))" Label="IEntityRepositoryReader&lt;TEnumeratorType,TDeepEnumeratorType,TEntityType,TDeepEntityType&gt;" Category="CodeSchema_Interface">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="f5c0e47c-f4b7-48ba-99b1-a808a668b0ea" name="IEntityRepositoryWriter.cs">
+          <references>
+            <reference Id="fe56c23d-f3f2-4c18-9cb7-d40359a39058" name="IEntityRepositoryWriter.cs">
+              <ArtifactNode Label="IEntityRepositoryWriter.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.DataPersistence/IEntityRepositoryWriter.cs)">
+                <Category Ref="CodeSchema_SourceFile" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.DataPersistence Namespace=UmbracoFramework.EntityGraph.DataPersistence Type=(Name=IEntityRepositoryWriter GenericParameterCount=4))" Label="IEntityRepositoryWriter&lt;TEnumeratorType,TDeepEnumeratorType,TEntityType,TDeepEntityType&gt;" Category="CodeSchema_Interface">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="e6f22669-8288-42a0-9e55-2e0230806d20" name="IEntityRepositoryReader.cs">
+          <ArtifactNode Label="IEntityRepositoryReader.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.DataPersistence/IEntityRepositoryReader.cs)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.DataPersistence Namespace=UmbracoFramework.EntityGraph.DataPersistence Type=(Name=IEntityRepositoryReader GenericParameterCount=4))" Label="IEntityRepositoryReader&lt;TEnumeratorType,TDeepEnumeratorType,TEntityType,TDeepEntityType&gt;" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="13b98540-3fb6-4586-8f76-541a47edd3d8" name="IEntityRepositoryWriter.cs">
+          <ArtifactNode Label="IEntityRepositoryWriter.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.DataPersistence/IEntityRepositoryWriter.cs)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.DataPersistence Namespace=UmbracoFramework.EntityGraph.DataPersistence Type=(Name=IEntityRepositoryWriter GenericParameterCount=4))" Label="IEntityRepositoryWriter&lt;TEnumeratorType,TDeepEnumeratorType,TEntityType,TDeepEntityType&gt;" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="2ce79cbb-2507-415c-a5ed-4555dbbe3975" name="CMS.Persistence">
+      <childLayers>
+        <layer Id="20dea7ff-b503-44b9-8385-7a07bd070c9f" name="UmbracoProjects.CMS.DataPersistence">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="8a42e45a-2856-4873-9283-2284a40b855c" direction="Backward">
+              <layerMoniker Id="3ab76157-3422-4328-a02a-ce23da7b580a" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="9ae9d905-e1ec-4762-a80b-f83a552fc1cf" name="RepositoryReader">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="5cceec60-a7e9-45cc-8143-2d07b78a6470" direction="Backward">
+                  <layerMoniker Id="ded5a586-e1c2-4ff1-b6cb-52ad56b78320" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="fc42921e-8988-4d3b-90ee-80ed3df92c1a" name="ContentEntityRepositoryReader.cs">
+                  <ArtifactNode Label="ContentEntityRepositoryReader.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.DataPersistence/Repositories/ContentEntityRepositoryReader.cs)">
+                    <Category Ref="CodeSchema_SourceFile" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.DataPersistence Namespace=UmbracoProjects.CMS.DataPersistence.Repositories Type=ContentEntityRepositoryReader)" Label="ContentEntityRepositoryReader" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+                <reference Id="c5dd02b7-c29a-485b-a3de-36adab72b18f" name="IEntityRepositoryReader.cs">
+                  <ArtifactNode Label="IEntityRepositoryReader.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.DataPersistence/IEntityRepositoryReader.cs)">
+                    <Category Ref="CodeSchema_SourceFile" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.DataPersistence Namespace=UmbracoFramework.EntityGraph.DataPersistence Type=(Name=IEntityRepositoryReader GenericParameterCount=4))" Label="IEntityRepositoryReader&lt;TEnumeratorType,TDeepEnumeratorType,TEntityType,TDeepEntityType&gt;" Category="CodeSchema_Interface">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="88e34907-2db2-4bd5-9202-dab41f9f39ce" name="RepositoryWriter">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="a7d3b23f-285c-40aa-9c24-d5a868eee234" direction="Backward">
+                  <layerMoniker Id="f5c0e47c-f4b7-48ba-99b1-a808a668b0ea" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="4aef9eb4-b839-46ae-b03e-a03e88aaf60e" name="ContentEntityRepositoryReader.cs">
+                  <ArtifactNode Label="ContentEntityRepositoryReader.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.DataPersistence/Repositories/ContentEntityRepositoryReader.cs)" />
+                  <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.DataPersistence Namespace=UmbracoProjects.CMS.DataPersistence.Repositories Type=ContentEntityRepositoryReader)" Label="ContentEntityRepositoryReader" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+                <reference Id="eb80c0e2-8469-4b42-9865-fa43ed719cab" name="IEntityRepositoryReader.cs">
+                  <ArtifactNode Label="IEntityRepositoryReader.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.DataPersistence/IEntityRepositoryReader.cs)" />
+                  <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.DataPersistence Namespace=UmbracoFramework.EntityGraph.DataPersistence Type=(Name=IEntityRepositoryReader GenericParameterCount=4))" Label="IEntityRepositoryReader&lt;TEnumeratorType,TDeepEnumeratorType,TEntityType,TDeepEntityType&gt;" Category="CodeSchema_Interface">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="c0866a58-d110-4de6-91f0-bd6fb2c6ceb4" name="UmbracoProjects.CMS.DataPersistence">
+              <ArtifactNode Label="UmbracoProjects.CMS.DataPersistence" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.DataPersistence/UmbracoProjects.CMS.DataPersistence.csproj)">
+                <Category Ref="CodeSchema_SourceFile" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.DataPersistence)" Label="UmbracoProjects.CMS.DataPersistence.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="82a95dd6-7920-406b-a0ee-0e7139a213f0" name="UmbracoProjects.CMS.DataPersistence1">
+          <childLayers>
+            <layer Id="9058139d-f12f-4add-94b8-80e9f2fec9d9" name="ContentEntityRepositoryReader.cs">
+              <references>
+                <reference Id="5a8a65a6-af06-4e7b-b771-8d5774d80b7b" name="ContentEntityRepositoryReader.cs">
+                  <ArtifactNode Label="ContentEntityRepositoryReader.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.DataPersistence/Repositories/ContentEntityRepositoryReader.cs)" />
+                  <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.DataPersistence Namespace=UmbracoProjects.CMS.DataPersistence.Repositories Type=ContentEntityRepositoryReader)" Label="ContentEntityRepositoryReader" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+                <reference Id="60832f60-2630-4131-8042-e63b31cd3411" name="IEntityRepositoryReader.cs">
+                  <ArtifactNode Label="IEntityRepositoryReader.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../../Libraries/UmbracoFramework.EntityGraph.DataPersistence/IEntityRepositoryReader.cs)" />
+                  <ExpandedNode Id="(Assembly=UmbracoFramework.EntityGraph.DataPersistence Namespace=UmbracoFramework.EntityGraph.DataPersistence Type=(Name=IEntityRepositoryReader GenericParameterCount=4))" Label="IEntityRepositoryReader&lt;TEnumeratorType,TDeepEnumeratorType,TEntityType,TDeepEntityType&gt;" Category="CodeSchema_Interface">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="af478a58-3c66-485b-b358-3acaaec65192" name="UmbracoProjects.CMS.DataPersistence">
+              <ArtifactNode Label="UmbracoProjects.CMS.DataPersistence" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoProjects.CMS.DataPersistence/UmbracoProjects.CMS.DataPersistence.csproj)" />
+              <ExpandedNode Id="(Assembly=UmbracoProjects.CMS.DataPersistence)" Label="UmbracoProjects.CMS.DataPersistence.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="9596f693-aff3-4f48-9043-39266ae288ec" name="Mapping">
+      <childLayers>
+        <layer Id="4ba105cd-a2d7-4969-8464-3dd80d15ad4c" name="UmbracoFramework.EntityProviderFederation">
+          <references>
+            <reference Id="45b36995-6847-4027-b8f8-0487b6b64672" name="UmbracoFramework.EntityProviderFederation">
+              <ArtifactNode Label="UmbracoFramework.EntityProviderFederation" Category="CodeSchema_Project" Id="(Assembly=../../Libraries/UmbracoFramework.EntityProviderFederation/UmbracoFramework.EntityProviderFederation.csproj)">
+                <Category Ref="CodeSchema_SourceFile" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=UmbracoFramework.EntityProviderFederation)" Label="UmbracoFramework.EntityProviderFederation.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

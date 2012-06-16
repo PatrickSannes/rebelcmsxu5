@@ -1,0 +1,59 @@
+﻿@inherits WebViewPage<SelectMacroModel>
+              
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Trees;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+@using Umbraco.Cms.Web.Model.BackOffice.TinyMCE.InsertMacro;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Controllers;
+
+@{
+    ViewBag.Title = "Insert/edit macro";
+    Layout = "~/Areas/Umbraco/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    @{
+        Html
+            .RequiresJs("../Modules/TinyMCE/tiny_mce_popup.js", "Scripts", 100)
+            .RequiresJsResource(typeof(InsertMacroController), "Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Resources.InsertMacro.SelectMacro.js", 101);
+    }
+}
+
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {
+            Umbraco.Controls.TinyMCE.SelectMacro.init();
+        });
+    })(jQuery);
+</script>
+
+@using (Html.BeginForm("SetParameters", "InsertMacro", FormMethod.Get))
+{
+	<h2>Select Macro</h2>
+    
+    @Html.HiddenFor(x => Model.IsNew)
+    @Html.HiddenFor(x => Model.ContentId)
+
+    <div class="property-pane">        
+
+        @Html.UmbEditorFor(x => Model.MacroAlias, x => Model.MacroAlias,
+            Html.DropDownListFor(x => Model.MacroAlias, Model.AvailableMacroItems, "Choose...",
+                         new Dictionary<string, object> { { "data-bind", "value: macroAlias" } }))
+    </div>    	
+
+    <div class="button-bar">
+        <input type="submit" value="Next >" data-bind="enable: macroAlias" /> or <a href="#" onclick="tinyMCEPopup.close();">Cancel</a>
+    </div>
+    
+}

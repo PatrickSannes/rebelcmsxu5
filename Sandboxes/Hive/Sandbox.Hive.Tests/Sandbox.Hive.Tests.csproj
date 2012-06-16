@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C23F1D85-D0BA-4517-9BA8-2179E05B7806}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sandbox.Hive.Tests</RootNamespace>
+    <AssemblyName>Sandbox.Hive.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\Resources\References\Autofac\2.3.2.632-NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutofacContrib.CommonServiceLocator">
+      <HintPath>..\..\..\Resources\References\Autofac\Contrib-2.3.2.632-NET40\Library\AutofacContrib.CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\Resources\References\AutoMapper\1.1\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\..\Resources\References\FluentNHibernate\NH3.0-binary-1.2.0.694\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Resources\References\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\Resources\References\Microsoft.Practices\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\Resources\References\FluentNHibernate\NH3.0-binary-1.2.0.694\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\..\..\Resources\References\FluentNHibernate\NH3.0-binary-1.2.0.694\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.1, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Resources\References\Microsoft\SqlServerCe.4.0\CTP2\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigurationTests.cs" />
+    <Compile Include="NHibernateProviderTest.cs" />
+    <Compile Include="HiveRepositoryTest.cs" />
+    <Compile Include="IoCTesting.cs" />
+    <Compile Include="MappingRepositoryTest.cs" />
+    <Compile Include="PersistenceRepositoryTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MockedInMemoryProviderTest.cs" />
+    <Compile Include="TestHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\Sandbox.Hive.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sandbox.Hive.Domain\Sandbox.Hive.Domain.csproj">
+      <Project>{4FBFC07A-FBDA-4CA5-A432-C2395CFF5A52}</Project>
+      <Name>Sandbox.Hive.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sandbox.Hive.Foundation\Sandbox.Hive.Foundation.csproj">
+      <Project>{2146902D-6956-4F6B-BC5E-A8D442FD5BFF}</Project>
+      <Name>Sandbox.Hive.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sandbox.Hive.BootStrappers.AutoFac\Sandbox.Hive.BootStrappers.AutoFac.csproj">
+      <Project>{124CF288-DD01-4832-9745-BAE3CB4A052F}</Project>
+      <Name>Sandbox.Hive.BootStrappers.AutoFac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sandbox.PersistenceProviders.MockedInMemory\Sandbox.PersistenceProviders.MockedInMemory.csproj">
+      <Project>{1635B93A-00B1-4FEF-922A-F696FB5B82A0}</Project>
+      <Name>Sandbox.PersistenceProviders.MockedInMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sandbox.PersistenceProviders.NHibernate\Sandbox.PersistenceProviders.NHibernate.csproj">
+      <Project>{7EE6C7BC-FF29-42CE-9AEA-4207452DD79B}</Project>
+      <Name>Sandbox.PersistenceProviders.NHibernate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Test.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

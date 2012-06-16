@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Localizations>
+  <Text Key="Plural1">
+    <Translation Language="en-US" Dialect="Text">1</Translation>
+  </Text>
+
+
+  <Text Key="Koala1">
+    <Translation Language="en-US">resource:Sandbox.Localization.WebTest.Content.Koala.jpg</Translation>
+  </Text>
+
+  <Text Key="Koala2">
+    <Translation Language="en-US">~/Content/Koala.jpg</Translation>
+  </Text>
+  
+  <Text Key="Plugin.Tulips2" Namespace="Sandbox.Localization.PluginTest">
+    <Translation Language="en-US">resource:Sandbox.Localization.WebTest.Content.Koala.jpg</Translation>
+  </Text>
+
+
+  <Text Key="AnotherString">
+    <Translation Language="en-US">
+      <![CDATA[Pretty please provide another string]]>
+    </Translation>
+  </Text>
+  
+
+  <Text Key="MessagesTest">
+    <Translation Language="en-US">
+      <![CDATA[#Value{<0: A negative amount of messages are | 0: No messages are | 1: One message is | {#:roman} messages are } not enough or too many]]>
+    </Translation>
+  </Text>
+  
+  <Text Key="MessagesTest2">
+    <Translation Language="en-US">This is so required</Translation>
+  </Text>
+
+
+  <Text Key="Friends">
+    <Translation Language="en-US">
+      <![CDATA[You and {User} are now connected]]>
+    </Translation>
+  </Text>
+
+  <Text Key="FriendList">
+    <Translation Language="en-US">
+      <![CDATA[You are now connected with {@Enum(Users)}]]>
+    </Translation>
+  </Text>
+
+  <Text Key="NotFriendList">
+    <Translation Language="en-US">
+      <![CDATA[You are not connected with neither {@Enum(Users, "nor")}]]>
+    </Translation>
+  </Text>
+
+
+  <Text Key="ManyFriends">
+    <Translation Language="en-US">
+      <![CDATA[You and <Link: #Count{<= 10: {#} other people | a lot of people}> are now connected]]>
+    </Translation>
+  </Text>
+
+  <Text Key="Echo">
+    <Translation Language="en-US"><![CDATA[{Value}]]></Translation>>
+  </Text>
+  
+  <Text Key="EnumTest">
+    <Translation Language="en-US"><![CDATA[You have selected {@Enum(Values)}]]></Translation>    
+  </Text>
+
+  <Text Key="Stars">
+    <Translation Language="en-US"><![CDATA[You've specified #Value{1: 1 star|{#} stars}. Should've been between {Minimum} and {Maximum}]]></Translation>    
+  </Text>
+
+  <Text Key="Validation.Types.IntegerDefinite">
+    <Translation Language="en-US"><![CDATA[An integer]]></Translation>
+  </Text>
+
+  <Text Key="Validation.Types.NumberDefinite">
+    <Translation Language="en-US"><![CDATA[A number]]></Translation>
+  </Text>
+
+  <Text Key="Validation.Types.DateTimeDefinite">
+    <Translation Language="en-US"><![CDATA[A date/time]]></Translation>
+  </Text>
+
+  <Text Key="Validation.FormatException">
+    <Translation Language="en-US"><![CDATA[The value is not #@@CommonTypeKey+Definite{ {#:lc} |? a {CommonTypeName:lc} } ]]></Translation>
+  </Text>
+
+  <Text Key="Validation.Required">
+    <Translation Language="en-US">
+      <![CDATA[Required]]>
+    </Translation>
+  </Text>
+
+  <Text Key="Validation.Range">
+    <Translation Language="en-US">
+      <![CDATA[The value must be between {Minimum} and #Maximum{<100: {#} | a lot} ({Value} is not)]]>
+    </Translation>
+  </Text>
+
+
+  <Text Key="Validation.StringLength">
+    <Translation Language="en-US">
+      <![CDATA[You #MinimumLength{>0: #MaximumLength{>0: must enter between {MinimumLength} and {#} characters |  must at least enter {#} characters} | can at most enter {MaximumLength} characters}]]>
+    </Translation>
+  </Text>
+  
+  
+  <Text Key="Greeting">
+    <Translation Language="da-DK">Hej {Username}!</Translation>
+    
+    <Translation Language="en-US">Welcome &lt;NameFormat: {Username}!&gt;</Translation>
+  </Text>  
+
+  <Text Key="JsTest1">
+    <Translation Language="en-US">Welcome {Username}!</Translation>
+  </Text>
+  <Text Key="JsTest2">
+    <Translation Language="en-US">Welcome {Part1.Part2} {Number:N2}!</Translation>
+  </Text>
+  <Text Key="JsTest3">
+    <Translation Language="en-US">Welcome &lt;NameFormat: {Username}!&gt;</Translation>
+  </Text>
+  <Text Key="JsTest4">
+    <Translation Language="en-US">Welcome #Number{0: Zero|1:One|A lot  |? Null branch}</Translation>
+  </Text>
+  <Text Key="JsTest5">
+    <Translation Language="en-US">Welcome #Plural(Number){One|More}</Translation>
+  </Text>
+  <Text Key="JsTest6">
+    <Translation Language="en-US">Welcome {BigNumber:N2} #Number{%5=1: Case 1 | +3 % 5=1: Case 2 | Case 3}</Translation>
+  </Text>
+
+  <Text Key="Claus">
+    <Translation Language="en-US"><![CDATA[Hello <NameFormat: {Username}>. You have #Count{0: No new messages | 1: one new message | {#} messages}]]>
+    </Translation>
+  </Text>
+
+
+  <Text Key="Plugin.Key">
+    <Translation Language="en-US">Plugin.Key has another meaning</Translation>
+  </Text>
+      
+</Localizations>

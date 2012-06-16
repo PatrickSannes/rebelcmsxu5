@@ -1,0 +1,32 @@
+﻿@using Umbraco.Framework.Localization.Web.JavaScript;
+@using Umbraco.Framework.Localization.Configuration;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>    
+    
+
+    <script>
+        function jsonPTest(textManager, ns) {
+            //This is another way to get client-side text managers (jsonp)
+            //alert("Got " + textManager + " for " + ns);
+        }
+    </script>
+
+    
+
+    @JavaScriptGenerator.WriteScriptDependencies()
+    
+    <!-- This is simplest way to load texts. This will generate a variable called "Showcase", i.e. var Showcase = ... -->
+    <script src="/localization/script/?var=Showcase" type="text/javascript"></script>
+    <!-- This is the json-p way to load texts -->
+    <script src="/localization/script/?handler=jsonPTest" type="text/javascript"></script>
+        
+</head>
+
+<body>
+    @RenderBody()
+</body>
+</html>

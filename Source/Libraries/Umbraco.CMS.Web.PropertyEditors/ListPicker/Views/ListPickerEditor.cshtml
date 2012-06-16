@@ -1,0 +1,80 @@
+﻿@inherits WebViewPage<Umbraco.Cms.Web.PropertyEditors.ListPicker.ListPickerEditorModel>
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.ListPicker;
+
+
+@{
+    object selected = null;
+    if (Model.Value != null && Model.Value.Count > 0)
+    {
+        selected = Model.Value[0]; // Only used by dropdown list
+    }
+}
+
+@Html.ValidationMessageFor(x => Model.Value)
+
+@if (Model.PreValueModel.Mode == ListPickerMode.CheckboxList || Model.PreValueModel.Mode == ListPickerMode.RadioButtonList)
+{
+    <div class="table-box list-picker @(Model.PreValueModel.Mode == ListPickerMode.CheckboxList ? "checkboxlist" : "radiobuttonlist")">
+        <table class="standard highlight-row">
+            <tbody>
+            @foreach (var c in new MultiSelectList(Model.PreValueModel.Items, "Id", "Value", Model.Value))
+            {
+                var metaData = ModelMetadata.FromLambdaExpression(x => Model.Value, ViewData);
+                var id = string.Concat(metaData.PropertyName, "_", c.Value);
+        
+                <tr>
+                    <td class="@(Model.PreValueModel.Mode == ListPickerMode.CheckboxList ? "check-box-cell" : "radio-button-cell")">
+                        <input 
+                            type="@(Model.PreValueModel.Mode == ListPickerMode.CheckboxList ? "checkbox" : "radio")"
+                            id="@id" 
+                            name="@Html.NameFor(x => Model.Value)" 
+                            value="@c.Value"
+                            @(c.Selected ? "checked='checked'" : "") />
+                    </td>
+                    <td>
+                        <label for="@id">@c.Text</label>
+                    </td>
+                </tr> 
+            }
+            </tbody>
+        </table>
+    </div>
+
+    if (Model.PreValueModel.Mode == ListPickerMode.RadioButtonList)
+    {
+        <script type="text/javascript">
+            (function ($) {
+                $(document).ready(function () {
+                    $('#@ViewBag.UmbracoPropertyId .clearList').click(function () {
+                        $('input[type="radio"]', $(this).parent()).attr('checked', false);
+                    });
+                });
+            })(jQuery);
+        </script>
+        <br />
+        <span class="clearList" style="cursor:pointer;">Clear selection</span>
+    }
+
+}
+else if (Model.PreValueModel.Mode == ListPickerMode.DropDownList)
+{ 
+    @Html.DropDownListFor(x => Model.Value, new SelectList(Model.PreValueModel.Items, "Id", "Value", selected), string.Empty, new { @class = "list-picker dropdownlist" })
+}
+else if (Model.PreValueModel.Mode == ListPickerMode.ListBox)
+{ 
+    
+    @Html.ListBoxFor(x => Model.Value, new MultiSelectList(Model.PreValueModel.Items, "Id", "Value", Model.Value), new { @class = "list-picker listbox", Multiple = "multiple" })
+}
+
+

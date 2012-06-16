@@ -1,0 +1,53 @@
+﻿@inherits System.Web.Mvc.WebViewPage<Umbraco.Cms.Web.PropertyEditors.TextBox.TextBoxEditorModel>
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.TextBox;
+
+@Html.ValidationMessageFor(x => Model.Value)
+
+@if (Model.PreValueModel.CharacterLimit > 0 || Model.PreValueModel.Mode != TextBoxMode.SingleLine)
+{
+	Html
+		.RequiresJsResource(typeof(TextBoxEditor), "Umbraco.Cms.Web.PropertyEditors.TextBox.Resources.TextBoxPropertyEditor.js")
+		.RequiresCssResource(typeof(TextBoxEditor), "Umbraco.Cms.Web.PropertyEditors.TextBox.Resources.TextBoxPropertyEditor.css");
+	
+	<script type="text/javascript">
+		(function ($) {
+			$(document).ready(function () {
+			@if (Model.PreValueModel.CharacterLimit > 0)
+			{
+				@: Umbraco.PropertyEditors.TextBoxPropertyEditor.charLimit({
+				@:    umbracoPropertyId: "@ViewBag.UmbracoPropertyId",
+				@:    fieldId: "@Html.IdFor(x => Model.Value)",
+				@:    charLimit: @Model.PreValueModel.CharacterLimit
+				@: });
+			}
+			@if (Model.PreValueModel.Mode != TextBoxMode.SingleLine)
+			{
+				@: Umbraco.PropertyEditors.TextBoxPropertyEditor.init({
+				@:    umbracoPropertyId: "@ViewBag.UmbracoPropertyId",
+				@:    fieldId: "@Html.IdFor(x => Model.Value)"
+				@: });
+			}
+			});
+		})(jQuery);
+    </script>
+}
+
+@if (Model.PreValueModel.Mode == TextBoxMode.SingleLine)
+{    
+    @Html.TextBoxFor(x => Model.Value, new { @class = "text-box" })
+}
+else
+{
+    @Html.TextAreaFor(x => Model.Value, new { @class = "text-box" })
+}

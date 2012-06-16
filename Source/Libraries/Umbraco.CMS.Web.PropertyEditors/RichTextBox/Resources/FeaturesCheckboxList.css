@@ -1,0 +1,277 @@
+﻿.rtb-features table .rtb-feature 
+{
+	width:20px;
+	height:20px;
+}
+.rtb-features table tr td 
+{
+	padding:4px 10px 4px 0px;
+}
+.rtb-features table tr td input[type=checkbox]
+{
+    vertical-align: middle;
+}
+
+.rtb-feature
+{
+	background: url('<%= WebResource("Umbraco.Cms.Web.PropertyEditors.RichTextBox.Resources.FeaturesIcons.gif")%>') no-repeat left top;
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;	
+}
+.rtb-feature span 
+{
+	display:none;
+}
+
+/* Mapped to TinyMCE aliases */
+
+.rtb-feature.anchor
+{
+	background-position: 0px 0px;
+}
+.rtb-feature.backcolor
+{
+	background-position: -20px 0px;
+}
+.rtb-feature.bold
+{
+	background-position: -40px 0px;
+}
+.rtb-feature.bullist
+{
+	background-position: -60px 0px;
+}
+.rtb-feature.numlist
+{
+	background-position: -420px 0px;
+}
+.rtb-feature.charmap,
+.rtb-feature.umbracocharmap
+{
+	background-position: -80px 0px;
+}
+.rtb-feature.cleanup
+{
+	background-position: -100px 0px;
+}
+.rtb-feature.code
+{
+	background-position: -120px 0px;
+}
+.rtb-feature.copy
+{
+	background-position: -140px 0px;
+}
+.rtb-feature.cut
+{
+	background-position: -160px 0px;
+}
+.rtb-feature.help
+{
+	background-position: -200px 0px;
+}
+.rtb-feature.hr
+{
+	background-position: -220px 0px;
+}
+.rtb-feature.image,
+.rtb-feature.umbracomedia
+{
+	background-position: -240px 0px;
+}
+.rtb-feature.indent
+{
+	background-position: -260px 0px;
+}
+.rtb-feature.outdent
+{
+	background-position: -440px 0px;
+}
+.rtb-feature.italic
+{
+	background-position: -280px 0px;
+}
+.rtb-feature.justifycenter
+{
+	background-position: -300px 0px;
+}
+.rtb-feature.justifyfull
+{
+	background-position: -320px 0px;
+}
+.rtb-feature.justifyleft
+{
+	background-position: -340px 0px;
+}
+.rtb-feature.justifyright
+{
+	background-position: -360px 0px;
+}
+.rtb-feature.link,
+.rtb-feature.umbracolink
+{
+	background-position: -380px 0px;
+}
+.rtb-feature.new
+{
+	background-position: -400px 0px;
+}
+.rtb-feature.paste
+{
+	background-position: -460px 0px;
+}
+.rtb-feature.redo
+{
+	background-position: -480px 0px;
+}
+/*
+.rtb-feature.erase
+{
+	background-position: -500px 0px;
+}
+*/
+.rtb-feature.strikethrough
+{
+	background-position: -520px 0px;
+}
+.rtb-feature.sub
+{
+	background-position: -540px 0px;
+}
+.rtb-feature.sup
+{
+	background-position: -560px 0px;
+}
+.rtb-feature.paint
+{
+	background-position: -180px 0px;
+}
+.rtb-feature.underline
+{
+	background-position: -580px 0px;
+}
+.rtb-feature.undo
+{
+	background-position: -600px 0px;
+}
+.rtb-feature.unlink
+{
+	background-position: -620px 0px;
+}
+.rtb-feature.table
+{
+	background-position: -640px 0px;
+}
+.rtb-feature.bar
+{
+	background-position: -660px 0px;
+}
+.rtb-feature.paragraph-start
+{
+	background-position: -680px 0px;
+}
+.rtb-feature.paragraph-end
+{
+	background-position: -700px 0px;
+}
+.rtb-feature.smiley
+{
+	background-position: -720px 0px;
+}
+.rtb-feature.media
+{
+	background-position: -740px 0px;
+}
+.rtb-feature.zoom
+{
+	background-position: -760px 0px;
+}
+.rtb-feature.fullscreen
+{
+	background-position: -780px 0px;
+}
+.rtb-feature.iespell
+{
+	background-position: -800px 0px;
+}
+.rtb-feature.insertdate
+{
+	background-position: -820px 0px;
+}
+.rtb-feature.inserttime
+{
+	background-position: -840px 0px;
+}
+.rtb-feature.formatselect
+{
+	background-position: -860px 0px;
+}
+.rtb-feature.word-format
+{
+	background-position: -880px 0px;
+}
+.rtb-feature.text-art
+{
+	background-position: -900px 0px;
+}
+.rtb-feature.preview
+{
+	background-position: -920px 0px;
+}
+.rtb-feature.print
+{
+	background-position: -940px 0px;
+}
+.rtb-feature.save
+{
+	background-position: -960px 0px;
+}
+.rtb-feature.transform
+{
+	background-position: -980px 0px;
+}
+.rtb-feature.searchreplace
+{
+	background-position: -1000px 0px;
+}
+.rtb-feature.table-edit
+{
+	background-position: -1020px 0px;
+}
+.rtb-feature.umbracostyles
+{
+	background-position: -1240px 0px;
+}
+.rtb-feature.umbracomacro
+{
+	background-position: -1260px 0px;
+}
+
+/* To be mapped to TinyMCE aliases ... */
+
+
+.rtb-feature.table-something
+{
+	background-position: -1040px 0px;
+}
+
+/* TODO: finish the rest, not sure what all the table stuff stands for! */
+
+/*.rtb-feature.smiley
+{
+	background-position: -180px 0px;
+}
+.rtb-feature.smiley
+{
+	background-position: -180px 0px;
+}
+.rtb-feature.smiley
+{
+	background-position: -180px 0px;
+}
+.rtb-feature.smiley
+{
+	background-position: -180px 0px;
+}*/

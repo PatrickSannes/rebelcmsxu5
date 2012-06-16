@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23078C45-56CA-4F7A-99A2-0B2B677A56E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Cms.Packages.DevDataset</RootNamespace>
+    <AssemblyName>Umbraco.Cms.Packages.DevDataset</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="DevDataset.cs" />
+    <Compile Include="DevDatasetInstallTask.cs" />
+    <Compile Include="Files.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Files.resx</DependentUpon>
+    </Compile>
+    <Compile Include="HttpPostedFileProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Files.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Files.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="umbraco.config">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.CMS.Web\Umbraco.Cms.Web.csproj">
+      <Project>{8F320595-7764-4E31-AEC5-94F1B128EDFE}</Project>
+      <Name>Umbraco.Cms.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework.Persistence\Umbraco.Framework.Persistence.csproj">
+      <Project>{178FC7BB-05AA-4AC1-8A0F-0AB2CBEADD9A}</Project>
+      <Name>Umbraco.Framework.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Framework\Umbraco.Framework.csproj">
+      <Project>{6B0F8E7A-FFD4-4C93-9E40-F591383EDB57}</Project>
+      <Name>Umbraco.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Hive\Umbraco.Hive.csproj">
+      <Project>{8E44FCAB-2597-48F9-8F88-984DD47787C5}</Project>
+      <Name>Umbraco.Hive</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\umbraco-logo-devstarterkit.png" />
+    <Content Include="Content\Scripts\IE8.js" />
+    <Content Include="Content\Styles\Faqs.css" />
+    <Content Include="Content\Styles\ie.css" />
+    <Content Include="Content\Styles\ie6.css" />
+    <Content Include="Content\Styles\main.css" />
+    <Content Include="Content\Styles\reset.css" />
+    <Content Include="icon.png" />
+    <Content Include="Media\01.jpg" />
+    <Content Include="Media\01_100.jpg" />
+    <Content Include="Media\02.jpg" />
+    <Content Include="Media\02_100.jpg" />
+    <Content Include="Media\03.jpg" />
+    <Content Include="Media\03_100.jpg" />
+    <Content Include="Media\04.jpg" />
+    <Content Include="Media\04_100.jpg" />
+    <Content Include="Media\05.jpg" />
+    <Content Include="Media\05_100.jpg" />
+    <Content Include="Media\Relations\7d837b8cddb6499ea8f25ba29becc067-11fcd1ad5fff8e6c341e88d13878da53.xml" />
+    <Content Include="Media\Relations\9bd8a6c0b19dde5d82084461582a1188-70679a9025d62544be2a24f0421e3e04.xml" />
+    <Content Include="Media\Relations\9ea54f6a325606f4cf3475bb0c5721f1-b3d172774dedca70a018a756b10408ac.xml" />
+    <Content Include="Media\Relations\a05b06448dd53ad84b9346884faafafe-098449935cc28fcdef4cf89dca599247.xml" />
+    <Content Include="Media\Relations\b1441f72c3dd23ff7755deb268539b3c-15754b84013025e03d2c32ca71b45f34.xml" />
+    <Content Include="Views\Faq.cshtml" />
+    <Content Include="Views\Homepage.cshtml" />
+    <Content Include="Views\Textpage.cshtml" />
+    <Content Include="Views\_DevDatasetLayout.cshtml" />
+    <None Include="Macros\bookList.macro" />
+    <None Include="Macros\test.macro" />
+    <None Include="NuSpecs\DevDataset.1.0.Build.nuspec" />
+    <None Include="NuSpecs\DevDataset.1.0.Debug.nuspec" />
+    <None Include="NuSpecs\DevDataset.1.0.Release.nuspec" />
+    <Content Include="Views\MacroPartials\TestPartialViewMacro.cshtml" />
+    <Content Include="Views\BooksPage.cshtml" />
+    <Content Include="Views\BookPage.cshtml" />
+    <None Include="Views\Partial\ChildContent.cshtml" />
+    <None Include="Views\Partial\Navigation.cshtml" />
+    <None Include="Views\MacroPartials\BookList.cshtml">
+      <SubType>Code</SubType>
+    </None>
+    <None Include="web.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>REM ===========================================
+REM Remove trailing slash off ProjectDir as NUget doesn't like it
+REM ===========================================
+
+SET targetDir=$(ProjectDir)
+SET endChar=%25targetDir:~-1%25
+IF %25endChar%25 == \ SET targetDir=%25targetDir:~0,-1%25
+
+echo targetDir = "%25targetDir%25"
+
+REM ===========================================
+REM Detect actual OutputDir (Differs in VS and Build script)
+REM ===========================================
+
+SET webProjectOutputDir=$(WebProjectOutputDir)
+IF "%25webProjectOutputDir%25" == "" SET webProjectOutputDir=$(SolutionDir)Web Apps\Umbraco.Cms.Web.UI\
+
+echo webProjectOutputDir = "%25webProjectOutputDir%25"
+
+REM ===========================================
+REM Decide which NUget template to use based on build config
+REM ===========================================
+
+SET config=$(ConfigurationName)
+SET template=Debug
+SET configChar=%25config:~0,1%25
+IF %25configChar%25 == R SET template=Release
+IF NOT "$(WebProjectOutputDir)" == "" SET template=Build
+
+echo template = "%25template%25"
+
+REM ===========================================
+REM Create NUget package
+REM ===========================================
+
+"$(SolutionDir)..\Resources\Build\Nuget\Nuget.exe" pack "%25targetDir%25\Nuspecs\DevDataset.1.0.%25template%25.nuspec" -BasePath "%25targetDir%25" -OutputDirectory "%25webProjectOutputDir%25App_Data\Umbraco\LocalPackages"
+
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

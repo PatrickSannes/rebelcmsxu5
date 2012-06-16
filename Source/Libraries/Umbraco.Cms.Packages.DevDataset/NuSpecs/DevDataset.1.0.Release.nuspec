@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>DevDataset</id>
+    <version>1.0</version>
+    <title>Umbraco DevDataset</title>
+    <authors>Shannon Deminick</authors>
+    <owners>Umbraco</owners>
+    <projectUrl>http://umbraco.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Installs data that has been used for developers to create Umbraco</description>
+    <summary>Installs data that has been used for developers to create Umbraco</summary>
+    <language />
+  </metadata>
+  <files>
+    <file src="bin\Release\Umbraco.Cms.Packages.DevDataset.dll" target="lib" />
+    <file src="Views\**\*.*" target="Views"  />
+    <file src="Content\**\*.*" target="Content" />
+    <file src="Macros\**\*.*" target="Macros" />
+    <file src="Media\**\*.*" target="Media" />
+    <file src="web.config" target="web.config" />
+    <file src="icon.png" target="icon.png" />
+  </files>
+</package>

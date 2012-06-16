@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <permissionsets>
+    <set id="S01" name="FullControl">
+      <item path="/permissiontypes/type[@id='T01']" />
+      <item path="/permissiontypes/type[@id='T02']" />
+    </set>
+  </permissionsets>
+  <permissiontypes>
+    <type id="T01" name="Read" />
+    <type id="T02" name="Write" />
+  </permissiontypes>
+</root>

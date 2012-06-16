@@ -1,0 +1,140 @@
+﻿@inherits WebViewPage
+              
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Cms
+@using Umbraco.Cms.Web.Model.BackOffice
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Controllers
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web;
+@using Umbraco.Cms.Web.Trees;
+@using Umbraco.Cms.Web.Editors;
+@using Umbraco.Cms.Web.PropertyEditors.RichTextBox;
+
+@{
+    ViewBag.Title = "Insert/edit link";
+    Layout = "~/Areas/Umbraco/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    @{
+        Html
+            .RequiresJs("../Modules/TinyMCE/tiny_mce_popup.js", "Scripts", 100)
+            .RequiresJsResource(typeof(InsertLinkController), "Umbraco.Cms.Web.PropertyEditors.RichTextBox.TinyMCE.Resources.InsertLink.InsertLink.js", 101);
+    }
+    
+    <style type="text/css">
+    
+        #tabs { z-index: 10; }
+        .panel { background-image: none !important; border: solid 1px #ccc; margin: 0 0 8px; z-index: 5; }
+        #content-tree, #media-tree { height: 267px; overflow: auto; }
+    
+    </style>
+}
+
+<form action="" data-bind="submit: insert">
+    <div class="property-pane clearfix">
+
+        <div class="property-editor clearfix">
+            <div class="property-editor-label">
+                <label for="href">URL</label>
+            </div>
+            <div class="property-editor-control">
+                <input type="hidden" id="localUrl" name="localUrl" data-bind="value: localUrl" />
+                <input type="text" id="href" name="href" data-bind="value: href" />
+            </div>
+        </div>
+
+        <div class="property-editor clearfix">
+            <div class="property-editor-label">
+                <label for="title">Title</label>
+            </div>
+            <div class="property-editor-control">
+                <input type="text" id="title" name="title" data-bind="value: title" />
+            </div>
+        </div>
+
+        <div class="property-editor clearfix">
+            <div class="property-editor-label">
+                <label for="target">Target</label>
+            </div>
+            <div class="property-editor-control">
+                <select id="target" name="target" data-bind="options: availableTargets, value: selectedTarget"></select>
+            </div>
+        </div>
+
+        <div class="property-editor clearfix">
+            <div class="property-editor-label">
+                <label for="anchor">Anchors</label>
+            </div>
+            <div class="property-editor-control">
+                <select id="anchor" name="anchor" data-bind="options: availableAnchors, optionsCaption: '---', value: selectedAnchor"></select>
+            </div>
+        </div>
+
+    </div>
+    
+    <div id="tabs">
+        <ul>
+            <li><a href="#t-content"><span>Content</span></a></li>
+            <li><a href="#t-media"><span>Media</span></a></li>
+        </ul>
+    </div>
+    <div class="panel">
+        <div id="editorContent" class="scrolling-content padded-content">
+                
+            @{
+                var additionaParameters = new Dictionary<string, object>();
+                additionaParameters.Add("DialogMode", true);
+                additionaParameters.Add("OnNodeClick", "Umbraco.Controls.TinyMCE.InsertLink.onNodeClick");
+            }
+
+            <div>
+
+                @Html.RenderTree(
+                    new TreeRenderModel(
+                        Url.GetTreeUrl(
+                            "Index",
+                            new HiveId(CorePluginConstants.ContentTreeControllerId), 
+                            new Guid(CorePluginConstants.ContentTreeControllerId),
+                            additionaParameters.ToFormCollection()),
+                                     "content-tree") { ManuallyInitialize = true })
+            </div>
+
+            <div>
+                @Html.RenderTree(
+                    new TreeRenderModel(
+                        Url.GetTreeUrl(
+                            "Index",
+                            new HiveId(CorePluginConstants.MediaTreeControllerId), 
+                            new Guid(CorePluginConstants.MediaTreeControllerId),
+                            additionaParameters.ToFormCollection()),
+                                     "media-tree") { ManuallyInitialize = true })
+            </div>
+
+        </div>
+    </div>
+
+    <div class="button-bar">
+        <input type="submit" id="insert" name="insert" value="Insert" /> or <a href="#" onclick="tinyMCEPopup.close();">Cancel</a>
+    </div>
+</form>
+
+<script type="text/javascript" language="javascript">
+
+    (function ($) {
+        $(document).ready(function () {
+            Umbraco.Controls.TinyMCE.InsertLink.init({
+                ajaxUrl: '@Url.Action("NiceUrl", "Content")'
+            });
+        });
+    })(jQuery);
+
+</script>

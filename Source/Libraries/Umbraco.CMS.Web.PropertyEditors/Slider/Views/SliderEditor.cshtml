@@ -1,0 +1,59 @@
+﻿@inherits WebViewPage<Umbraco.Cms.Web.PropertyEditors.Slider.SliderEditorModel>
+@using Umbraco.Cms.Web;
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Microsoft.Web.Mvc;
+@using Umbraco.Cms.Web.PropertyEditors.Slider;
+@{
+	bool hasMultipleValues = false;
+}
+
+<script type="text/javascript">
+	(function ($) {
+		$(document).ready(function () {
+			$('#@Html.IdFor(x => Model.SliderControl)').slider({
+				
+				@if (Model.PreValueModel.EnableRange) {
+					if (Model.PreValueModel.RangeValue != SliderOptionsRange.None) {
+						<text>range: '@Model.PreValueModel.RangeValue.ToString().ToLower()',</text>
+					} else {
+						if (Model.PreValueModel.Value2 >= Model.PreValueModel.Value) {
+							<text>range: true, values: [@Model.PreValueModel.Value,@Model.PreValueModel.Value2],</text>
+							hasMultipleValues = true;
+						}
+					}
+				}
+
+				@if (!hasMultipleValues) {
+					<text>value: @Model.PreValueModel.Value,</text>
+				}
+
+				@if (Model.PreValueModel.MaxValue > Model.PreValueModel.MinValue) {
+					<text>min: @Model.PreValueModel.MinValue, max: @Model.PreValueModel.MaxValue,</text>
+				}
+
+				@if (Model.PreValueModel.EnableStep) {
+					<text>step: @Model.PreValueModel.StepValue,</text>
+				}
+
+				@if (Model.PreValueModel.Orientation != null && Model.PreValueModel.Orientation != @SliderOptionsOrientation.Horizontal) {
+					<text>orientation: '@Model.PreValueModel.Orientation',</text>
+				}
+
+				slide: function(e, ui) {
+					$('#@Html.IdFor(x => Model.Value)').val(ui.@(hasMultipleValues ? "values" : "value"));
+				}
+			});
+			$('#@Html.IdFor(x => Model.Value)').val($('#@Html.IdFor(x => Model.SliderControl)').slider('@(hasMultipleValues ? "values" : "value")'));
+		});
+	})(jQuery);
+</script>
+
+<div id="@Html.IdFor(x => Model.SliderControl)" style="float:left;width:400px;"></div>
+@Html.TextBoxFor(x => Model.Value, new { @style = "float:left;width:40px;margin-left: 10px;" })

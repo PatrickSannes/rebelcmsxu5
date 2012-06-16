@@ -1,0 +1,24 @@
+﻿@inherits WebViewPage<Umbraco.Cms.Web.PropertyEditors.TreeNodePicker.TreeNodePickerModel>
+              
+@using ClientDependency.Core;
+@using ClientDependency.Core.Mvc;
+@using System.Web.Helpers;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Ajax;
+@using System.Web.Routing;
+@using System.Web.WebPages;
+@using Umbraco.Cms
+@using Umbraco.Cms.Web
+@using Umbraco.Cms.Web.Security
+@using Umbraco.Framework;
+@using Umbraco.Cms.Web.Model.BackOffice;
+@using Umbraco.Cms.Web.Trees;
+@using Microsoft.Web.Mvc;
+@using Umbraco.Framework.Persistence.Model.Constants
+
+@Html.TreePickerFor(x => Model.Value, new TreePickerRenderModel
+{
+    TreeControllerId = Model.TreeMetadata.Id,    
+    TreeVirtualRootId = Model.TreeVirtualRootId,
+    StartNodeId = new HiveId(Model.TreeMetadata.Id)
+})
